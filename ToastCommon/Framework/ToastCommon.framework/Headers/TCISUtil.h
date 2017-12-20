@@ -23,7 +23,43 @@
 #pragma mark - Data Util 
 + (NSString *)hash_SHA1 : (NSString *)str;
 + (NSString *)hash_MD5 : (NSString *)str;
-+ (NSString *)base64Encoding : (NSString *)source;
+
++ (NSString *)base64Encode : (id) sourc;
++ (NSData *)base64Decode : (NSString *)source;
+
++ (NSData *)zipCompress : (id)source;
++ (NSData *)zipDecompress : (NSData *)source;
+
++ (NSData *)AESGenerateInitializationVector;
+
++ (NSData *)AES128EncryptedDataWithKey:(NSData *)key source:(NSData *)source;
++ (NSData *)AES128DecryptedDataWithKey:(NSData *)key source:(NSData *)source;
+
++ (NSData *)AES128EncryptedDataWithKey:(NSData *)key source:(NSData *)source iv:(NSData *)iv;
++ (NSData *)AES128DecryptedDataWithKey:(NSData *)key source:(NSData *)source iv:(NSData *)iv;
+
++ (NSData *)AES128GenerateKey;
+
++ (NSData *)AES256EncryptedDataWithKey:(NSData*)key source:(NSData *)source;
++ (NSData *)AES256DecryptedDataWithKey:(NSData*)key source:(NSData *)source;
+
++ (NSData *)AES256EncryptedDataWithKey:(NSData *)key source:(NSData *)source iv:(NSData *)iv;
++ (NSData *)AES256DecryptedDataWithKey:(NSData *)key source:(NSData *)source iv:(NSData *)iv;
+
++ (NSData *)AES256GenerateKey;
+
++ (NSString *)RSAEncryptionString:(NSString *)str publicKey:(NSString *)pubKey;
++ (NSString *)RSADecryptionString:(NSString *)str publicKey:(NSString *)pubKey;
+
++ (NSData *)RSAEncryptionData:(NSData *)data publicKey:(NSString *)pubKey;
++ (NSData *)RSADecryptionData:(NSData *)data publicKey:(NSString *)pubKey;
+
++ (NSString *)RSAEncryptionString:(NSString *)str privateKey:(NSString *)privKey;
++ (NSString *)RSADecryptionString:(NSString *)str privateKey:(NSString *)privKey;
+
++ (NSData *)RSAEncryptionData:(NSData *)data privateKey:(NSString *)privKey;
++ (NSData *)RSADecryptionData:(NSData *)data privateKey:(NSString *)privKey;
+
 
 #pragma mark - Search Util
 + (BOOL)containsValueWithKey:(NSString *)key value:(id)value sourceArray:(NSArray *)sourceArray;
@@ -34,6 +70,13 @@
 + (NSString *)emptyStringToUnknown : (NSString *)value;
 + (NSString *)nilToEmptyString : (NSString *)value;
 + (NSString *)dictionaryToJsonString : (NSDictionary *)dictionary;
++ (const char *)createThreadLabel:(NSString *)threadName projectKey:(NSString *)projectKey;
+
++ (const char*) NSStringToCString : (NSString*) str;
++ (NSString*) CStringToNSString : (const char*) str;
+
++ (NSString *)hexStringFromData : (NSData *)sourceData;
++ (NSData *)dataFromHexString:(NSString *) string;
 
 #pragma mark - Type Search Util
 + (BOOL)checkDictionaryInNSStringType : (NSDictionary *)dictionary ;

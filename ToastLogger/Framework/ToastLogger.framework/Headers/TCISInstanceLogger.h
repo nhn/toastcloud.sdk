@@ -42,8 +42,9 @@
 
 - (void)enablePrintLogToConsole : (BOOL) enable;
 
-- (void)addUserLogField : (NSDictionary<NSString*, NSString*> *)addUserLogField;
-
+- (void)addUserLogField:(NSDictionary<NSString*, NSString*> *)addUserLogField;
+- (void)addUserLogFieldWithValue:(NSString *)value forKey:(NSString *)key;
+    
 - (NSString *)userID;
 - (void)setUserID : (NSString *) userID;
 
@@ -96,6 +97,7 @@
 //not supported user interface
 - (void)internalCrash : (id) internalCrash;
 
++ (NSString *)version;
 @end
 
 

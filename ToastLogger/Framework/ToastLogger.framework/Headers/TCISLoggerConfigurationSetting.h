@@ -23,7 +23,7 @@ typedef enum {
 
 + (instancetype)userSettingWithEnableNormalLog : (BOOL)enableNormalLog
                                 enableCrashLog : (BOOL)enableCrashLog
-                                logLevelFilter : (BOOL)enableLogLevelFilter
+                          enableLogLevelFilter : (BOOL)enableLogLevelFilter
                                 filterLogLevel : (TCISLogLevel)filterLogLevel
                            enableLogTypeFilter : (BOOL)enableLogTypeFilter
                             filterLogTypeArray : (NSArray *)filterLogTypeArray

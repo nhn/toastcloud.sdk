@@ -23,6 +23,7 @@
 + (NSString *)timeZone;
 + (NSString *)freeMemory;
 + (NSString *)freeSpace;
++ (BOOL)isSimulator;
 
 #pragma mark - Network
 + (NSString *)networkType;
@@ -40,5 +41,5 @@
 + (NSString *)shortVersionString;
 
 #pragma mark - Library
-+ (NSString *)libraryVersion;
++ (NSString *)version;
 @end

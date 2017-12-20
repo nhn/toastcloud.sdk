@@ -12,10 +12,9 @@
 
 + (TCISCore *)sharedInstance;
 
-+ (void)setUserID : (NSString *)userID;
-+ (NSString *)userID;
-
 + (void)setDebugMode : (BOOL) debugMode;
 + (BOOL)isDebugMode;
+
++ (NSString *)version;
 
 @end

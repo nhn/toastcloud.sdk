@@ -22,7 +22,8 @@
 + (void)setUserID : (NSString *)userID;
 
 + (void)addUserLogField : (NSDictionary<NSString*, NSString*> *)addUserLogField;
-
++ (void)addUserLogFieldWithValue:(NSString *)value forKey:(NSString *)key;
+    
 + (void)debugWithLogTag:(NSString *)logTag message:(NSString *)message;
 + (void)infoWithLogTag:(NSString *)logTag message:(NSString *)message;
 + (void)warnWithLogTag:(NSString *)logTag message:(NSString *)message;
@@ -44,4 +45,6 @@
 + (void)userLog : (TCISLog *)log;
 
 + (TCISInstanceLogger *)instanceLogger;
+
++ (NSString *)version;
 @end

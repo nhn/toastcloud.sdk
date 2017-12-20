@@ -39,9 +39,11 @@
 + (void)enableCrashDelegate : (id<TCISCrashDelegate>)crashDelegate;
 
 + (void)setUserField : (NSString *)value forKey :(NSString *)key;
++ (void)setUserField : (NSDictionary<NSString*, NSString*> *)addUserLogField;
 + (void)setUserFieldIntoTCISCrashBlock:(void (^)(void))block;
 
 #pragma mark - private
 + (void)handledWithLog : (TCISLog *)log ;
 
++ (NSString *)version;
 @end
