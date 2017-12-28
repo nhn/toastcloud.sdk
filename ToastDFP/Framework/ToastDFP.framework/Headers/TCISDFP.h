@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ToastLogger/ToastLogger.h>
 #import <ToastCommon/ToastCommon.h>
+#import <ToastLogger/ToastLogger.h>
 
 typedef NS_ENUM(NSInteger, TCISDFPPriority) {
     TCISDFPPriority_1 = 0,
