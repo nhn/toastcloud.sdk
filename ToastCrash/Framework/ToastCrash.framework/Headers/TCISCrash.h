@@ -11,6 +11,8 @@
 #import <ToastLogger/ToastLogger.h>
 #import <ToastCommon/ToastCommon.h>
 
+
+
 @protocol TCISCrashDelegate <NSObject>
 
 @optional
@@ -34,16 +36,18 @@
 
 @property (weak, nonatomic) id<TCISCrashDelegate> crashDelegate;
 
-+ (void)setConfigurationLogger : (TCISInstanceLogger *)logger;
++ (void)setConfigurationLogger:(TCISInstanceLogger *)logger;
 
-+ (void)enableCrashDelegate : (id<TCISCrashDelegate>)crashDelegate;
++ (void)enableCrashDelegate:(id<TCISCrashDelegate>)crashDelegate;
 
-+ (void)setUserField : (NSString *)value forKey :(NSString *)key;
-+ (void)setUserField : (NSDictionary<NSString*, NSString*> *)addUserLogField;
++ (void)setUserField:(NSString *)value forKey:(NSString *)key;
++ (void)setUserField:(NSDictionary<NSString*, NSString*> *)addUserLogField;
 + (void)setUserFieldIntoTCISCrashBlock:(void (^)(void))block;
 
-#pragma mark - private
-+ (void)handledWithLog : (TCISLog *)log ;
-
+#pragma mark - Version
 + (NSString *)version;
+
+#pragma mark - private
++ (void)handledWithLog:(TCISLog *)log ;
+
 @end

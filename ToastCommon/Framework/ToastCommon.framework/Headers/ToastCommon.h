@@ -11,13 +11,9 @@
 #import "TCISInfoUtil.h"
 #import "TCISHttpManager.h"
 #import "TCISUtil.h"
+#import "TCISInfoUtil.h"
+#import "TCISCacheUtil.h"
 #import "TCISIntervalThread.h"
-#import "TCISAccountInfo.h"
-#import "TCISApplicationInfo.h"
-#import "TCISDeviceInfo.h"
-#import "TCISJailbreakInfo.h"
-#import "TCISNetwork.h"
-#import "TCISDeviceIdentifier.h"
 
 //! Project version number for TCISCommon.
 FOUNDATION_EXPORT double ToastCommonVersionNumber;

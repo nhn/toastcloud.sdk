@@ -21,14 +21,14 @@ typedef enum {
 + (instancetype)defaultSetting;
 + (instancetype)consoleSetting;
 
-+ (instancetype)userSettingWithEnableNormalLog : (BOOL)enableNormalLog
-                                enableCrashLog : (BOOL)enableCrashLog
-                          enableLogLevelFilter : (BOOL)enableLogLevelFilter
-                                filterLogLevel : (TCISLogLevel)filterLogLevel
-                           enableLogTypeFilter : (BOOL)enableLogTypeFilter
-                            filterLogTypeArray : (NSArray *)filterLogTypeArray
-                      enableLogDuplicateFilter : (BOOL)enableLogDuplicateFilter
-                 filterLogDuplicateExpiredTime : (NSNumber *)filterLogDuplicateExpiredTime;
++ (instancetype)userSettingWithEnableNormalLog:(BOOL)enableNormalLog
+                                enableCrashLog:(BOOL)enableCrashLog
+                          enableLogLevelFilter:(BOOL)enableLogLevelFilter
+                                filterLogLevel:(TCISLogLevel)filterLogLevel
+                           enableLogTypeFilter:(BOOL)enableLogTypeFilter
+                            filterLogTypeArray:(NSArray *)filterLogTypeArray
+                      enableLogDuplicateFilter:(BOOL)enableLogDuplicateFilter
+                 filterLogDuplicateExpiredTime:(NSNumber *)filterLogDuplicateExpiredTime;
 
 - (TCISLoggerConfigurationType)configurationType;
 
@@ -58,10 +58,10 @@ typedef enum {
 
 #pragma mark - Enable, Disable
 - (BOOL)isEnableNormalLog;
-- (void)enableNormalLog : (BOOL) enable;
+- (void)enableNormalLog:(BOOL) enable;
 
 - (BOOL)isEnableCrashLog;
-- (void)enableCrashLog : (BOOL) enable;
+- (void)enableCrashLog:(BOOL) enable;
 
 @end
 

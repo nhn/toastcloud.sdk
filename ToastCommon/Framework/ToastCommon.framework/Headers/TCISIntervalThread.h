@@ -13,6 +13,7 @@
 @property (assign, nonatomic) NSTimeInterval lastExcuteTime;
 
 - (id)initWithName:(NSString *)name interval:(NSUInteger)interval;
+- (id)initWithInterval:(NSUInteger)interval;
 
 - (BOOL)isRunning;
 - (BOOL)isPause;

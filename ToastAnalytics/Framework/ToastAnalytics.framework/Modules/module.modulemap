@@ -1,0 +1,6 @@
+framework module ToastAnalytics {
+  umbrella header "ToastAnalytics.h"
+
+  export *
+  module * { export * }
+}

@@ -18,9 +18,10 @@ typedef NS_ENUM(NSInteger, TCISHttpVerbType)
 @interface TCISHttpManager : NSObject
 + (instancetype)requestWithURL:(NSURL *)aURL method:(TCISHttpVerbType)aVerbType;
 
-- (void)setHeaderKey : (NSString*)key Value:(NSString*)value;
-- (void)setQueryStringParamKey : (NSString*)key Value:(NSString*)value;
-- (void)setJsonBodyParameter : (id)jsonObject;
+- (void)setHeaderKey:(NSString*)key Value:(NSString*)value;
+- (void)setQueryStringParamKey:(NSString*)key Value:(NSString*)value;
+- (void)setJsonBodyParameter:(id)jsonObject;
+- (void)setStringBodyParameter:(NSString *)parameter;
 
 - (void)sendGetURLRequestWithCompletionBlock:(void (^)(NSData *aResponseData, NSDictionary *aResponseBody, NSError *aError))aBlock;
 
@@ -28,8 +29,11 @@ typedef NS_ENUM(NSInteger, TCISHttpVerbType)
 
 - (void)sendPostJsonBodyRequestWithCompletionBlock:(void (^)(NSData *aResponseData, NSDictionary *aResponseBody, NSError *aError))aBlock;
 
+- (void)sendPostStringBodyRequestWithCompletionBlock:(void (^)(NSData *aResponseData, NSDictionary *aResponseBody, NSError *aError))aBlock;
+
 - (NSDictionary *)sendGetURLRequest;
 - (NSDictionary *)sendPostURLEncodeRequest;
 - (NSDictionary *)sendPostJsonBodyRequest;
+- (NSDictionary *)sendPostStringBodyRequest;
 
 @end

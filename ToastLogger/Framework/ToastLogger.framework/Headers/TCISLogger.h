@@ -13,15 +13,15 @@
 
 @interface TCISLogger : NSObject
 
-+ (void)loggerConfiguration : (TCISLoggerConfiguration *)configuration;
++ (void)loggerConfiguration:(TCISLoggerConfiguration *)configuration;
 
-+ (void)enablePrintLogToConsole : (BOOL)enable;
++ (void)enablePrintLogToConsole:(BOOL)enable;
 
-+ (void)setDelegate : (id<TCISLoggerDelegate>) delegate;
++ (void)setDelegate:(id<TCISLoggerDelegate>) delegate;
 
-+ (void)setUserID : (NSString *)userID;
++ (void)setUserID:(NSString *)userID;
 
-+ (void)addUserLogField : (NSDictionary<NSString*, NSString*> *)addUserLogField;
++ (void)addUserLogField:(NSDictionary<NSString*, NSString*> *)addUserLogField;
 + (void)addUserLogFieldWithValue:(NSString *)value forKey:(NSString *)key;
     
 + (void)debugWithLogTag:(NSString *)logTag message:(NSString *)message;
@@ -42,9 +42,10 @@
 + (void)errorWithLogTag:(NSString *)logTag messageFormat:(NSString *)messageFromat, ...;
 + (void)fatalWithLogTag:(NSString *)logTag messageFormat:(NSString *)messageFromat, ...;
 
-+ (void)userLog : (TCISLog *)log;
++ (void)userLog:(TCISLog *)log;
 
 + (TCISInstanceLogger *)instanceLogger;
 
+#pragma mark - Version
 + (NSString *)version;
 @end

@@ -37,16 +37,16 @@
 
 @property (weak, nonatomic) id<TCISLoggerDelegate> loggerDelegate;
 
-+ (TCISInstanceLogger *)sharedInstance : (TCISLoggerConfiguration *)configuration;
++ (TCISInstanceLogger *)sharedInstance:(TCISLoggerConfiguration *)configuration;
 - (TCISLoggerConfiguration *)configuration;
 
-- (void)enablePrintLogToConsole : (BOOL) enable;
+- (void)enablePrintLogToConsole:(BOOL) enable;
 
 - (void)addUserLogField:(NSDictionary<NSString*, NSString*> *)addUserLogField;
 - (void)addUserLogFieldWithValue:(NSString *)value forKey:(NSString *)key;
     
 - (NSString *)userID;
-- (void)setUserID : (NSString *) userID;
+- (void)setUserID:(NSString *) userID;
 
 #pragma mark - normal log
 - (void)debugWithLogTag:(NSString *)logTag message:(NSString *) message;
@@ -95,8 +95,9 @@
 
 #pragma mark - private
 //not supported user interface
-- (void)internalCrash : (id) internalCrash;
+- (void)internalCrash:(id) internalCrash;
 
+#pragma mark - Version
 + (NSString *)version;
 @end
 

@@ -22,26 +22,26 @@ typedef enum {
 @property (strong, nonatomic) TCISLoggerConfigurationSetting *setting;
 
 #pragma mark - init Configuration
-+ (instancetype)configurationWithProjectKey : (NSString *)projectKey
-                             projectVersion : (NSString *)projectVersion;
++ (instancetype)configurationWithProjectKey:(NSString *)projectKey
+                             projectVersion:(NSString *)projectVersion;
 
-+ (instancetype)configurationWithProjectKey : (NSString *)projectKey
-                             projectVersion : (NSString *)projectVersion
-                          loggerServiceZone : (TCISLoggerServiceZone)loggerServiceZone;
++ (instancetype)configurationWithProjectKey:(NSString *)projectKey
+                             projectVersion:(NSString *)projectVersion
+                          loggerServiceZone:(TCISLoggerServiceZone)loggerServiceZone;
 
 
 #pragma mark - init Configuration With ServiceZone
-+ (instancetype)configurationWithProjectKey : (NSString *)projectKey
-                             projectVersion : (NSString *)projectVersion
-                       configurationSetting : (TCISLoggerConfigurationSetting *)configurationSetting;
++ (instancetype)configurationWithProjectKey:(NSString *)projectKey
+                             projectVersion:(NSString *)projectVersion
+                       configurationSetting:(TCISLoggerConfigurationSetting *)configurationSetting;
 
-+ (instancetype)configurationWithProjectKey : (NSString *)projectKey
-                             projectVersion : (NSString *)projectVersion
-                       configurationSetting : (TCISLoggerConfigurationSetting *)configurationSetting
-                          loggerServiceZone : (TCISLoggerServiceZone)loggerServiceZone;
++ (instancetype)configurationWithProjectKey:(NSString *)projectKey
+                             projectVersion:(NSString *)projectVersion
+                       configurationSetting:(TCISLoggerConfigurationSetting *)configurationSetting
+                          loggerServiceZone:(TCISLoggerServiceZone)loggerServiceZone;
 
 #pragma mark - ServiceZone
-- (void)setLoggerServiceZone : (TCISLoggerServiceZone) loggerServicezZone;
+- (void)setLoggerServiceZone:(TCISLoggerServiceZone)loggerServicezZone;
 - (TCISLoggerServiceZone)loggerServiceZone;
 
 @end

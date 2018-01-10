@@ -15,6 +15,7 @@
 + (void)setDebugMode : (BOOL) debugMode;
 + (BOOL)isDebugMode;
 
+#pragma mark - Version
 + (NSString *)version;
 
 @end

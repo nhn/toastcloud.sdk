@@ -11,7 +11,7 @@
 
 @interface TCISLogFilter : NSObject
 
-- (BOOL) filter : (TCISLog *) log;
+- (BOOL)filter:(TCISLog *)log;
 
 - (NSString *)name;
 

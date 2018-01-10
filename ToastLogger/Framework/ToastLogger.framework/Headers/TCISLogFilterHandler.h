@@ -12,7 +12,7 @@
 
 @interface TCISLogFilterHandler : NSObject
 
-+ (void)addLogFilter : (TCISLogFilter * __nonnull)logFilter
-     withLoggerConfiguration : (TCISLoggerConfiguration * __nonnull)configuration;
++ (void)addLogFilter:(TCISLogFilter * __nonnull)logFilter
+     withLoggerConfiguration:(TCISLoggerConfiguration * __nonnull)configuration;
 
 @end

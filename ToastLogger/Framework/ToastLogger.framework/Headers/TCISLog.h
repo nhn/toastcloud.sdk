@@ -26,16 +26,16 @@ typedef enum {
 @property (strong, nonatomic) NSDictionary<NSString*, NSString*> *userLogField;
 @property (strong, nonatomic) NSString *transactionID;
 
-+ (instancetype)logLevel : (TCISLogLevel ) logLevel
-                 logType : (NSString *) logType
-                  logTag : (NSString *) logTag
-              logMessage : (NSString *) logMessage
-             userLogField : (NSDictionary<NSString*, NSString*> *) userLogField;
++ (instancetype)logLevel:(TCISLogLevel ) logLevel
+                 logType:(NSString *) logType
+                  logTag:(NSString *) logTag
+              logMessage:(NSString *) logMessage
+            userLogField:(NSDictionary<NSString*, NSString*> *) userLogField;
 
-- (instancetype)initWithLogLevel : (TCISLogLevel ) logLevel
-                         logType : (NSString *) logType
-                          logTag : (NSString *) logTag
-                      logMessage : (NSString *) logMessage
-                     userLogField : (NSDictionary<NSString*, NSString*> *) userLogField;
+- (instancetype)initWithLogLevel:(TCISLogLevel ) logLevel
+                         logType:(NSString *) logType
+                          logTag:(NSString *) logTag
+                      logMessage:(NSString *) logMessage
+                    userLogField:(NSDictionary<NSString*, NSString*> *) userLogField;
 
 @end

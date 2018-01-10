@@ -19,14 +19,13 @@ typedef NS_ENUM(NSInteger, TCISDFPPriority) {
 };
 
 @interface TCISDFP : NSObject
-
-+ (void)setConfigurationLogger : (TCISInstanceLogger *)logger;
-+ (void)enableLocationData : (BOOL)enable;
-+ (void)setPriority : (TCISDFPPriority)priority;
-+ (void)addDFPValue : (NSString *)value key : (NSString *)key;
-+ (void)removeDFPValueWithKey : (NSString *) key;
++ (void)setConfigurationLogger:(TCISInstanceLogger *)logger;
++ (void)enableLocationData:(BOOL)enable;
++ (void)setPriority:(TCISDFPPriority)priority;
++ (void)addDFPValue:(NSString *)value key:(NSString *)key;
++ (void)removeDFPValueWithKey:(NSString *)key;
 + (void)removeDFPValues;
-+ (void)setSendInterval : (NSUInteger) interval;
-+ (NSString *)version;
++ (void)setSendInterval:(NSUInteger)interval;
 
++ (NSString *)version;
 @end

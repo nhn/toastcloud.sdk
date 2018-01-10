@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TCISDFP.h"
+#import "TCISDFPUtil.h"
 
 //! Project version number for ToastDFP.
 FOUNDATION_EXPORT double ToastDFPVersionNumber;
