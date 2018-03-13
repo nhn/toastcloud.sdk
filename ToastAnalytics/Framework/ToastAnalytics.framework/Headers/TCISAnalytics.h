@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <ToastCommon/ToastCommon.h>
+#import <ToastCore/ToastCore.h>
 #import "TCISAnalyticsConfiguration.h"
 
 @interface TCISAnalytics : NSObject

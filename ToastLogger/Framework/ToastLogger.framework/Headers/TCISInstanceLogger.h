@@ -10,13 +10,10 @@
 
 #import "TCISLog.h"
 #import "TCISLogFilter.h"
-
 #import "TCISLoggerConfiguration.h"
-
 #import "TCISInternalLoggerDelegate.h"
 
 @protocol TCISLoggerDelegate <NSObject>
-
 @optional
 - (void)instanceLogger:(TCISInstanceLogger *)instanceLogger
    didSendSuccessedLog:(TCISLog *)log;
@@ -33,6 +30,7 @@
              logFilter:(TCISLogFilter *)logFilter;
 @end
 
+
 @interface TCISInstanceLogger : NSObject
 
 @property (weak, nonatomic) id<TCISLoggerDelegate> loggerDelegate;
@@ -41,6 +39,7 @@
 - (TCISLoggerConfiguration *)configuration;
 
 - (void)enablePrintLogToConsole:(BOOL) enable;
+- (BOOL)isEnablePrintLogToConsole;
 
 - (void)addUserLogField:(NSDictionary<NSString*, NSString*> *)addUserLogField;
 - (void)addUserLogFieldWithValue:(NSString *)value forKey:(NSString *)key;
@@ -99,6 +98,7 @@
 
 #pragma mark - Version
 + (NSString *)version;
+
 @end
 
 

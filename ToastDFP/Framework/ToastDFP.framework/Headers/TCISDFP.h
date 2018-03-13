@@ -8,24 +8,32 @@
 
 #import <Foundation/Foundation.h>
 #import <ToastCommon/ToastCommon.h>
+#import <ToastCore/ToastCore.h>
 #import <ToastLogger/ToastLogger.h>
+#import "TCISDFPUserEvent.h"
+#import "TCISDFPConfiguration.h"
 
-typedef NS_ENUM(NSInteger, TCISDFPPriority) {
-    TCISDFPPriority_1 = 0,
-    TCISDFPPriority_2,
-    TCISDFPPriority_3,
-    TCISDFPPriority_4,
-    TCISDFPPriority_All
-};
+@class TCISDFP;
+@class TCISDFPConfiguration;
 
 @interface TCISDFP : NSObject
-+ (void)setConfigurationLogger:(TCISInstanceLogger *)logger;
-+ (void)enableLocationData:(BOOL)enable;
+
++ (void)initWithConfiguration:(TCISDFPConfiguration *)configuration;
+
++ (BOOL)startService;
++ (void)stopService;
+
++ (void)startUpdatingLocation;
++ (void)stopUpdatingLocation;
++ (void)setUserIdentifier:(NSString *)identifier;
 + (void)setPriority:(TCISDFPPriority)priority;
-+ (void)addDFPValue:(NSString *)value key:(NSString *)key;
-+ (void)removeDFPValueWithKey:(NSString *)key;
-+ (void)removeDFPValues;
-+ (void)setSendInterval:(NSUInteger)interval;
+
++ (void)setUserField:(NSString *)value forKey:(NSString *)key;
++ (NSString *)userFieldForKey:(NSString *)key;
++ (void)removeUserFieldForKey:(NSString *)key;
++ (void)removeAllUserFields;
+
++ (void)sendUserEvent:(TCISDFPUserEvent *)event;
 
 + (NSString *)version;
 @end

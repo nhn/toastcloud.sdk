@@ -20,7 +20,6 @@ typedef enum {
 
 + (instancetype)defaultSetting;
 + (instancetype)consoleSetting;
-
 + (instancetype)userSettingWithEnableNormalLog:(BOOL)enableNormalLog
                                 enableCrashLog:(BOOL)enableCrashLog
                           enableLogLevelFilter:(BOOL)enableLogLevelFilter

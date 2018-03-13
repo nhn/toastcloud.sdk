@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^ VoidBlock) (void);
+
 @interface TCISIntervalThread : NSObject
 
 @property (assign, nonatomic) NSTimeInterval lastExcuteTime;
 
-- (id)initWithName:(NSString *)name interval:(NSUInteger)interval;
-- (id)initWithInterval:(NSUInteger)interval;
+- (instancetype)initWithName:(NSString *)name interval:(NSUInteger)interval block:(VoidBlock)block;
+- (instancetype)initWithInterval:(NSUInteger)interval block:(VoidBlock)block;
 
 - (BOOL)isRunning;
 - (BOOL)isPause;
@@ -25,5 +27,6 @@
 - (void)pause;
 - (void)resume;
 - (void)restart;
+- (void)reset;
 
 @end

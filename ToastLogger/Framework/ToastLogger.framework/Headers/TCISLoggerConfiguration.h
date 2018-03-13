@@ -27,13 +27,13 @@ typedef enum {
 
 + (instancetype)configurationWithProjectKey:(NSString *)projectKey
                              projectVersion:(NSString *)projectVersion
-                          loggerServiceZone:(TCISLoggerServiceZone)loggerServiceZone;
-
+                       configurationSetting:(TCISLoggerConfigurationSetting *)configurationSetting;
 
 #pragma mark - init Configuration With ServiceZone
 + (instancetype)configurationWithProjectKey:(NSString *)projectKey
                              projectVersion:(NSString *)projectVersion
-                       configurationSetting:(TCISLoggerConfigurationSetting *)configurationSetting;
+                          loggerServiceZone:(TCISLoggerServiceZone)loggerServiceZone;
+
 
 + (instancetype)configurationWithProjectKey:(NSString *)projectKey
                              projectVersion:(NSString *)projectVersion

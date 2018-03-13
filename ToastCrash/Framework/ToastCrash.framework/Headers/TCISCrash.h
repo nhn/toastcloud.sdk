@@ -10,11 +10,9 @@
 
 #import <ToastLogger/ToastLogger.h>
 #import <ToastCommon/ToastCommon.h>
-
-
+#import <ToastCore/ToastCore.h>
 
 @protocol TCISCrashDelegate <NSObject>
-
 @optional
 - (void)crashLoggerInstance:(TCISInstanceLogger *)instanceLogger
         didSendSuccessedCrashLog:(TCISLog *)crashLog;
@@ -33,8 +31,6 @@
 
 
 @interface TCISCrash : NSObject
-
-@property (weak, nonatomic) id<TCISCrashDelegate> crashDelegate;
 
 + (void)setConfigurationLogger:(TCISInstanceLogger *)logger;
 

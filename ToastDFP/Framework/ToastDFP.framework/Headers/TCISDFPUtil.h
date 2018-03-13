@@ -12,10 +12,9 @@
 @interface TCISDFPUtil : NSObject
 
 + (NSMutableDictionary *)getDFPDataWithPriority:(TCISDFPPriority)priority;
-
 + (void)enableLocation:(BOOL)enable;
-+ (NSDictionary *)locationWithPriority:(TCISDFPPriority)priority;
 + (NSString *)dns;
 + (NSString *)gateway;
++ (NSDictionary *)location;
 
 @end

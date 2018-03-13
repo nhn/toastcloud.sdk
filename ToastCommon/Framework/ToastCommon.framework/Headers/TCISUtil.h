@@ -10,6 +10,9 @@
 
 @interface TCISUtil : NSObject
 
+extern NSString *const TCISUnknownString;
+extern NSString *const TCISNotApplicableString;
+
 #pragma mark - Version Util
 + (BOOL)isiOSVersion:(int)majorVersion orLater:(BOOL)later;
 
@@ -69,9 +72,9 @@
 + (NSString *)emptyStringToUnknown:(NSString *)value;
 + (NSString *)nilToEmptyString:(NSString *)value;
 + (NSString *)emptyStringToNA:(NSString *)value;
-
-+ (NSString *)dictionaryToJsonString:(NSDictionary *)dictionary;
++ (NSString *)stringWithJSONObject: (id)object;
 + (BOOL)isEmptyString:(NSString *)string;
++ (BOOL)isUnknownString:(NSString *)string;
 
 + (const char*)NSStringToCString:(NSString*) str;
 + (NSString*)CStringToNSString:(const char*) str;
