@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 
-#define APPKEY @"bUNrwOkUyn7HS1Ij"
+
+#define APPKEY @"INPUT YOUT APP KEY"
 
 @interface ViewController ()
 
@@ -67,9 +68,9 @@
 
 - (NSDictionary *)getLogUserInfo {
     
-    if( (![self.logUserInfoKey1TextField.text isEqualToString:@""]) &&
-        (![self.logUserInfoKey1TextField.text isEqualToString:@""]) &&
-        (![self.logUserInfoKey1TextField.text isEqualToString:@""]) ) {
+    if( ([self.logUserInfoKey1TextField.text isEqualToString:@""]) &&
+        ([self.logUserInfoKey1TextField.text isEqualToString:@""]) &&
+        ([self.logUserInfoKey1TextField.text isEqualToString:@""]) ) {
         return nil;
     }
     
@@ -171,7 +172,7 @@
    didSendSuccessedLog:(TCISLog *)log {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.delegateTextView.text = [NSString stringWithFormat:@"[SUCCESS] - %@", log.logMessage];
+        self.delegateTextView.text = [NSString stringWithFormat:@"[ToastLogger][SUCCESS] - %@", log.logMessage];
     });
     
 }
@@ -181,7 +182,7 @@
                  error:(NSError *)error {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.delegateTextView.text = [NSString stringWithFormat:@"[FAIL] - %@\n%@", log.logMessage, [error description] ];
+        self.delegateTextView.text = [NSString stringWithFormat:@"[ToastLogger][FAIL] - %@\n%@", log.logMessage, [error description] ];
     });
 }
 
@@ -189,7 +190,7 @@
            didSavedLog:(TCISLog *)log {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.delegateTextView.text = [NSString stringWithFormat:@"[SAVE] - %@", log.logMessage];
+        self.delegateTextView.text = [NSString stringWithFormat:@"[ToastLogger][SAVE] - %@", log.logMessage];
     });
 }
 
@@ -198,7 +199,7 @@
              logFilter:(TCISLogFilter *)logFilter {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.delegateTextView.text = [NSString stringWithFormat:@"[FILTER] [%@] - %@", logFilter.name, log.logMessage];
+        self.delegateTextView.text = [NSString stringWithFormat:@"[ToastLogger][FILTER] [%@] - %@", logFilter.name, log.logMessage];
     });
 }
 
@@ -277,7 +278,7 @@
    didSendSuccessedCrashLog:(TCISLog *)crashLog {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.delegateTextView.text = [NSString stringWithFormat:@"[SUCCESS] - %@", crashLog.logMessage];
+        self.delegateTextView.text = [NSString stringWithFormat:@"[ToastCrash][SUCCESS] - %@", crashLog.logMessage];
     });
 }
 
@@ -286,7 +287,7 @@
                       error:(NSError *)error {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.delegateTextView.text = [NSString stringWithFormat:@"[FAIL] - %@\n%@", crashLog.logMessage, [error description] ];
+        self.delegateTextView.text = [NSString stringWithFormat:@"[ToastCrash][FAIL] - %@\n%@", crashLog.logMessage, [error description] ];
     });
 }
 
@@ -294,7 +295,7 @@
            didSavedCrashLog:(TCISLog *)crashLog {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.delegateTextView.text = [NSString stringWithFormat:@"[SAVE] - %@", crashLog.logMessage];
+        self.delegateTextView.text = [NSString stringWithFormat:@"[ToastCrash][SAVE] - %@", crashLog.logMessage];
     });
 }
 
@@ -303,7 +304,7 @@
                   logFilter:(TCISLogFilter *)logFilter {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.delegateTextView.text = [NSString stringWithFormat:@"[FILTER] [%@] - %@", logFilter.name, crashLog.logMessage];
+        self.delegateTextView.text = [NSString stringWithFormat:@"[ToastCrash][FILTER] [%@] - %@", logFilter.name, crashLog.logMessage];
     });
     
 }

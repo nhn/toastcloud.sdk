@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D302C695205BDB6B0005D9BA /* ToastCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D302C692205BDB6A0005D9BA /* ToastCore.framework */; };
+		D302C696205BDB6B0005D9BA /* ToastCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D302C693205BDB6A0005D9BA /* ToastCommon.framework */; };
+		D302C697205BDB6B0005D9BA /* ToastLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D302C694205BDB6A0005D9BA /* ToastLogger.framework */; };
 		D3CC35842057CA6100869634 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CC35832057CA6100869634 /* AppDelegate.m */; };
 		D3CC35872057CA6100869634 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CC35862057CA6100869634 /* ViewController.m */; };
 		D3CC358A2057CA6100869634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3CC35882057CA6100869634 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D302C692205BDB6A0005D9BA /* ToastCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ToastCore.framework; sourceTree = "<group>"; };
+		D302C693205BDB6A0005D9BA /* ToastCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ToastCommon.framework; sourceTree = "<group>"; };
+		D302C694205BDB6A0005D9BA /* ToastLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ToastLogger.framework; sourceTree = "<group>"; };
 		D3CC357F2057CA6100869634 /* ToastLoggerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToastLoggerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3CC35822057CA6100869634 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3CC35832057CA6100869634 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D302C697205BDB6B0005D9BA /* ToastLogger.framework in Frameworks */,
+				D302C695205BDB6B0005D9BA /* ToastCore.framework in Frameworks */,
+				D302C696205BDB6B0005D9BA /* ToastCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,9 @@
 		D3CC35762057CA6100869634 = {
 			isa = PBXGroup;
 			children = (
+				D302C693205BDB6A0005D9BA /* ToastCommon.framework */,
+				D302C692205BDB6A0005D9BA /* ToastCore.framework */,
+				D302C694205BDB6A0005D9BA /* ToastLogger.framework */,
 				D3CC35812057CA6100869634 /* ToastLoggerSample */,
 				D3CC359A2057CA6100869634 /* ToastLoggerSampleTests */,
 				D3CC35A52057CA6100869634 /* ToastLoggerSampleUITests */,
@@ -432,8 +444,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3876PXF82;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ToastLoggerSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.toast.ToastLoggerSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,8 +466,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3876PXF82;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ToastLoggerSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.toast.ToastLoggerSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
