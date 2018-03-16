@@ -41,8 +41,8 @@
 - (void)enablePrintLogToConsole:(BOOL) enable;
 - (BOOL)isEnablePrintLogToConsole;
 
-- (void)addUserLogField:(NSDictionary<NSString*, NSString*> *)addUserLogField;
-- (void)addUserLogFieldWithValue:(NSString *)value forKey:(NSString *)key;
+- (void)setUserLogField:(NSDictionary<NSString*, NSString*> *)addUserLogField;
+- (void)setUserLogFieldWithValue:(NSString *)value forKey:(NSString *)key;
     
 - (NSString *)userID;
 - (void)setUserID:(NSString *) userID;

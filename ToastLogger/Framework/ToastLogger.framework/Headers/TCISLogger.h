@@ -21,8 +21,8 @@
 
 + (void)setUserID:(NSString *)userID;
 
-+ (void)addUserLogField:(NSDictionary<NSString*, NSString*> *)addUserLogField;
-+ (void)addUserLogFieldWithValue:(NSString *)value forKey:(NSString *)key;
++ (void)setUserLogField:(NSDictionary<NSString*, NSString*> *)addUserLogField;
++ (void)setUserLogFieldWithValue:(NSString *)value forKey:(NSString *)key;
     
 + (void)debugWithLogTag:(NSString *)logTag message:(NSString *)message;
 + (void)infoWithLogTag:(NSString *)logTag message:(NSString *)message;
