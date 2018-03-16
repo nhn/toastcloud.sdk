@@ -94,4 +94,9 @@ extern NSString *const TCISNotApplicableString;
 + (NSString *)generateUUID;
 + (NSString *)generateUUIDRef;
 
+#pragma mark - InternalField
++ (NSArray *)getCommonCollectionDataKey;
++ (NSArray *)getAppDetailCommonCollectionDataKey;
++ (NSArray *)getCrashDataKey;
+
 @end
