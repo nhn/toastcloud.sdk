@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7074A4421384E57484D302A0 /* Pods_ToastSDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDBFE9A371696E33A661EFAE /* Pods_ToastSDKSample.framework */; };
 		D3CC35462057CA0F00869634 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CC35452057CA0F00869634 /* AppDelegate.m */; };
 		D3CC35492057CA0F00869634 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CC35482057CA0F00869634 /* ViewController.m */; };
 		D3CC354C2057CA0F00869634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3CC354A2057CA0F00869634 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC4E46FCB9E379DBFE76388D /* Pods-ToastSDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastSDKSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToastSDKSample/Pods-ToastSDKSample.debug.xcconfig"; sourceTree = "<group>"; };
 		D3CC35412057CA0E00869634 /* ToastSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToastSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3CC35442057CA0E00869634 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3CC35452057CA0F00869634 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		D3CC35642057CA0F00869634 /* ToastSDKSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToastSDKSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3CC35682057CA0F00869634 /* ToastSDKSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastSDKSampleUITests.m; sourceTree = "<group>"; };
 		D3CC356A2057CA0F00869634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E62143AE344053EA00D28D9E /* Pods-ToastSDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastSDKSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToastSDKSample/Pods-ToastSDKSample.release.xcconfig"; sourceTree = "<group>"; };
+		EDBFE9A371696E33A661EFAE /* Pods_ToastSDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToastSDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7074A4421384E57484D302A0 /* Pods_ToastSDKSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D7DF9FD8E2C90A580614EAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDBFE9A371696E33A661EFAE /* Pods_ToastSDKSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1572F06DD44BB22933E7F6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC4E46FCB9E379DBFE76388D /* Pods-ToastSDKSample.debug.xcconfig */,
+				E62143AE344053EA00D28D9E /* Pods-ToastSDKSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D3CC35382057CA0E00869634 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,8 @@
 				D3CC355C2057CA0F00869634 /* ToastSDKSampleTests */,
 				D3CC35672057CA0F00869634 /* ToastSDKSampleUITests */,
 				D3CC35422057CA0E00869634 /* Products */,
+				A1572F06DD44BB22933E7F6B /* Pods */,
+				6D7DF9FD8E2C90A580614EAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3CC356D2057CA0F00869634 /* Build configuration list for PBXNativeTarget "ToastSDKSample" */;
 			buildPhases = (
+				7CC88076EE1F76001CBD79E2 /* [CP] Check Pods Manifest.lock */,
 				D3CC353D2057CA0E00869634 /* Sources */,
 				D3CC353E2057CA0E00869634 /* Frameworks */,
 				D3CC353F2057CA0E00869634 /* Resources */,
+				AE96C5686BCDC22331A178B0 /* [CP] Embed Pods Frameworks */,
+				B4123A9978F7C7112C59824C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +286,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7CC88076EE1F76001CBD79E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToastSDKSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE96C5686BCDC22331A178B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToastSDKSample/Pods-ToastSDKSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4123A9978F7C7112C59824C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToastSDKSample/Pods-ToastSDKSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3CC353D2057CA0E00869634 /* Sources */ = {
@@ -428,6 +506,7 @@
 		};
 		D3CC356E2057CA0F00869634 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC4E46FCB9E379DBFE76388D /* Pods-ToastSDKSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +521,7 @@
 		};
 		D3CC356F2057CA0F00869634 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E62143AE344053EA00D28D9E /* Pods-ToastSDKSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
