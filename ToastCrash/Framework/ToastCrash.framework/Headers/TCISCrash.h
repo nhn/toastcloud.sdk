@@ -36,7 +36,7 @@
 
 + (void)enableCrashDelegate:(id<TCISCrashDelegate>)crashDelegate;
 
-+ (void)setUserField:(NSString *)value forKey:(NSString *)key;
++ (void)setUserFieldWithValue:(NSString *)value forKey:(NSString *)key;
 + (void)setUserField:(NSDictionary<NSString*, NSString*> *)addUserLogField;
 + (void)setUserFieldIntoTCISCrashBlock:(void (^)(void))block;
 
