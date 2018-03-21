@@ -35,7 +35,7 @@
     
     NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
         
-    [TCISLogger loggerConfiguration:[TCISLoggerConfiguration configurationWithProjectKey:APPKEY projectVersion:appVersion]];
+    [TCISLogger setConfiguration:[TCISLoggerConfiguration configurationWithProjectKey:APPKEY projectVersion:appVersion]];
 
     [TCISCrash setConfigurationLogger:[TCISLogger instanceLogger]];
     
