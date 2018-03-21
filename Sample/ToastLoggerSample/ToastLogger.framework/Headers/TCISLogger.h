@@ -13,7 +13,7 @@
 
 @interface TCISLogger : NSObject
 
-+ (void)loggerConfiguration:(TCISLoggerConfiguration *)configuration;
++ (void)setConfiguration:(TCISLoggerConfiguration *)configuration;
 
 + (void)enablePrintLogToConsole:(BOOL)enable;
 
