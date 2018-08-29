@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TCISCore.h"
+#import "ToastSDK.h"
 
-
-//! Project version number for TCISCore.
+//! Project version number for ToastCore.
 FOUNDATION_EXPORT double ToastCoreVersionNumber;
 
-//! Project version string for TCISCore.
+//! Project version string for ToastCore.
 FOUNDATION_EXPORT const unsigned char ToastCoreVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <TCISCore/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <ToastCore/PublicHeader.h>
 
 

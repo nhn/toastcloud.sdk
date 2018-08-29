@@ -7,23 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ToastLogger+SDK.h"
+#import "ToastInstanceLogger.h"
+#import "ToastLogFilterHandler.h"
+#import "ToastLogFilter.h"
+#import "ToastLog.h"
+#import "ToastLoggerDelegate.h"
 
-#import "TCISLogger.h"
-#import "TCISInstanceLogger.h"
-
-#import "TCISLogFilterHandler.h"
-#import "TCISLogFilter.h"
-
-#import "TCISLog.h"
-
-#import "TCISInternalLoggerDelegate.h"
-
-//! Project version number for TCISLogger.
+//! Project version number for ToastLogger.
 FOUNDATION_EXPORT double ToastLoggerVersionNumber;
 
-//! Project version string for TCISLogger.
+//! Project version string for ToastLogger.
 FOUNDATION_EXPORT const unsigned char ToastLoggerVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <TCISLogger/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <ToastLogger/PublicHeader.h>
 
 

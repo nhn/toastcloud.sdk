@@ -1,6 +1,0 @@
-framework module ToastCrash {
-  umbrella header "ToastCrash.h"
-
-  export *
-  module * { export * }
-}
