@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,34 +10,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Toast View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ToastViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Send Log Delegate" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="94N-Vg-aCH">
-                                <rect key="frame" x="16" y="380" width="343" height="267"/>
+                                <rect key="frame" x="16" y="414" width="343" height="233"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hS-B1-sUn">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hS-B1-sUn">
                                 <rect key="frame" x="16" y="342" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="e9Z-uL-Bgr"/>
                                 </constraints>
                                 <state key="normal" title="Send Log"/>
+                                <connections>
+                                    <action selector="sendLogButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bIH-R2-aen"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIq-yj-gwi">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIq-yj-gwi">
                                 <rect key="frame" x="16" y="163" width="163.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQa-eO-CbZ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQa-eO-CbZ">
                                 <rect key="frame" x="195" y="163" width="164" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -49,7 +52,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2pS-3R-Qb4">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2pS-3R-Qb4">
                                 <rect key="frame" x="16" y="304" width="163.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -95,18 +98,29 @@
                                     <constraint firstAttribute="height" constant="30" id="DD0-6P-rw6"/>
                                 </constraints>
                                 <state key="normal" title="Initialize"/>
+                                <connections>
+                                    <action selector="initializeButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6m0-Ot-Jw8"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ttz-gN-tfg">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ttz-gN-tfg">
                                 <rect key="frame" x="195" y="304" width="164" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urs-Hx-py4">
+                                <rect key="frame" x="16" y="376" width="343" height="30"/>
+                                <state key="normal" title="Send Crash"/>
+                                <connections>
+                                    <action selector="sendCrashButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NrW-7q-iqS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8hS-B1-sUn" secondAttribute="trailing" constant="16" id="0p3-iu-0cM"/>
-                            <constraint firstItem="94N-Vg-aCH" firstAttribute="top" secondItem="8hS-B1-sUn" secondAttribute="bottom" constant="8" id="2ts-BT-U9D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="urs-Hx-py4" secondAttribute="trailing" constant="16" id="4ep-sS-rHA"/>
+                            <constraint firstItem="urs-Hx-py4" firstAttribute="top" secondItem="8hS-B1-sUn" secondAttribute="bottom" constant="4" id="6ug-gA-ONH"/>
                             <constraint firstItem="GIq-yj-gwi" firstAttribute="top" secondItem="GDa-WM-7mQ" secondAttribute="bottom" constant="8" id="7Hq-4a-IdZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GDa-WM-7mQ" secondAttribute="trailing" constant="16" id="9OP-fG-t9w"/>
                             <constraint firstItem="LBB-MH-nVn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9eA-CH-G7U"/>
@@ -129,12 +143,13 @@
                             <constraint firstItem="Twq-5E-HyJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Quh-uE-mtH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ttz-gN-tfg" secondAttribute="trailing" constant="16" id="Sa8-xr-WnX"/>
                             <constraint firstItem="8hS-B1-sUn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SxK-B1-Jn4"/>
+                            <constraint firstItem="94N-Vg-aCH" firstAttribute="top" secondItem="urs-Hx-py4" secondAttribute="bottom" constant="8" id="VSn-Sp-yig"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oKm-ll-RBJ" secondAttribute="trailing" constant="16" id="W7R-1R-XbW"/>
                             <constraint firstItem="Ttz-gN-tfg" firstAttribute="top" secondItem="Twq-5E-HyJ" secondAttribute="bottom" constant="8" id="aWY-mb-H8M"/>
                             <constraint firstItem="Twq-5E-HyJ" firstAttribute="top" secondItem="LBB-MH-nVn" secondAttribute="bottom" constant="8" id="aY1-lf-6Sc"/>
                             <constraint firstItem="I7B-MG-PXY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bLT-71-9zO"/>
+                            <constraint firstItem="urs-Hx-py4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bMl-z2-1kt"/>
                             <constraint firstItem="Q06-6V-fs7" firstAttribute="top" secondItem="GIq-yj-gwi" secondAttribute="bottom" constant="8" id="d6H-dz-jpQ"/>
-                            <constraint firstItem="94N-Vg-aCH" firstAttribute="top" secondItem="8hS-B1-sUn" secondAttribute="bottom" constant="8" id="e21-0r-sWM"/>
                             <constraint firstItem="Ttz-gN-tfg" firstAttribute="width" secondItem="2pS-3R-Qb4" secondAttribute="width" id="ebh-LG-amo"/>
                             <constraint firstItem="94N-Vg-aCH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="f9p-z2-ksR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Twq-5E-HyJ" secondAttribute="trailing" constant="16" id="fP5-FV-W7I"/>
@@ -159,6 +174,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="appKeyTextField" destination="oKm-ll-RBJ" id="Yvc-9f-s0p"/>
+                        <outlet property="globalUserFieldKeyTextField" destination="GIq-yj-gwi" id="q74-f1-KuB"/>
+                        <outlet property="globalUserFieldValueTextField" destination="AQa-eO-CbZ" id="Pim-cc-DMN"/>
+                        <outlet property="logLevelSegment" destination="Q06-6V-fs7" id="37M-GV-CmK"/>
+                        <outlet property="logMessageTextField" destination="LBB-MH-nVn" id="ptH-74-nZS"/>
+                        <outlet property="personalUserFieldKeyTextField" destination="2pS-3R-Qb4" id="7sM-1I-YNG"/>
+                        <outlet property="personalUserFieldValueTextField" destination="Ttz-gN-tfg" id="ilk-NX-dqZ"/>
+                        <outlet property="sendCrashButton" destination="urs-Hx-py4" id="MEl-i5-3yl"/>
+                        <outlet property="sendLogButton" destination="8hS-B1-sUn" id="88v-TQ-XzG"/>
+                        <outlet property="sendLogDelegateTextView" destination="94N-Vg-aCH" id="5At-gD-oqj"/>
+                        <outlet property="userIDTextField" destination="Hlr-eH-tIR" id="pSp-zb-ylL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
