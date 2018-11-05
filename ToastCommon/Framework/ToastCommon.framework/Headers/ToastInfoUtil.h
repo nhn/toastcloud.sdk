@@ -12,6 +12,7 @@
 
 #pragma mark - Application
 + (NSString *)bundleID;
++ (NSString *)bundleName;
 + (NSString *)displayName;
 + (NSString *)appVersion;
 + (NSString *)rootViewControllerTitle;

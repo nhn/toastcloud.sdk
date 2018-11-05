@@ -16,8 +16,12 @@ typedef NS_ENUM(NSInteger, ToastHttpVerbType)
 
 
 @interface ToastHttpManager : NSObject
+
+@property (nonatomic, copy, readonly) NSURLResponse *URLResponse;
+
 + (instancetype)requestWithURL:(NSURL *)aURL method:(ToastHttpVerbType)aVerbType;
 
+- (void)setTimeoutInterval:(NSTimeInterval)interval;
 - (void)setHeaderKey:(NSString *)key Value:(NSString *)value;
 - (void)setQueryStringParamKey:(NSString *)key Value:(NSString *)value;
 - (void)setJsonBodyParameter:(id)jsonObject;

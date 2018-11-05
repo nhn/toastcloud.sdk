@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    ToastServiceZoneReal = 0,
+    ToastServiceZoneAlpha,
+    ToastServiceZoneBeta    
+} ToastServiceZone;
+
 @interface ToastSDK : NSObject
 
 #pragma mark - init

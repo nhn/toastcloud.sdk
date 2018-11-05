@@ -48,18 +48,6 @@ extern NSString *const ToastNotApplicableString;
 
 + (NSData *)AES256GenerateKey;
 
-+ (NSString *)RSAEncryptionString:(NSString *)str publicKey:(NSString *)pubKey;
-+ (NSString *)RSADecryptionString:(NSString *)str publicKey:(NSString *)pubKey;
-
-+ (NSData *)RSAEncryptionData:(NSData *)data publicKey:(NSString *)pubKey;
-+ (NSData *)RSADecryptionData:(NSData *)data publicKey:(NSString *)pubKey;
-
-+ (NSString *)RSAEncryptionString:(NSString *)str privateKey:(NSString *)privKey;
-+ (NSString *)RSADecryptionString:(NSString *)str privateKey:(NSString *)privKey;
-
-+ (NSData *)RSAEncryptionData:(NSData *)data privateKey:(NSString *)privKey;
-+ (NSData *)RSADecryptionData:(NSData *)data privateKey:(NSString *)privKey;
-
 + (NSData *)zipCompress:(id)source;
 + (NSData *)zipDecompress:(NSData *)source;
 
@@ -74,6 +62,7 @@ extern NSString *const ToastNotApplicableString;
 + (NSString *)nilToEmptyString:(NSString *)value;
 + (NSString *)emptyStringToNA:(NSString *)value;
 
++ (BOOL)isEmptyObject:(id)object;
 + (BOOL)isEmptyString:(NSString *)string;
 + (BOOL)isUnknownString:(NSString *)string;
 
@@ -87,7 +76,8 @@ extern NSString *const ToastNotApplicableString;
 
 #pragma mark - Json Util
 + (NSString *)stringWithJSONObject:(id)object;
-+ (id)jsonStrringToObject:(NSString *)jsonString;
++ (id)jsonStringToObject:(NSString *)jsonString;
++ (id)jsonDataToObject:(NSData *)data;
 
 #pragma mark - Type Search Util
 + (BOOL)checkDictionaryInNSStringType:(NSDictionary *)dictionary;
@@ -107,5 +97,8 @@ extern NSString *const ToastNotApplicableString;
 #pragma mark - enum to String ToastLogLevel
 + (NSString *)logLevelToString:(int)input;
 + (int)logLevelStringToLogLevel:(NSString *)input;
+
++ (BOOL)setObjectSafety:(id)object forKey:(NSString *)key in:(NSMutableDictionary *)dictionary;
++ (id)validateObject:(id)object withDefault:(id)defaultObject;
 
 @end
