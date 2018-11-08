@@ -64,6 +64,7 @@
 + (NSString *)idfa;
 + (NSString *)idfv;
 + (NSString *)deviceUUID;
++ (NSString *)launchedID;
 + (NSString *)keychainUUID;
 
 #pragma mark - JailbreakInfo
