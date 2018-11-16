@@ -12,6 +12,7 @@
 
 #pragma mark - Application
 + (NSString *)bundleID;
++ (NSString *)bundleName;
 + (NSString *)displayName;
 + (NSString *)appVersion;
 + (NSString *)rootViewControllerTitle;
@@ -63,6 +64,7 @@
 + (NSString *)idfa;
 + (NSString *)idfv;
 + (NSString *)deviceUUID;
++ (NSString *)launchedID;
 + (NSString *)keychainUUID;
 
 #pragma mark - JailbreakInfo
