@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DEAEAD121367B1F0046FAB6 /* ToastCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEAEAD021367B1F0046FAB6 /* ToastCommon.framework */; };
-		2DEAEAD321367B310046FAB6 /* ToastCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEAEAD221367B310046FAB6 /* ToastCore.framework */; };
-		2DEAEAD521367B3A0046FAB6 /* ToastLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEAEAD421367B3A0046FAB6 /* ToastLogger.framework */; };
-		2DEAEAD721369E6A0046FAB6 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEAEAD621369E6A0046FAB6 /* CrashReporter.framework */; };
+		2D6E4349219E67BC00771580 /* ToastCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6E4348219E67BC00771580 /* ToastCommon.framework */; };
+		2D6E434B219E67C300771580 /* ToastCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6E434A219E67C300771580 /* ToastCore.framework */; };
+		2D6E434D219E67CF00771580 /* ToastLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6E434C219E67CF00771580 /* ToastLogger.framework */; };
+		2D6E434F219E67F400771580 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6E434E219E67F400771580 /* CrashReporter.framework */; };
 		2DEAEAE22137B9190046FAB6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEAEAD92137AE000046FAB6 /* AdSupport.framework */; };
 		D345C3C8213659B000670BE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D345C3C7213659B000670BE9 /* AppDelegate.m */; };
 		D345C3CB213659B000670BE9 /* ToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D345C3CA213659B000670BE9 /* ToastViewController.m */; };
@@ -21,10 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2DEAEAD021367B1F0046FAB6 /* ToastCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ToastCommon.framework; sourceTree = "<group>"; };
-		2DEAEAD221367B310046FAB6 /* ToastCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ToastCore.framework; sourceTree = "<group>"; };
-		2DEAEAD421367B3A0046FAB6 /* ToastLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ToastLogger.framework; sourceTree = "<group>"; };
-		2DEAEAD621369E6A0046FAB6 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrashReporter.framework; sourceTree = "<group>"; };
+		2D6E4348219E67BC00771580 /* ToastCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToastCommon.framework; path = ../../ToastCommon/Framework/ToastCommon.framework; sourceTree = "<group>"; };
+		2D6E434A219E67C300771580 /* ToastCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToastCore.framework; path = ../../ToastCore/Framework/ToastCore.framework; sourceTree = "<group>"; };
+		2D6E434C219E67CF00771580 /* ToastLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToastLogger.framework; path = ../../ToastLogger/Framework/ToastLogger.framework; sourceTree = "<group>"; };
+		2D6E434E219E67F400771580 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CrashReporter.framework; path = ../../ToastLogger/External/CrashReporter.framework; sourceTree = "<group>"; };
 		2DEAEAD92137AE000046FAB6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		D345C3C3213659B000670BE9 /* ToastSDK-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToastSDK-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D345C3C6213659B000670BE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,11 +43,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6E434F219E67F400771580 /* CrashReporter.framework in Frameworks */,
+				2D6E434D219E67CF00771580 /* ToastLogger.framework in Frameworks */,
+				2D6E434B219E67C300771580 /* ToastCore.framework in Frameworks */,
+				2D6E4349219E67BC00771580 /* ToastCommon.framework in Frameworks */,
 				2DEAEAE22137B9190046FAB6 /* AdSupport.framework in Frameworks */,
-				2DEAEAD521367B3A0046FAB6 /* ToastLogger.framework in Frameworks */,
-				2DEAEAD121367B1F0046FAB6 /* ToastCommon.framework in Frameworks */,
-				2DEAEAD321367B310046FAB6 /* ToastCore.framework in Frameworks */,
-				2DEAEAD721369E6A0046FAB6 /* CrashReporter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,11 +57,11 @@
 		2DEAEAC22136779E0046FAB6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D6E434E219E67F400771580 /* CrashReporter.framework */,
+				2D6E434C219E67CF00771580 /* ToastLogger.framework */,
+				2D6E434A219E67C300771580 /* ToastCore.framework */,
+				2D6E4348219E67BC00771580 /* ToastCommon.framework */,
 				2DEAEAD92137AE000046FAB6 /* AdSupport.framework */,
-				2DEAEAD621369E6A0046FAB6 /* CrashReporter.framework */,
-				2DEAEAD421367B3A0046FAB6 /* ToastLogger.framework */,
-				2DEAEAD221367B310046FAB6 /* ToastCore.framework */,
-				2DEAEAD021367B1F0046FAB6 /* ToastCommon.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -331,6 +331,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.toast.ToastSDK-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../ToastLogger/external\"",
+					"\"$(SRCROOT)/../../ToastLogger/Framework\"",
+					"\"$(SRCROOT)/../../ToastCommon/Framework\"",
+					"\"$(SRCROOT)/../../ToastCore/Framework\"",
+				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -359,6 +365,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.toast.ToastSDK-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../ToastLogger/external\"",
+					"\"$(SRCROOT)/../../ToastLogger/Framework\"",
+					"\"$(SRCROOT)/../../ToastCommon/Framework\"",
+					"\"$(SRCROOT)/../../ToastCore/Framework\"",
+				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
