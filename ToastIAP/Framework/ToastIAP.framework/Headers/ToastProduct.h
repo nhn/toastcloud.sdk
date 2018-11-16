@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, readonly) NSString *productIdentifier;
 @property (nonatomic, copy, readonly, nullable) NSString *productName;
+@property (nonatomic, assign, readonly) long productSeq;
 @property (nonatomic, readonly) ToastProductType productType;
 @property (nonatomic, copy, readonly, nullable) NSDecimalNumber *price;
 @property (nonatomic, copy, readonly, nullable) NSString *currency;
