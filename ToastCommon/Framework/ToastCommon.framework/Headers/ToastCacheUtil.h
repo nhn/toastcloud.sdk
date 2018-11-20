@@ -8,9 +8,28 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ # Cache Util
+ 
+ A utility used for caching. It is used as a singleton object.
+ */
 @interface ToastCacheUtil : NSObject
 
+/**
+ Caches a given value and key via a safety check.
+
+ @param value Value to save
+ @param key Key to save.
+ */
 + (void)setObject:(id)value forKey:(NSString *)key;
+
+
+/**
+ Gets the values stored in the cache through the given key.
+
+ @param key The key used to retrieve the stored value
+ @return The value found through the key
+ */
 + (id)objectForKey:(NSString *)key;
 
 @end

@@ -13,9 +13,27 @@ typedef enum {
     ToastCollectorServiceZoneAlpha
 }ToastCollectorServiceZone;
 
+/**
+ # Collector URL
+ 
+ Provides the server URL according to the service zone.
+ */
 @interface ToastCollectorURL : NSObject
 
+/**
+ Gets the collector server URL according to the service zone.
+
+ @param serviceZone Servicezone(Real or Alpha)
+ @return The collector server URL according to the service zone.
+ */
 + (NSString *)collectorServerURLWithLoggerServiceZone:(ToastCollectorServiceZone)serviceZone;
-+ (NSString *)settingsServerURLWithLoggerServiceZone:(ToastCollectorServiceZone)sserviceZone;
+
+/**
+ Gets the setting server URL according to the service zone.
+ 
+ @param serviceZone Servicezone(Real or Alpha)
+ @return The collector server URL according to the service zone.
+ */
++ (NSString *)settingsServerURLWithLoggerServiceZone:(ToastCollectorServiceZone)serviceZone;
 
 @end

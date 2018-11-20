@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ The type of product.
+
+ - ToastProductTypeUnknown: Unknown type
+ - ToastProductTypeConsumable: Consumable type
+ - ToastProductTypeAutoRenewableSubscription: Ayto renewable subscription type
+ */
 typedef NS_ENUM(NSInteger, ToastProductType) {
     ToastProductTypeUnknown = 0,
     ToastProductTypeConsumable = 1,
@@ -16,17 +23,43 @@ typedef NS_ENUM(NSInteger, ToastProductType) {
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ # ToastProduct
+ 
+ The information of product.
+ */
 @interface ToastProduct : NSObject
 
+/** The identifier of product */
 @property (nonatomic, copy, readonly) NSString *productIdentifier;
-@property (nonatomic, copy, readonly, nullable) NSString *productName;
+
+/** The sequence of product. */
 @property (nonatomic, assign, readonly) long productSeq;
+
+/** The name of product */
+@property (nonatomic, copy, readonly, nullable) NSString *productName;
+
+/** The Type of product(consumable or auto-renewable-subscription) */
 @property (nonatomic, readonly) ToastProductType productType;
+
+/** The price of product */
 @property (nonatomic, copy, readonly, nullable) NSDecimalNumber *price;
+
+/** The currency of product */
 @property (nonatomic, copy, readonly, nullable) NSString *currency;
+
+/** The localized price of product */
 @property (nonatomic, copy, readonly, nullable) NSString *localizedPrice;
+
+/** If 'YES', the product is currently active. If 'NO', it is deactive. */
 @property (nonatomic, assign, readonly) BOOL active;
 
+
+/**
+ Whether or not the product is active.
+
+ @return If 'YES', the product is currently active. If 'NO', it is deactive
+ */
 - (BOOL)isActive;
 
 @end

@@ -12,18 +12,55 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// --no-merge-categories \
+
+/**
+ # ToastPurchaseResult
+ 
+ The result of purchase.
+ 
+ It used in
+ 
+ * [ToastIAP requestConsumablePurchasesWithCompletionHandler:]
+ * [ToastIAP restoreWithCompletionHandler:]
+ * [ToastIAP requestActivePurchasesWithCompletionHandler:]
+ * [ToastIAP consumeWithPurchaseResult:completionHandler:]
+ * [ToastInAppPurchaseDelegate didReceivePurchaseResult:]
+ 
+ */
 @interface ToastPurchaseResult : NSObject <NSCopying>
 
+/** The userID of purchase */
 @property (nonatomic, copy, readonly) NSString *userID;
+
+/** The product identifier of purchase */
 @property (nonatomic, copy, readonly) NSString *productIdentifier;
+
+/** The product type of purchase */
 @property (nonatomic, assign, readonly) ToastProductType productType;
+
+/** The price of purchase */
 @property (nonatomic, copy, readonly) NSDecimalNumber *price;
+
+/** The currency of purchse */
 @property (nonatomic, copy, readonly) NSString *currency;
+
+/** The payment sequence of purchase(Issued from the IAP server) */
 @property (nonatomic, copy, readonly) NSString *paymentSeq;
+
+/** The access token of purchase */
 @property (nonatomic, copy, readonly) NSString *accessToken;
+
+/** The appstore transaction identifier of purchase */
 @property (nonatomic, copy, readonly) NSString *transactionIdentifier;
+
+/** The original transaction identifier of purchase(In case of auto-renewable-subscription) */
 @property (nonatomic, copy, readonly, nullable) NSString *originalTransactionIdentifier;
+
+/** The purchase time of purchase */
 @property (nonatomic, readonly) NSTimeInterval purchaseTime;
+
+/** The expiry time of purchse */
 @property (nonatomic, readonly) NSTimeInterval expiryTime;
 
 @end

@@ -11,9 +11,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ # ToastProductsResponse
+ 
+ The response you receive as a result of the product listing inquiry([ToastIAP requestProductsWithCompletionHandler:]).
+ 
+ */
 @interface ToastProductsResponse : NSObject
 
+/** A list of products whose status is active in the IAP Console and can be viewed from AppConnect (iTunseConnect). */
 @property (nonatomic, readonly) NSArray<ToastProduct *> *products;
+
+/** A list of products whose status is active in the IAP Console and can not be viewed by AppConnect(iTunseConnect). */
 @property (nonatomic, readonly) NSArray<ToastProduct *> *invalidProducts;
 
 @end

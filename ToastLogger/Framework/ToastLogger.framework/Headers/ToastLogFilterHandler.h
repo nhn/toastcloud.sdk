@@ -10,8 +10,19 @@
 #import "ToastLoggerConfiguration.h"
 #import "ToastLogFilter.h"
 
+/**
+ # ToastLogFilterHandler
+ 
+ A class that manages to add ToastLogFilter according to ToastLoggerConfiguration.
+ */
 @interface ToastLogFilterHandler : NSObject
 
+/**
+ Add the log filter user want.
+
+ @param logFilter The filter to add
+ @param configuration The configuration about Toast Logger
+ */
 + (void)addLogFilter:(ToastLogFilter * __nonnull)logFilter
      withLoggerConfiguration:(ToastLoggerConfiguration * __nonnull)configuration;
 

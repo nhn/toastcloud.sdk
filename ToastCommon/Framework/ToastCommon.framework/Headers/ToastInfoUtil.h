@@ -24,7 +24,10 @@
 + (NSString *)iCloudToken;
 
 #pragma mark - Device
+/** Telecommunications Service Provider(ex: SK Telecom) */
 + (NSString *)carrier;
+
+/** name of device(ex: ) */
 + (NSString *)deviceName;
 + (NSString *)deviceModel;
 + (NSString *)deviceLocalizedModel;
