@@ -13,6 +13,7 @@
 #import "ToastProduct.h"
 #import "ToastProductsResponse.h"
 #import "ToastPurchaseResult.h"
+#import "ToastIAPError.h"
 
 //! Project version number for ToastIAP.
 FOUNDATION_EXPORT double ToastIAPVersionNumber;

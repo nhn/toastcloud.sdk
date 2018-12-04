@@ -101,4 +101,19 @@ extern NSString *const ToastNotApplicableString;
 + (BOOL)setObjectSafety:(id)object forKey:(NSString *)key in:(NSMutableDictionary *)dictionary;
 + (id)validateObject:(id)object withDefault:(id)defaultObject;
 
+#pragma mark - Generate NSError
++ (NSError *)errorWithDomain:(NSString *)domain
+                        code:(NSInteger)code
+                 description:(NSString *)description
+               failureReason:(NSString *)failureReason
+          recoverySuggestion:(NSString *)recoverySuggestion;
+
++ (NSError *)errorWithDomain:(NSString *)domain
+                        code:(NSInteger)code
+                 description:(NSString *)format, ...;
+
++ (NSError *)errorWithDomain:(NSString *)domain
+                        code:(NSInteger)code
+                       error:(NSError *)error;
+
 @end

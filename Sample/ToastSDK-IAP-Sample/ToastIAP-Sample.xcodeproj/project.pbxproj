@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D90506721950E1F00513EB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D90506621950E1F00513EB8 /* AppDelegate.m */; };
+		2D90506A21950E1F00513EB8 /* IAPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D90506921950E1F00513EB8 /* IAPViewController.m */; };
+		2D90506D21950E1F00513EB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D90506B21950E1F00513EB8 /* Main.storyboard */; };
+		2D90506F21950E2200513EB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D90506E21950E2200513EB8 /* Assets.xcassets */; };
+		2D90507221950E2200513EB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D90507021950E2200513EB8 /* LaunchScreen.storyboard */; };
+		2D90507521950E2200513EB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D90507421950E2200513EB8 /* main.m */; };
+		2DD30B0E219A8F1700541406 /* ToastCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD30B0D219A8F1700541406 /* ToastCommon.framework */; };
+		2DDE2AA821992DFB00A0F705 /* ToastIAP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDE2AA721992DFB00A0F705 /* ToastIAP.framework */; };
+		2DDE2AAA21992E0B00A0F705 /* ToastCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDE2AA921992E0B00A0F705 /* ToastCore.framework */; };
+		2DDE3B10219917C700B51E93 /* BorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDE3B0F219917C700B51E93 /* BorderedButton.m */; };
+		2DDE3B1721992C2F00B51E93 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDE3B1621992C2F00B51E93 /* StoreKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D90507B21950E2200513EB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D90505A21950E1F00513EB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D90506121950E1F00513EB8;
+			remoteInfo = "ToastIAP-Sample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D90506221950E1F00513EB8 /* ToastIAP-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToastIAP-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D90506521950E1F00513EB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2D90506621950E1F00513EB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2D90506821950E1F00513EB8 /* IAPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPViewController.h; sourceTree = "<group>"; };
+		2D90506921950E1F00513EB8 /* IAPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAPViewController.m; sourceTree = "<group>"; };
+		2D90506C21950E1F00513EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D90506E21950E2200513EB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D90507121950E2200513EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D90507321950E2200513EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D90507421950E2200513EB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D90507A21950E2200513EB8 /* ToastIAP-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ToastIAP-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DD30B0D219A8F1700541406 /* ToastCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToastCommon.framework; path = ../../ToastCommon/Framework/ToastCommon.framework; sourceTree = "<group>"; };
+		2DDE2AA721992DFB00A0F705 /* ToastIAP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToastIAP.framework; path = ../../ToastIAP/Framework/ToastIAP.framework; sourceTree = "<group>"; };
+		2DDE2AA921992E0B00A0F705 /* ToastCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToastCore.framework; path = ../../ToastCore/Framework/ToastCore.framework; sourceTree = "<group>"; };
+		2DDE3B0E219917C700B51E93 /* BorderedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BorderedButton.h; sourceTree = "<group>"; };
+		2DDE3B0F219917C700B51E93 /* BorderedButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BorderedButton.m; sourceTree = "<group>"; };
+		2DDE3B1621992C2F00B51E93 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D90505F21950E1F00513EB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD30B0E219A8F1700541406 /* ToastCommon.framework in Frameworks */,
+				2DDE2AAA21992E0B00A0F705 /* ToastCore.framework in Frameworks */,
+				2DDE3B1721992C2F00B51E93 /* StoreKit.framework in Frameworks */,
+				2DDE2AA821992DFB00A0F705 /* ToastIAP.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D90507721950E2200513EB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D90505921950E1F00513EB8 = {
+			isa = PBXGroup;
+			children = (
+				2D90506421950E1F00513EB8 /* ToastIAP-Sample */,
+				2D90506321950E1F00513EB8 /* Products */,
+				2DDE3B1121992B3900B51E93 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2D90506321950E1F00513EB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D90506221950E1F00513EB8 /* ToastIAP-Sample.app */,
+				2D90507A21950E2200513EB8 /* ToastIAP-SampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D90506421950E1F00513EB8 /* ToastIAP-Sample */ = {
+			isa = PBXGroup;
+			children = (
+				2D90506821950E1F00513EB8 /* IAPViewController.h */,
+				2D90506921950E1F00513EB8 /* IAPViewController.m */,
+				2DDE3B0E219917C700B51E93 /* BorderedButton.h */,
+				2DDE3B0F219917C700B51E93 /* BorderedButton.m */,
+				2D90506B21950E1F00513EB8 /* Main.storyboard */,
+				2D90507321950E2200513EB8 /* Info.plist */,
+				2D90506521950E1F00513EB8 /* AppDelegate.h */,
+				2D90506621950E1F00513EB8 /* AppDelegate.m */,
+				2D90506E21950E2200513EB8 /* Assets.xcassets */,
+				2D90507021950E2200513EB8 /* LaunchScreen.storyboard */,
+				2D90507421950E2200513EB8 /* main.m */,
+			);
+			path = "ToastIAP-Sample";
+			sourceTree = "<group>";
+		};
+		2DDE3B1121992B3900B51E93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DD30B0D219A8F1700541406 /* ToastCommon.framework */,
+				2DDE2AA921992E0B00A0F705 /* ToastCore.framework */,
+				2DDE2AA721992DFB00A0F705 /* ToastIAP.framework */,
+				2DDE3B1621992C2F00B51E93 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D90506121950E1F00513EB8 /* ToastIAP-Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D90508321950E2200513EB8 /* Build configuration list for PBXNativeTarget "ToastIAP-Sample" */;
+			buildPhases = (
+				2D90505E21950E1F00513EB8 /* Sources */,
+				2D90505F21950E1F00513EB8 /* Frameworks */,
+				2D90506021950E1F00513EB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ToastIAP-Sample";
+			productName = "ToastIAP-Sample";
+			productReference = 2D90506221950E1F00513EB8 /* ToastIAP-Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D90507921950E2200513EB8 /* ToastIAP-SampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D90508621950E2200513EB8 /* Build configuration list for PBXNativeTarget "ToastIAP-SampleTests" */;
+			buildPhases = (
+				2D90507621950E2200513EB8 /* Sources */,
+				2D90507721950E2200513EB8 /* Frameworks */,
+				2D90507821950E2200513EB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D90507C21950E2200513EB8 /* PBXTargetDependency */,
+			);
+			name = "ToastIAP-SampleTests";
+			productName = "ToastIAP-SampleTests";
+			productReference = 2D90507A21950E2200513EB8 /* ToastIAP-SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D90505A21950E1F00513EB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = NHNEnt;
+				TargetAttributes = {
+					2D90506121950E1F00513EB8 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					2D90507921950E2200513EB8 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 2D90506121950E1F00513EB8;
+					};
+				};
+			};
+			buildConfigurationList = 2D90505D21950E1F00513EB8 /* Build configuration list for PBXProject "ToastIAP-Sample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D90505921950E1F00513EB8;
+			productRefGroup = 2D90506321950E1F00513EB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D90506121950E1F00513EB8 /* ToastIAP-Sample */,
+				2D90507921950E2200513EB8 /* ToastIAP-SampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D90506021950E1F00513EB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D90507221950E2200513EB8 /* LaunchScreen.storyboard in Resources */,
+				2D90506F21950E2200513EB8 /* Assets.xcassets in Resources */,
+				2D90506D21950E1F00513EB8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D90507821950E2200513EB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D90505E21950E1F00513EB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D90506A21950E1F00513EB8 /* IAPViewController.m in Sources */,
+				2D90507521950E2200513EB8 /* main.m in Sources */,
+				2DDE3B10219917C700B51E93 /* BorderedButton.m in Sources */,
+				2D90506721950E1F00513EB8 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D90507621950E2200513EB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D90507C21950E2200513EB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D90506121950E1F00513EB8 /* ToastIAP-Sample */;
+			targetProxy = 2D90507B21950E2200513EB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D90506B21950E1F00513EB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D90506C21950E1F00513EB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2D90507021950E2200513EB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D90507121950E2200513EB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D90508121950E2200513EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2D90508221950E2200513EB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D90508421950E2200513EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 32H93D7PFQ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../ToastCore/Framework\"",
+					"\"$(SRCROOT)/../../ToastIAP/Framework/\"",
+					"\"$(SRCROOT)/../../ToastCommon/Framework\"",
+					"\"$(SRCROOT)/../../ToastLogger/Framework\"",
+					"\"$(SRCROOT)/../../ToastLogger/external\"",
+				);
+				INFOPLIST_FILE = "ToastIAP-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nhnent.IAPSample.store;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "std_IAP SDK_dev_181022";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D90508521950E2200513EB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 32H93D7PFQ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../ToastCore/Framework\"",
+					"\"$(SRCROOT)/../../ToastIAP/Framework/\"",
+					"\"$(SRCROOT)/../../ToastCommon/Framework\"",
+					"\"$(SRCROOT)/../../ToastLogger/Framework\"",
+					"\"$(SRCROOT)/../../ToastLogger/external\"",
+				);
+				INFOPLIST_FILE = "ToastIAP-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nhnent.IAPSample.store;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "std_IAP SDK_adhoc_181019";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2D90508721950E2200513EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F5NU2PA3PK;
+				INFOPLIST_FILE = "ToastIAP-SampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.toast.ToastIAP-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToastIAP-Sample.app/ToastIAP-Sample";
+			};
+			name = Debug;
+		};
+		2D90508821950E2200513EB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F5NU2PA3PK;
+				INFOPLIST_FILE = "ToastIAP-SampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.toast.ToastIAP-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToastIAP-Sample.app/ToastIAP-Sample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D90505D21950E1F00513EB8 /* Build configuration list for PBXProject "ToastIAP-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D90508121950E2200513EB8 /* Debug */,
+				2D90508221950E2200513EB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D90508321950E2200513EB8 /* Build configuration list for PBXNativeTarget "ToastIAP-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D90508421950E2200513EB8 /* Debug */,
+				2D90508521950E2200513EB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D90508621950E2200513EB8 /* Build configuration list for PBXNativeTarget "ToastIAP-SampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D90508721950E2200513EB8 /* Debug */,
+				2D90508821950E2200513EB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D90505A21950E1F00513EB8 /* Project object */;
+}
