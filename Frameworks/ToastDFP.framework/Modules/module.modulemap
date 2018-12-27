@@ -1,0 +1,6 @@
+framework module ToastDFP {
+  umbrella header "ToastDFP.h"
+
+  export *
+  module * { export * }
+}
