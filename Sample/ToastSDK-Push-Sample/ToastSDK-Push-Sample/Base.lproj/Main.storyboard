@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wvj-2l-y9A">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Push View Controller-->
+        <scene sceneID="AzR-LF-0xZ">
+            <objects>
+                <viewController id="Wvj-2l-y9A" customClass="PushViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ijE-BF-IOF"/>
+                        <viewControllerLayoutGuide type="bottom" id="J7s-He-oaQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="buW-PM-XJl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input User ID" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VwI-QB-6qS">
+                                <rect key="frame" x="8" y="28" width="258" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMX-En-YSB">
+                                <rect key="frame" x="274" y="28" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginOrLogoutButtonDidTap:" destination="Wvj-2l-y9A" eventType="touchUpInside" id="kfA-WY-yoW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dut-jN-ayP">
+                                <rect key="frame" x="8" y="201" width="144" height="30"/>
+                                <state key="normal" title="Registration"/>
+                                <connections>
+                                    <action selector="registrationButtonDidTap:" destination="Wvj-2l-y9A" eventType="touchUpInside" id="aB1-dA-MCf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Push Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9c-mZ-1qR">
+                                <rect key="frame" x="8" y="75" width="131" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="p5E-Fx-d2D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XAd-H7-tZa">
+                                <rect key="frame" x="263" y="75" width="51" height="31"/>
+                                <connections>
+                                    <action selector="togglePushSwitch:" destination="Wvj-2l-y9A" eventType="valueChanged" id="9EV-c4-LTX"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVB-Is-s8c">
+                                <rect key="frame" x="8" y="114" width="113" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="y49-gd-uay"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sHU-7j-xcX">
+                                <rect key="frame" x="263" y="114" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleAdSwitch:" destination="Wvj-2l-y9A" eventType="valueChanged" id="xux-Rd-cgd"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night Ad Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hQ-vV-IGp">
+                                <rect key="frame" x="8" y="153" width="159" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="vXU-cw-hDq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DvG-y4-maR">
+                                <rect key="frame" x="263" y="153" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleNightAdSwitch:" destination="Wvj-2l-y9A" eventType="valueChanged" id="LAa-Pi-Zzi"/>
+                                </connections>
+                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHD-id-cCu" userLabel="Sperator">
+                                <rect key="frame" x="8" y="66" width="304" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="wMj-Nd-29b"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4t-fD-U08" userLabel="Sperator">
+                                <rect key="frame" x="8" y="192" width="304" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="leM-Lc-Hc9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxP-6f-Alw">
+                                <rect key="frame" x="168" y="201" width="144" height="30"/>
+                                <state key="normal" title="Query"/>
+                                <connections>
+                                    <action selector="queryButtonDidTap:" destination="Wvj-2l-y9A" eventType="touchUpInside" id="whY-ef-eD6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OMX-En-YSB" firstAttribute="top" secondItem="ijE-BF-IOF" secondAttribute="bottom" constant="8" id="1Cx-CP-qFd"/>
+                            <constraint firstAttribute="trailing" secondItem="AHD-id-cCu" secondAttribute="trailing" constant="8" id="55A-tG-vos"/>
+                            <constraint firstAttribute="trailing" secondItem="OMX-En-YSB" secondAttribute="trailing" constant="8" id="5Mf-0f-tqI"/>
+                            <constraint firstItem="ZVB-Is-s8c" firstAttribute="top" secondItem="i9c-mZ-1qR" secondAttribute="bottom" constant="8" id="6hW-LE-cYD"/>
+                            <constraint firstItem="fxP-6f-Alw" firstAttribute="top" secondItem="P4t-fD-U08" secondAttribute="bottom" constant="8" id="9Gr-ex-Y8v"/>
+                            <constraint firstItem="VwI-QB-6qS" firstAttribute="leading" secondItem="buW-PM-XJl" secondAttribute="leading" constant="8" id="AsG-zy-LIc"/>
+                            <constraint firstItem="AHD-id-cCu" firstAttribute="top" secondItem="VwI-QB-6qS" secondAttribute="bottom" constant="8" id="CY5-YE-vq5"/>
+                            <constraint firstItem="sHU-7j-xcX" firstAttribute="top" secondItem="XAd-H7-tZa" secondAttribute="bottom" constant="8" id="E6c-Yh-VNT"/>
+                            <constraint firstItem="2hQ-vV-IGp" firstAttribute="top" secondItem="ZVB-Is-s8c" secondAttribute="bottom" constant="8" id="HqH-BD-ycU"/>
+                            <constraint firstAttribute="trailing" secondItem="XAd-H7-tZa" secondAttribute="trailing" constant="8" id="IIR-6Y-4v4"/>
+                            <constraint firstAttribute="trailing" secondItem="P4t-fD-U08" secondAttribute="trailing" constant="8" id="KW2-dG-qh2"/>
+                            <constraint firstItem="VwI-QB-6qS" firstAttribute="top" secondItem="ijE-BF-IOF" secondAttribute="bottom" constant="8" id="Kqy-4d-QjG"/>
+                            <constraint firstItem="AHD-id-cCu" firstAttribute="leading" secondItem="buW-PM-XJl" secondAttribute="leading" constant="8" id="STc-pL-a5m"/>
+                            <constraint firstItem="ZVB-Is-s8c" firstAttribute="leading" secondItem="buW-PM-XJl" secondAttribute="leading" constant="8" id="UM7-6h-rvF"/>
+                            <constraint firstItem="XAd-H7-tZa" firstAttribute="top" secondItem="AHD-id-cCu" secondAttribute="bottom" constant="8" id="Uo8-21-MBa"/>
+                            <constraint firstAttribute="trailing" secondItem="sHU-7j-xcX" secondAttribute="trailing" constant="8" id="UsK-Of-EfK"/>
+                            <constraint firstItem="dut-jN-ayP" firstAttribute="top" secondItem="P4t-fD-U08" secondAttribute="bottom" constant="8" id="VbT-IY-eb6"/>
+                            <constraint firstItem="OMX-En-YSB" firstAttribute="leading" secondItem="VwI-QB-6qS" secondAttribute="trailing" constant="8" id="X2g-9U-7uF"/>
+                            <constraint firstItem="i9c-mZ-1qR" firstAttribute="leading" secondItem="buW-PM-XJl" secondAttribute="leading" constant="8" id="YMu-dM-rJ9"/>
+                            <constraint firstItem="fxP-6f-Alw" firstAttribute="width" secondItem="dut-jN-ayP" secondAttribute="width" id="a47-Ah-kIJ"/>
+                            <constraint firstItem="2hQ-vV-IGp" firstAttribute="leading" secondItem="buW-PM-XJl" secondAttribute="leading" constant="8" id="aH2-PZ-57r"/>
+                            <constraint firstItem="P4t-fD-U08" firstAttribute="leading" secondItem="buW-PM-XJl" secondAttribute="leading" constant="8" id="cgF-uG-KmN"/>
+                            <constraint firstItem="fxP-6f-Alw" firstAttribute="leading" secondItem="dut-jN-ayP" secondAttribute="trailing" constant="16" id="dkY-aL-svw"/>
+                            <constraint firstAttribute="trailing" secondItem="DvG-y4-maR" secondAttribute="trailing" constant="8" id="iKd-Ch-s3t"/>
+                            <constraint firstItem="P4t-fD-U08" firstAttribute="top" secondItem="2hQ-vV-IGp" secondAttribute="bottom" constant="8" id="kt9-x4-yMK"/>
+                            <constraint firstItem="DvG-y4-maR" firstAttribute="top" secondItem="sHU-7j-xcX" secondAttribute="bottom" constant="8" id="oJF-oE-fkF"/>
+                            <constraint firstAttribute="trailing" secondItem="fxP-6f-Alw" secondAttribute="trailing" constant="8" id="q4Y-zP-xEv"/>
+                            <constraint firstItem="dut-jN-ayP" firstAttribute="leading" secondItem="buW-PM-XJl" secondAttribute="leading" constant="8" id="tVY-Tb-deS"/>
+                            <constraint firstItem="i9c-mZ-1qR" firstAttribute="top" secondItem="AHD-id-cCu" secondAttribute="bottom" constant="8" id="udR-03-M23"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dcd-iY-F3H" appends="YES" id="ZGz-MV-hAM"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="adSwitch" destination="sHU-7j-xcX" id="Gov-xu-zZC"/>
+                        <outlet property="loginOrLogoutButton" destination="OMX-En-YSB" id="Bfm-md-2Ts"/>
+                        <outlet property="nightAdSwitch" destination="DvG-y4-maR" id="Qhb-ZX-MhV"/>
+                        <outlet property="pushSwitch" destination="XAd-H7-tZa" id="Y3U-F1-BKZ"/>
+                        <outlet property="queryButton" destination="fxP-6f-Alw" id="9Eu-yJ-OMG"/>
+                        <outlet property="registrationButton" destination="dut-jN-ayP" id="Dn9-3H-6Gl"/>
+                        <outlet property="userIdTextField" destination="VwI-QB-6qS" id="Dy4-s2-jev"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9nv-iz-TMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dcd-iY-F3H">
+                    <connections>
+                        <action selector="mainViewDidTap:" destination="Wvj-2l-y9A" id="E7C-Bn-NBs"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="356.25" y="127.8169014084507"/>
+        </scene>
+    </scenes>
+</document>
