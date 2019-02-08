@@ -15,6 +15,10 @@
  */
 @interface ToastCacheUtil : NSObject
 
+/// ---------------------------------
+/// @name Set & Get Methods
+/// ---------------------------------
+
 /**
  Caches a given value and key via a safety check.
 

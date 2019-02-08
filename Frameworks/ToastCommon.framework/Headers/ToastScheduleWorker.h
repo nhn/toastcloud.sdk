@@ -8,29 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ToastScheduleWorker : NSObject
 
-@property (nonatomic, readonly) BOOL isPaused;
-@property (nonatomic, readonly) BOOL isExecuting;
-@property (nonatomic, readonly) NSDate *lastExecuteDate;
-@property (nonatomic, readonly) NSTimeInterval interval;
+@property (nonatomic, readonly) NSTimeInterval timeInterval;
+@property (readonly) NSTimeInterval remainTimeInterval;
+@property (readonly) NSTimeInterval lastExecuteTimeInterval;
+@property (readonly, getter=isExecuting) BOOL executing;
 
-- (instancetype)initWithInterval:(NSUInteger)interval;
-- (instancetype)initWithInterval:(NSUInteger)interval block:(void(^)(void))block;
-- (instancetype)initWithLabel:(NSString *)label;
-- (instancetype)initWithLabel:(NSString *)label interval:(NSUInteger)interval;
-- (instancetype)initWithLabel:(NSString *)label interval:(NSUInteger)interval block:(void(^)(void))block;
+- (instancetype)initWithTimeInterval:(NSTimeInterval)timeInterval
+                        executeBlock:(nullable void (^) (void))executeBlock;
 
-- (void)start;
-- (void)startWithDelay:(NSUInteger)delay;
-- (void)stop;
+- (void)setExecuteBlock:(nullable void (^) (void))executeBlock;
 
 - (void)resume;
-- (void)pause;
 
-- (void)restart;
-- (void)setInterval:(NSTimeInterval)interval;
+- (void)suspend;
 
-- (NSTimeInterval)timeIntervalSinceLastExecute;
+- (void)reset;
 
 @end
+
+NS_ASSUME_NONNULL_END

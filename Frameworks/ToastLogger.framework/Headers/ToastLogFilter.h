@@ -26,6 +26,10 @@
  */
 @interface ToastLogFilter : NSObject
 
+/// ---------------------------------
+/// @name Get Methods
+/// ---------------------------------
+
 /**
  Whether or not to filter the log.
 

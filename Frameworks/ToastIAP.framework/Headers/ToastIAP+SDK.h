@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  SDK to manage in-app-purchase
  
- ## initialize
+ ## Initialize Precautions
  * ToastIAP SDK uses the UserID set in ToastSDK.
  * After you set the UserID, you need to initialize the ToastIAP Module.
  * At initialization, you must register the delegate to receive the payment result as mandatory.
@@ -31,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface ToastIAP : NSObject
 
+/// ---------------------------------
+/// @name Set Delegate(ToastInAppPurchaseDelegate)
+/// ---------------------------------
 
 /**
  Sets Delegate with a given delegate that following ToastInAppPurchaseDelegate
@@ -39,7 +42,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)setDelegate:(nullable id<ToastInAppPurchaseDelegate>)delegate;
 
-// SDK 초기화
+/// ---------------------------------
+/// @name Initialize
+/// ---------------------------------
+
 /**
  Initialize SDK
  
@@ -55,6 +61,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)initWithConfiguration:(ToastIAPConfiguration *)configuration
                      delegate:(nullable id<ToastInAppPurchaseDelegate>)delegate;
+
+/// ---------------------------------
+/// @name IAP Methods
+/// ---------------------------------
 
 // 상품 목록 조회
 /**
@@ -96,6 +106,10 @@ NS_ASSUME_NONNULL_BEGIN
  @param completionHandler The handler to execute after the list of products is complete
  */
 + (void)requestActivePurchasesWithCompletionHandler:(nullable void (^)(NSArray<ToastPurchaseResult *> * _Nullable purchases, NSError * _Nullable error))completionHandler;
+
+/// ---------------------------------
+/// @name Gets the version
+/// ---------------------------------
 
 // SDK 버전 정보
 /**

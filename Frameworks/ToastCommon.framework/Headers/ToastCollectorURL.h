@@ -20,6 +20,10 @@ typedef enum {
  */
 @interface ToastCollectorURL : NSObject
 
+/// ---------------------------------
+/// @name Gets the Server URL
+/// ---------------------------------
+
 /**
  Gets the collector server URL according to the service zone.
 

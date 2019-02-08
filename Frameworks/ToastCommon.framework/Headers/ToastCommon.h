@@ -20,7 +20,7 @@
 #import "ToastCollectorURL.h"
 #import "ToastNetworkManager.h"
 #import "ToastNetworkStatus.h"
-#import "ToastTimer.h"
+#import "ToastScheduleTask.h"
 
 //! Project version number for ToastCommon.
 FOUNDATION_EXPORT double ToastCommonVersionNumber;

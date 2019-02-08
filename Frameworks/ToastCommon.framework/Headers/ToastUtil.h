@@ -13,9 +13,6 @@
 extern NSString *const ToastUnknownString;
 extern NSString *const ToastNotApplicableString;
 
-#pragma mark - Version Util
-+ (BOOL)isiOSVersion:(int)majorVersion orLater:(BOOL)later;
-
 #pragma mark - Time Util
 + (uint64_t)unixEpochTime;
 
@@ -55,6 +52,7 @@ extern NSString *const ToastNotApplicableString;
 + (BOOL)containsValueWithKey:(NSString *)key value:(id)value sourceArray:(NSArray *)sourceArray;
 + (NSArray *)containsArrayValueWithKey:(NSString *)key value:(id)value sourceArray:(NSArray *)sourceArray;
 + (id)objectForCaseInsensitiveKey:(NSString *)key fromDictionary:(NSDictionary *)dictionary;
++ (id)objectForRecursiveKey:(NSString *)key fromDictionary:(NSDictionary *)dictionary;
 
 #pragma mark - String Util
 + (NSString *)createFileName:(NSString *)name key:(NSString *)key;
@@ -62,7 +60,6 @@ extern NSString *const ToastNotApplicableString;
 + (NSString *)nilToEmptyString:(NSString *)value;
 + (NSString *)emptyStringToNA:(NSString *)value;
 
-+ (BOOL)isEmptyObject:(id)object;
 + (BOOL)isEmptyString:(NSString *)string;
 + (BOOL)isUnknownString:(NSString *)string;
 
@@ -74,10 +71,14 @@ extern NSString *const ToastNotApplicableString;
 
 + (const char *)createThreadLabel:(NSString *)threadName projectKey:(NSString *)projectKey;
 
-#pragma mark - Json Util
+#pragma mark - Object Util
 + (NSString *)stringWithJSONObject:(id)object;
 + (id)jsonStringToObject:(NSString *)jsonString;
 + (id)jsonDataToObject:(NSData *)data;
+
++ (BOOL)isEmptyObject:(id)object;
++ (BOOL)setObjectSafety:(id)object forKey:(NSString *)key in:(NSMutableDictionary *)dictionary;
++ (id)validateObject:(id)object withDefault:(id)defaultObject;
 
 #pragma mark - Type Search Util
 + (BOOL)checkDictionaryInNSStringType:(NSDictionary *)dictionary;
@@ -98,9 +99,6 @@ extern NSString *const ToastNotApplicableString;
 #pragma mark - enum to String ToastLogLevel
 + (NSString *)logLevelToString:(int)input;
 + (int)logLevelStringToLogLevel:(NSString *)input;
-
-+ (BOOL)setObjectSafety:(id)object forKey:(NSString *)key in:(NSMutableDictionary *)dictionary;
-+ (id)validateObject:(id)object withDefault:(id)defaultObject;
 
 #pragma mark - Generate NSError
 + (NSError *)errorWithDomain:(NSString *)domain

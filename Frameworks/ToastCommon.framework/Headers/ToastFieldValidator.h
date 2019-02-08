@@ -16,8 +16,16 @@
  */
 @interface ToastFieldValidator : NSObject
 
+/// ---------------------------------
+/// @name Properties
+/// ---------------------------------
+
 /** Pre-reserved keys used by the SDK */
 @property (strong, nonatomic) NSMutableArray *ignoreKeys;
+
+/// ---------------------------------
+/// @name Get Methods
+/// ---------------------------------
 
 /**
  Gets only the fields that passed validation with given fields consisting of key and value.

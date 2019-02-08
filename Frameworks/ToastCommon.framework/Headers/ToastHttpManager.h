@@ -29,9 +29,16 @@ typedef NS_ENUM(NSInteger, ToastHttpVerbType)
  */
 @interface ToastHttpManager : NSObject
 
+/// ---------------------------------
+/// @name Properties
+/// ---------------------------------
 
 /** Response to the request  */
 @property (nonatomic, copy, readonly) NSURLResponse *URLResponse;
+
+/// ---------------------------------
+/// @name Initialize
+/// ---------------------------------
 
 /**
  Initialize a httpManager with a given url and http request method.
@@ -42,6 +49,9 @@ typedef NS_ENUM(NSInteger, ToastHttpVerbType)
  */
 + (instancetype)requestWithURL:(NSURL *)aURL method:(ToastHttpVerbType)aVerbType;
 
+/// ---------------------------------
+/// @name Set Methods
+/// ---------------------------------
 
 /**
  Sets the timeout interval for the request.
@@ -85,6 +95,10 @@ typedef NS_ENUM(NSInteger, ToastHttpVerbType)
  @param parameter string body parameter to be set the request body
  */
 - (void)setStringBodyParameter:(NSString *)parameter;
+
+/// ---------------------------------
+/// @name Networking
+/// ---------------------------------
 
 /**
  Sends the get request asynchronously.

@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, ToastHttpErrorCode) {
     ToastHttpErrorURLInvalid = 103,                 // URL 오류
     ToastHttpErrorResponseInvalid = 104,            // 서버 응답 오류
     ToastHttpErrorAlreadyInprogress = 105,          // 동일 요청 이미 수행중
-    ToastHttpErrorRequiresSecureConnection = 106,   // App Transaport Security Setting -> Allow Arbitrary Loads 미설정
+    ToastHttpErrorRequiresSecureConnection = 106,   // Allow Arbitrary Loads 미설정
 };
 
 @class ToastHttpResponse;

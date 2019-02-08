@@ -30,6 +30,11 @@ typedef enum {
     ToastLoggerConfigurationTypeUser
 } ToastLoggerConfigurationType;
 
+
+/// ---------------------------------
+/// @name Gets the setting
+/// ---------------------------------
+
 /**
  Gets the instance of ToastLoggerConfigurationSetting with the type set to the default.
 
@@ -70,6 +75,10 @@ typedef enum {
 - (ToastLoggerConfigurationType)configurationType;
 
 #pragma mark - Filter
+/// ---------------------------------
+/// @name Filter
+/// ---------------------------------
+
 /**
  Whether or not duplicate log filter is enabled.
 
@@ -162,6 +171,10 @@ typedef enum {
 - (void)setFilterLogType:(NSArray *)fiterLogType;
 
 #pragma mark - Enable, Disable
+/// ---------------------------------
+/// @name Enable, Disable
+/// ---------------------------------
+
 /**
  Whether or not sending normal log is enabled.
 

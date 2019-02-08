@@ -31,12 +31,16 @@
  * ERROR
  * FATAL
  
+
  ### Sending a log example
     [ToastLogger info:@"TOAST Log & Crash Search!"];
 
  */
 @interface ToastLogger : NSObject
 
+/// ---------------------------------
+/// @name Initialze
+/// ---------------------------------
 
 /**
  Initialize the singletone instance of a ToastInstanceLogger.
@@ -47,6 +51,10 @@
  */
 + (void)initWithConfiguration:(ToastLoggerConfiguration *)configuration;
 
+/// ---------------------------------
+/// @name Get Methods
+/// ---------------------------------
+
 /**
  Gets the configuration set for the current instance.
  
@@ -54,6 +62,9 @@
  */
 + (ToastLoggerConfiguration *)loggerConfiguration;
 
+/// ---------------------------------
+/// @name Set Methods
+/// ---------------------------------
 
 /**
  Sets a ToastLoggerDelegate.
@@ -78,6 +89,10 @@
 + (void)setShouldReportCrashHandler:(void (^)(void))handler;
 
 #pragma mark - normal log
+/// ---------------------------------
+/// @name Normal Log
+/// ---------------------------------
+
 /**
  Sends a log message of level debug.
  
@@ -114,6 +129,9 @@
 + (void)fatal:(NSString *)message;
 
 #pragma mark - normal log (userLogField)
+/// ---------------------------------
+/// @name Normal Log(userLogField)
+/// ---------------------------------
 
 /**
  Sends a log message with user fields of level debug.
@@ -156,6 +174,9 @@
 + (void)fatal:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
 
 #pragma mark - normal log (messageFormat)
+/// ---------------------------------
+/// @name Normal Log(messageFormat)
+/// ---------------------------------
 
 /**
  Sends a log message with format of level debug.
@@ -205,6 +226,9 @@
 + (void)userLog:(ToastLog *)log;
 
 #pragma mark - Version
+/// ---------------------------------
+/// @name Getting the version
+/// ---------------------------------
 
 /**
  Gets the version of ToastSDK.

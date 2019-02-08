@@ -15,6 +15,10 @@
  */
 @interface ToastStorageManager : NSObject
 
+/// ---------------------------------
+/// @name Work about filename
+/// ---------------------------------
+
 /**
  Whether a matching file name exists.
 
@@ -30,6 +34,10 @@
  @return If 'YES', Successfully removing the file. If 'NO', Failed to remove the file.
  */
 - (BOOL)removeFileName:(NSString *)fileName;
+
+/// ---------------------------------
+/// @name Save & Load file
+/// ---------------------------------
 
 /**
  Use when you need to save the contents of the array as a file.

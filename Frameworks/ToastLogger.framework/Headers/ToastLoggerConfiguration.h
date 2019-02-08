@@ -17,6 +17,10 @@
  */
 @interface ToastLoggerConfiguration : NSObject
 
+/// ---------------------------------
+/// @name Properties
+/// ---------------------------------
+
 /** Log & Crasyh Search project key on the toast console */
 @property (strong, nonatomic) NSString *projectKey;
 
@@ -27,6 +31,10 @@
 @property (assign, nonatomic) BOOL enableCrashReporter;
 
 #pragma mark - init Configuration
+/// ---------------------------------
+/// @name Initialize
+/// ---------------------------------
+
 /**
  Initialize a configuration with the given projectKey.
 
@@ -47,6 +55,10 @@
                         enableCrashReporter:(BOOL)enableCrashReporter;
 
 #pragma mark - init Detail Setting
+/// ---------------------------------
+/// @name Initialize (detail setting)
+/// ---------------------------------
+
 /**
  Initialize a configuration with the given projectKey, enableCrashReport and setting.
 
@@ -86,6 +98,10 @@
                                 serviceZone:(ToastServiceZone)serviceZone;
 
 #pragma mark - ServiceZone
+/// ---------------------------------
+/// @name Set & Get service zone
+/// ---------------------------------
+
 /**
  Sets service zone of the toast console.
 

@@ -17,14 +17,22 @@
  */
 @interface ToastIAPConfiguration : NSObject
 
+/// ---------------------------------
+/// @name Properties
+/// ---------------------------------
+
 /** The app key of Toast Console Project Key */
-@property (strong, nonatomic, readonly) NSString *appKey;
+@property (nonatomic, copy, readonly) NSString *appKey;
 
 /** The service zone(Real or Alpha) */
-@property (assign, nonatomic, readonly) ToastServiceZone serviceZone;
+@property (nonatomic) ToastServiceZone serviceZone;
+
+/// ---------------------------------
+/// @name Initialize
+/// ---------------------------------
 
 /**
- Initialize Toast IAP Configuration with a given app key.
+ Initialize ToastIAPConfiguration with a given app key.
 
  @param appKey The app key of Toast Console Project key
  @return The instance of ToastIAPConfiguration
@@ -32,13 +40,11 @@
 + (ToastIAPConfiguration *)configurationWithAppKey:(NSString *)appKey;
 
 /**
- Initialize Toast IAP Configuration with a given app key and service zone.
-
- @param appKey The app key of Toast Console Project Key
- @param serviceZone The service zone(Real or Alpha)
- @return The instance of ToastIAPConfiguration
+ Initialize ToastIAPConfiguration with a given appKey.
+ 
+ @param appKey The app key of Toast Console Project key.
+ @return The instance of ToastIAPConfiguration.
  */
-+ (ToastIAPConfiguration *)configurationWithAppKey:(NSString *)appKey
-                                       serviceZone:(ToastServiceZone)serviceZone;
+- (instancetype)initWithAppKey:(NSString *)appKey;
 
 @end

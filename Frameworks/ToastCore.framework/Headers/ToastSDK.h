@@ -14,6 +14,14 @@ typedef enum {
     ToastServiceZoneBeta    
 } ToastServiceZone;
 
+typedef enum {
+    ToastLogLevel_DEBUG = 0,
+    ToastLogLevel_INFO,
+    ToastLogLevel_WARN,
+    ToastLogLevel_ERROR,
+    ToastLogLevel_FATAL
+} ToastLogLevel;
+
 /**
  # ToastSDK
  
@@ -21,6 +29,10 @@ typedef enum {
 @interface ToastSDK : NSObject
 
 #pragma mark - init
+
+/// ---------------------------------
+/// @name Initialize
+/// ---------------------------------
 
 /**
  Gets the singletone instance of a ToastSDK.
@@ -30,6 +42,9 @@ typedef enum {
 + (ToastSDK *)sharedInstance;
 
 #pragma mark - Optional Setting
+/// ---------------------------------
+/// @name Optional Setting
+/// ---------------------------------
 
 /**
  Sets optional policies and send common collection indicator.
@@ -56,7 +71,9 @@ typedef enum {
 + (NSString *)userID;
 
 #pragma mark - DebugMode Setting
-
+/// ---------------------------------
+/// @name DebugMode Setting
+/// ---------------------------------
 
 /**
  Sets whether to set debug mode.

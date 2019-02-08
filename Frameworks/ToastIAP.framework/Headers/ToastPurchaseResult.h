@@ -30,6 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface ToastPurchaseResult : NSObject <NSCopying>
 
+/// ---------------------------------
+/// @name Properties
+/// ---------------------------------
+
 /** The userID of purchase */
 @property (nonatomic, copy, readonly) NSString *userID;
 

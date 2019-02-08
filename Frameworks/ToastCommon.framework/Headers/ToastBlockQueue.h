@@ -15,13 +15,22 @@
  */
 @interface ToastBlockQueue : NSObject
 
+/// ---------------------------------
+/// @name Initialize
+/// ---------------------------------
+
 /**
  Initialize a block queue with a given queue capacity
-
+ 
  @param queueCapacity capacity of block queue(The maximum capacity of the queue can not exceed this value)
  @return Instance of ToastBlockQueue
+ 
  */
 - (id)initWithQueueCapacity:(int)queueCapacity;
+
+/// ---------------------------------
+/// @name Queue Methods
+/// ---------------------------------
 
 /**
  Whether or not the queue is empty.

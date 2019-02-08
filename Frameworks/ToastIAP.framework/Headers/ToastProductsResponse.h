@@ -19,6 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface ToastProductsResponse : NSObject
 
+/// ---------------------------------
+/// @name Properties
+/// ---------------------------------
+
 /** A list of products whose status is active in the IAP Console and can be viewed from AppConnect (iTunseConnect). */
 @property (nonatomic, readonly) NSArray<ToastProduct *> *products;
 

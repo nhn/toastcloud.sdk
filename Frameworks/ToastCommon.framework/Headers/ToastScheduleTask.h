@@ -1,5 +1,5 @@
 //
-//  ToastTimer.h
+//  ToastScheduleTask.h
 //  ToastPush
 //
 //  Created by JooHyun Lee on 2018. 12. 21..
@@ -7,21 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ToastTimer : NSObject
+@interface ToastScheduleTask : NSObject
 
-@property (readonly) NSTimeInterval timeInterval;
-@property (readonly) NSTimeInterval remainInterval;
+@property (nonatomic, readonly) NSTimeInterval timeInterval;
+@property (readonly) NSTimeInterval remainTimeInterval;
+
 @property (readonly, getter=isExecuting) BOOL executing;
-@property (readonly, getter=isCanceled) BOOL canceled;
+@property (readonly, getter=isCancelled) BOOL cancelled;
 @property (readonly, getter=isFinished) BOOL finished;
 
 - (instancetype)initWithTimeInterval:(NSTimeInterval)timeInterval
-                     completionBlock:(nullable void (^) (void))completionBlock;
-
-- (void)setCompletionBlock:(nullable void (^) (void))completionBlock;
+                   completionHandler:(nullable void (^) (void))completionBlock;
 
 - (void)resume;
 

@@ -21,9 +21,16 @@
  */
 @interface ToastInstanceLogger : NSObject
 
+/// ---------------------------------
+/// @name Properties
+/// ---------------------------------
+
 /** The delegate that following ToastLoggerDelegate protocol */
 @property (weak, nonatomic) id<ToastLoggerDelegate> loggerDelegate;
 
+/// ---------------------------------
+/// @name Shared Instance
+/// ---------------------------------
 
 /**
  Gets the singletone instance of a ToastInstanceLogger.
@@ -36,6 +43,9 @@
  */
 + (ToastInstanceLogger *)sharedInstanceWithConfiguration:(ToastLoggerConfiguration *)configuration;
 
+/// ---------------------------------
+/// @name Gets the Configuration
+/// ---------------------------------
 
 /**
  Gets the configuration set for the current instance.
@@ -44,6 +54,10 @@
  */
 - (ToastLoggerConfiguration *)configuration;
 
+/// ---------------------------------
+/// @name Sets the user field
+/// ---------------------------------
+
 /**
  Sets the key and value of the user field to send when sending the log.
 
@@ -51,8 +65,12 @@
  @param key Key of the user field
  */
 - (void)setUserFieldWithValue:(NSString *)value forKey:(NSString *)key;
- 
+
 #pragma mark - normal log
+/// ---------------------------------
+/// @name Normal Log
+/// ---------------------------------
+
 /**
  Sends a log message of level debug.
 
@@ -85,6 +103,10 @@
 - (void)fatal:(NSString *)message;
 
 #pragma mark - normal log (messageFormat)
+/// ---------------------------------
+/// @name Normal Log (messageFormat)
+/// ---------------------------------
+
 /**
  Sends a log message with format of level debug.
  
@@ -126,6 +148,10 @@
 - (void)fatalWithFormat:(NSString *)format, ...;
 
 #pragma mark - normal log (userLogField)
+/// ---------------------------------
+/// @name Normal Log (userLogField)
+/// ---------------------------------
+
 /**
  Sends a log message with user fields of level debug.
 
@@ -167,6 +193,10 @@
 - (void)fatal:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
 
 #pragma mark - Type Setting log
+/// ---------------------------------
+/// @name Type Setting Log
+/// ---------------------------------
+
 /**
  Sends a log message with logType of level debug.
 
@@ -208,6 +238,10 @@
 - (void)fatalWithLogType:(NSString *)logType message:(NSString *)message;
 
 #pragma mark - Type Setting log (userLogField)
+/// ---------------------------------
+/// @name Type Setting Log (userLogField)
+/// ---------------------------------
+
 /**
  Sends a log message with logType of level debug.
 
@@ -254,6 +288,10 @@ Sends a log message with logType of level info.
 - (void)fatalWithLogType:(NSString *)logType format:(NSString *)format, ...;
 
 #pragma mark - Type Setting log (messageFormat)
+/// ---------------------------------
+/// @name Type Setting Log (messageFormat)
+/// ---------------------------------
+
 /**
  Sends a log message with logType and user fields of level debug.
 
@@ -300,6 +338,10 @@ Sends a log message with logType of level info.
 - (void)fatalWithLogType:(NSString *)logType message:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
 
 #pragma mark - User Log - private
+/// ---------------------------------
+/// @name User Log - private
+/// ---------------------------------
+
 /**
  Used to sends log generated manually.
 
@@ -308,6 +350,9 @@ Sends a log message with logType of level info.
 - (void)userLog:(ToastLog*)log;
 
 #pragma mark - Version
+/// ---------------------------------
+/// @name Version
+/// ---------------------------------
 
 /**
  Gets the ToastSDK version

@@ -17,6 +17,10 @@
  */
 @interface ToastLogFilterHandler : NSObject
 
+/// ---------------------------------
+/// @name Adding log filter
+/// ---------------------------------
+
 /**
  Add the log filter user want.
 

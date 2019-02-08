@@ -23,6 +23,10 @@
 @property (class, readonly, strong) ToastNetworkManager *defaultManager;
 @property (nonatomic, readonly, strong) ToastNetworkStatus *currentNetworkStatus;
 
+/// ---------------------------------
+/// @name Start & Stop monitoring
+/// ---------------------------------
+
 /**
  Start monitoring to see if the state of the network changes.
 
@@ -35,6 +39,9 @@
  */
 - (void)stopMonitoringNetworkStatusChanges;
 
+/// ---------------------------------
+/// @name Add & Remove observer
+/// ---------------------------------
 
 /**
  Add observer(ToastNetworkStatusObserver)

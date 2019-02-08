@@ -6,15 +6,8 @@
 //  Copyright © 2017년 NHNEnt. All rights reserved.
 //
 
-typedef enum {
-    ToastLogLevel_DEBUG = 0,
-    ToastLogLevel_INFO,
-    ToastLogLevel_WARN,
-    ToastLogLevel_ERROR,
-    ToastLogLevel_FATAL
-} ToastLogLevel;
-
 #import <Foundation/Foundation.h>
+#import <ToastCore/ToastCore.h>
 
 /**
  # Toastlog
@@ -24,6 +17,11 @@ typedef enum {
  There are methods to create a log.
  */
 @interface ToastLog : NSObject
+
+
+/// ---------------------------------
+/// @name Properties
+/// ---------------------------------
 
 /** unique number of log */
 @property (strong, nonatomic) NSString *transactionID;
@@ -39,6 +37,12 @@ typedef enum {
 @property (strong, nonatomic) NSDictionary<NSString*, NSString*> *userFields;
 
 
+
+/// ---------------------------------
+/// @name Craete ToastLog
+/// ---------------------------------
+
+
 /**
  Create ToastLog instance with the given level, type, message and userFields.
 
@@ -52,6 +56,12 @@ typedef enum {
                         type:(NSString *)type
                      message:(NSString *)message
                   userFields:(NSDictionary<NSString*, NSString*> *)userFields;
+
+
+
+/// ---------------------------------
+/// @name Initialize with parameters
+/// ---------------------------------
 
 /**
  Initialize log with the given level, type, message and userFields.

@@ -16,7 +16,6 @@
 + (NSString *)displayName;
 + (NSString *)appVersion;
 + (NSString *)rootViewControllerTitle;
-+ (NSString *)packageName;
 + (NSString *)buildNumber;
 + (NSString *)appState;
 
@@ -24,10 +23,8 @@
 + (NSString *)iCloudToken;
 
 #pragma mark - Device
-/** Telecommunications Service Provider(ex: SK Telecom) */
-+ (NSString *)carrier;
 
-/** name of device(ex: ) */
++ (NSString *)carrier;
 + (NSString *)deviceName;
 + (NSString *)deviceModel;
 + (NSString *)deviceLocalizedModel;
