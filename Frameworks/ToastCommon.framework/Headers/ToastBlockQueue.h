@@ -92,6 +92,9 @@
  */
 - (id)queueDequeue;
 
+
+- (NSArray *)queueObjects;
+
 //Queue 저장이 필요할 경우 사용
 /**
  Use when you need to save the contents of the queue.

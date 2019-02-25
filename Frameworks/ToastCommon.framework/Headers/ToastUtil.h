@@ -80,6 +80,10 @@ extern NSString *const ToastNotApplicableString;
 + (BOOL)setObjectSafety:(id)object forKey:(NSString *)key in:(NSMutableDictionary *)dictionary;
 + (id)validateObject:(id)object withDefault:(id)defaultObject;
 
+#pragma mark - Date Util
++ (NSString *)dateStringWithTimeInterval:(NSTimeInterval)timeInterval;
++ (NSTimeInterval)timeIntervalWithUnixTimestamp:(long long)timestamp;
+
 #pragma mark - Type Search Util
 + (BOOL)checkDictionaryInNSStringType:(NSDictionary *)dictionary;
 
