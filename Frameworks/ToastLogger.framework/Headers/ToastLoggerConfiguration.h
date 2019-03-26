@@ -2,13 +2,15 @@
 //  ToastLoggerConfiguration.h
 //  ToastLogger
 //
-//  Created by Hyup on 2017. 9. 29..
-//  Copyright © 2017년 NHNEnt. All rights reserved.
+//  Created by JooHyun Lee on 07/03/2019.
+//  Copyright © 2019 NHNEnt. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <ToastCore/ToastCore.h>
 #import "ToastLoggerConfigurationSetting.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  # ToastLoggerConfiguration
@@ -21,102 +23,79 @@
 /// @name Properties
 /// ---------------------------------
 
-/** Log & Crasyh Search project key on the toast console */
-@property (strong, nonatomic) NSString *projectKey;
+/** Log & Crasyh Search app key on the toast console */
+@property (nonatomic, copy, readonly) NSString *appKey;
 
 /** configuration setting about Toast Logger */
-@property (strong, nonatomic) ToastLoggerConfigurationSetting *setting;
+@property (nonatomic, copy, readonly) ToastLoggerConfigurationSetting *setting;
 
 /** Whether or not sending crash is enabled. */
-@property (assign, nonatomic) BOOL enableCrashReporter;
+@property (nonatomic) BOOL enableCrashReporter;
 
-#pragma mark - init Configuration
-/// ---------------------------------
-/// @name Initialize
-/// ---------------------------------
+/** TOAST Cloud service zone(Real or Alpha) */
+@property (nonatomic) ToastServiceZone serviceZone;
+
 
 /**
- Initialize a configuration with the given projectKey.
+ Initialize a configuration with the given appKey.
 
- @param projectKey Project key on the toast console
+ @param appKey AppKey on the toast console
  @return A instance of ToastLoggerConfiguration
  */
-+ (instancetype)configurationWithProjectKey:(NSString *)projectKey;
-
++ (nullable instancetype)configurationWithAppKey:(NSString *)appKey;
 
 /**
- Initialize a configuration with the given projectKey and enableCrashReport.
+ Initialize a configuration with the given appKey and enableCrashReport.
 
- @param projectKey Project key on the toast console
+ @param appKey AppKey on the toast console
  @param enableCrashReporter Whether or not sending crash is enabled
  @return A instance of ToastLoggerConfiguration
  */
-+ (instancetype)configurationWithProjectKey:(NSString *)projectKey
-                        enableCrashReporter:(BOOL)enableCrashReporter;
-
-#pragma mark - init Detail Setting
-/// ---------------------------------
-/// @name Initialize (detail setting)
-/// ---------------------------------
++ (nullable instancetype)configurationWithAppKey:(NSString *)appKey
+                             enableCrashReporter:(BOOL)enableCrashReporter;
 
 /**
- Initialize a configuration with the given projectKey, enableCrashReport and setting.
+ Initialize a configuration with the given appKey, enableCrashReport and setting.
 
- @param projectKey Project key on the toast console
+ @param appKey AppKey on the toast console
  @param enableCrashReporter Whether or not sending crash is enabled
  @param setting configuration setting about Toast Logger
  @return A instance of ToastLoggerConfiguration
  */
-+ (instancetype)configurationWithProjectKey:(NSString *)projectKey
-                        enableCrashReporter:(BOOL)enableCrashReporter
-                                    setting:(ToastLoggerConfigurationSetting *)setting;
++ (nullable instancetype)configurationWithAppKey:(NSString *)appKey
+                             enableCrashReporter:(BOOL)enableCrashReporter
+                                         setting:(nullable ToastLoggerConfigurationSetting *)setting;
 
 /**
- Initialize a configuration with the given projectKey, enableCrashReport and serviceZone.
+ Initialize a configuration with the given appKey.
  
- @param projectKey Project key on the toast console
- @param enableCrashReporter Whether or not sending crash is enabled
- @param serviceZone service zone of the toast console
+ @param appKey AppKey on the toast console
  @return A instance of ToastLoggerConfiguration
  */
-+ (instancetype)configurationWithProjectKey:(NSString *)projectKey
-                        enableCrashReporter:(BOOL)enableCrashReporter
-                                serviceZone:(ToastServiceZone)serviceZone;
+- (nullable instancetype)initWithAppKey:(NSString *)appKey;
 
 /**
- Initialize a configuration with the given projectKey, enableCrashReport, setting and serviceZone.
+ Initialize a configuration with the given appKey and enableCrashReport.
  
- @param projectKey Project key on the toast console
+ @param appKey AppKey on the toast console
+ @param enableCrashReporter Whether or not sending crash is enabled
+ @return A instance of ToastLoggerConfiguration
+ */
+- (nullable instancetype)initWithAppKey:(NSString *)appKey
+                    enableCrashReporter:(BOOL)enableCrashReporter;
+
+/**
+ Initialize a configuration with the given appKey, enableCrashReport and setting.
+ 
+ @param appKey AppKey on the toast console
  @param enableCrashReporter Whether or not sending crash is enabled
  @param setting configuration setting about Toast Logger
- @param serviceZone service zone of the toast console
  @return A instance of ToastLoggerConfiguration
  */
-+ (instancetype)configurationWithProjectKey:(NSString *)projectKey
-                        enableCrashReporter:(BOOL)enableCrashReporter
-                                    setting:(ToastLoggerConfigurationSetting *)setting
-                                serviceZone:(ToastServiceZone)serviceZone;
-
-#pragma mark - ServiceZone
-/// ---------------------------------
-/// @name Set & Get service zone
-/// ---------------------------------
-
-/**
- Sets service zone of the toast console.
-
- @param serviceZone service zone of the toast console.(Real or Alpha or Beta)
- */
-- (void)setLoggerServiceZone:(ToastServiceZone)serviceZone;
-
-/**
- Gets service zone of the toast console.
-
- @return service zone of the toast console.(Real or Alpha or Beta)
- */
-- (ToastServiceZone)loggerServiceZone;
+- (nullable instancetype)initWithAppKey:(NSString *)appKey
+                    enableCrashReporter:(BOOL)enableCrashReporter
+                                setting:(nullable ToastLoggerConfigurationSetting *)setting;
 
 @end
 
-
-
+NS_ASSUME_NONNULL_END

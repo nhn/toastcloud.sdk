@@ -6,8 +6,6 @@
 //  Copyright © 2018년 NHNEnt. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 static NSString *const ToastIAPErrorDomain = @"com.toast.iap";
 
 typedef NS_ENUM(NSUInteger, ToastIAPErrorCode) {

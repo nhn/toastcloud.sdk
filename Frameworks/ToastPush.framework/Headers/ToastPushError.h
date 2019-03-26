@@ -6,9 +6,6 @@
 //  Copyright © 2018년 NHNEnt. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-
 static NSString *const ToastPushErrorDomain = @"com.toast.push";
 
 /**

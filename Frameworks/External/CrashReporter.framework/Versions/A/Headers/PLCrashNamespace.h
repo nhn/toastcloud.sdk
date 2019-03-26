@@ -35,7 +35,7 @@
  * This may be used to avoid symbol conflicts between multiple libraries
  * that may both incorporate PLCrashReporter.
  */
-// #define PLCRASHREPORTER_PREFIX AcmeCo
+//#define PLCRASHREPORTER_PREFIX Toast
 
 
 // We need two extra layers of indirection to make CPP substitute
@@ -146,8 +146,8 @@
 #define plcrash_async_cfe_entry_apply PLNS(plcrash_async_cfe_entry_apply)
 #define plcrash_async_cfe_entry_free PLNS(plcrash_async_cfe_entry_free)
 #define plcrash_async_cfe_entry_init PLNS(plcrash_async_cfe_entry_init)
-#define lnc_plcrash_async_cfe_entry_register_count PLNS(lnc_plcrash_async_cfe_entry_register_count)
-#define lnc__plcrash_async_cfe_entry_register_list PLNS(lnc__plcrash_async_cfe_entry_register_list)
+#define plcrash_async_cfe_entry_register_count PLNS(plcrash_async_cfe_entry_register_count)
+#define plcrash_async_cfe_entry_register_list PLNS(plcrash_async_cfe_entry_register_list)
 #define plcrash_async_cfe_entry_return_address_register PLNS(plcrash_async_cfe_entry_return_address_register)
 #define plcrash_async_cfe_entry_stack_adjustment PLNS(plcrash_async_cfe_entry_stack_adjustment)
 #define plcrash_async_cfe_entry_stack_offset PLNS(plcrash_async_cfe_entry_stack_offset)
@@ -178,14 +178,14 @@
 #define plcrash_async_macho_header_size PLNS(plcrash_async_macho_header_size)
 #define plcrash_async_macho_map_section PLNS(plcrash_async_macho_map_section)
 #define plcrash_async_macho_map_segment PLNS(plcrash_async_macho_map_segment)
-#define lnc_plcrash_async_macho_mapped_segment_free PLNS(lnc_plcrash_async_macho_mapped_segment_free)
+#define plcrash_async_macho_mapped_segment_free PLNS(plcrash_async_macho_mapped_segment_free)
 #define plcrash_async_macho_next_command PLNS(plcrash_async_macho_next_command)
-#define lnc__plcrash_async_macho_next_command_type PLNS(lnc__plcrash_async_macho_next_command_type)
+#define plcrash_async_macho_next_command_type PLNS(plcrash_async_macho_next_command_type)
 #define plcrash_async_macho_string_free PLNS(plcrash_async_macho_string_free)
 #define plcrash_async_macho_string_get_length PLNS(plcrash_async_macho_string_get_length)
 #define plcrash_async_macho_string_get_pointer PLNS(plcrash_async_macho_string_get_pointer)
 #define plcrash_async_macho_string_init PLNS(plcrash_async_macho_string_init)
-#define lnc_plcrash_async_macho_symtab_reader_free PLNS(lnc_plcrash_async_macho_symtab_reader_free)
+#define plcrash_async_macho_symtab_reader_free PLNS(plcrash_async_macho_symtab_reader_free)
 #define plcrash_async_macho_symtab_reader_init PLNS(plcrash_async_macho_symtab_reader_init)
 #define plcrash_async_macho_symtab_reader_read PLNS(plcrash_async_macho_symtab_reader_read)
 #define plcrash_async_macho_symtab_reader_symbol_name PLNS(plcrash_async_macho_symtab_reader_symbol_name)
@@ -205,7 +205,7 @@
 #define plcrash_async_objc_cache_free PLNS(plcrash_async_objc_cache_free)
 #define plcrash_async_objc_cache_init PLNS(plcrash_async_objc_cache_init)
 #define plcrash_async_objc_find_method PLNS(plcrash_async_objc_find_method)
-#define lnc__plcrash_async_objc_supports_nonptr_isa PLNS(lnc__plcrash_async_objc_supports_nonptr_isa)
+#define plcrash_async_objc_supports_nonptr_isa PLNS(plcrash_async_objc_supports_nonptr_isa)
 #define plcrash_async_read_addr PLNS(plcrash_async_read_addr)
 #define plcrash_async_signal_sigcode PLNS(plcrash_async_signal_sigcode)
 #define plcrash_async_signal_signame PLNS(plcrash_async_signal_signame)
@@ -215,10 +215,10 @@
 #define plcrash_async_symbol_cache_free PLNS(plcrash_async_symbol_cache_free)
 #define plcrash_async_symbol_cache_init PLNS(plcrash_async_symbol_cache_init)
 #define plcrash_async_task_memcpy PLNS(plcrash_async_task_memcpy)
-#define lnc_plcrash_async_task_read_uint16 PLNS(lnc_plcrash_async_task_read_uint16)
+#define plcrash_async_task_read_uint16 PLNS(plcrash_async_task_read_uint16)
 #define plcrash_async_task_read_uint32 PLNS(plcrash_async_task_read_uint32)
 #define plcrash_async_task_read_uint64 PLNS(plcrash_async_task_read_uint64)
-#define lnc_plcrash_async_task_read_uint8 PLNS(lnc_plcrash_async_task_read_uint8)
+#define plcrash_async_task_read_uint8 PLNS(plcrash_async_task_read_uint8)
 #define plcrash_async_thread_state_clear_all_regs PLNS(plcrash_async_thread_state_clear_all_regs)
 #define plcrash_async_thread_state_clear_reg PLNS(plcrash_async_thread_state_clear_reg)
 #define plcrash_async_thread_state_clear_volatile_regs PLNS(plcrash_async_thread_state_clear_volatile_regs)
@@ -231,7 +231,7 @@
 #define plcrash_async_thread_state_get_reg_name PLNS(plcrash_async_thread_state_get_reg_name)
 #define plcrash_async_thread_state_get_stack_direction PLNS(plcrash_async_thread_state_get_stack_direction)
 #define plcrash_async_thread_state_has_reg PLNS(plcrash_async_thread_state_has_reg)
-#define lnc__plcrash_async_thread_state_init PLNS(lnc__plcrash_async_thread_state_init)
+#define plcrash_async_thread_state_init PLNS(plcrash_async_thread_state_init)
 #define plcrash_async_thread_state_mach_thread_init PLNS(plcrash_async_thread_state_mach_thread_init)
 #define plcrash_async_thread_state_map_dwarf_to_reg PLNS(plcrash_async_thread_state_map_dwarf_to_reg)
 #define plcrash_async_thread_state_map_reg_to_dwarf PLNS(plcrash_async_thread_state_map_reg_to_dwarf)
@@ -247,8 +247,8 @@
 #define plcrash_nasync_image_list_free PLNS(plcrash_nasync_image_list_free)
 #define plcrash_nasync_image_list_init PLNS(plcrash_nasync_image_list_init)
 #define plcrash_nasync_image_list_remove PLNS(plcrash_nasync_image_list_remove)
-#define plcrash_async_macho_free PLNS(plcrash_async_macho_free)
-#define plcrash_async_macho_init PLNS(plcrash_async_macho_init)
+#define plcrash_nasync_macho_free PLNS(plcrash_nasync_macho_free)
+#define plcrash_nasync_macho_init PLNS(plcrash_nasync_macho_init)
 #define plcrash_populate_error PLNS(plcrash_populate_error)
 #define plcrash_populate_mach_error PLNS(plcrash_populate_mach_error)
 #define plcrash_populate_posix_error PLNS(plcrash_populate_posix_error)
@@ -268,7 +268,7 @@
 #define plframe_cursor_read_dwarf_unwind PLNS(plframe_cursor_read_dwarf_unwind)
 #define plframe_cursor_read_frame_ptr PLNS(plframe_cursor_read_frame_ptr)
 #define plframe_cursor_thread_init PLNS(plframe_cursor_thread_init)
-#define lnc_plframe_strerror PLNS(lnc_plframe_strerror)
+#define plframe_strerror PLNS(plframe_strerror)
 #define plframe_test_thread_spawn PLNS(plframe_test_thread_spawn)
 #define plframe_test_thread_stop PLNS(plframe_test_thread_stop)
 

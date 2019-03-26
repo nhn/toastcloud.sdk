@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  * [ToastInAppPurchaseDelegate didReceivePurchaseResult:]
  
  */
-@interface ToastPurchaseResult : NSObject <NSCopying>
+@interface ToastPurchaseResult : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------
 /// @name Properties
@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *productIdentifier;
 
 /** The product type of purchase */
-@property (nonatomic, assign, readonly) ToastProductType productType;
+@property (nonatomic, readonly) ToastProductType productType;
 
 /** The price of purchase */
 @property (nonatomic, copy, readonly) NSDecimalNumber *price;

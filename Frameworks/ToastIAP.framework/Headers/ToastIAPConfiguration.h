@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <ToastCore/ToastCore.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  # ToastIAPConfiguration
  
  Configuration for ToastIAP SDK initialization.
  
  */
-@interface ToastIAPConfiguration : NSObject
+@interface ToastIAPConfiguration : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------
 /// @name Properties
@@ -37,7 +39,7 @@
  @param appKey The app key of Toast Console Project key
  @return The instance of ToastIAPConfiguration
  */
-+ (ToastIAPConfiguration *)configurationWithAppKey:(NSString *)appKey;
++ (nullable instancetype)configurationWithAppKey:(NSString *)appKey;
 
 /**
  Initialize ToastIAPConfiguration with a given appKey.
@@ -45,6 +47,8 @@
  @param appKey The app key of Toast Console Project key.
  @return The instance of ToastIAPConfiguration.
  */
-- (instancetype)initWithAppKey:(NSString *)appKey;
+- (nullable instancetype)initWithAppKey:(NSString *)appKey;
 
 @end
+
+NS_ASSUME_NONNULL_END

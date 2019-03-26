@@ -17,7 +17,10 @@
 typedef NS_ENUM(NSInteger, ToastHttpVerbType)
 {
     ToastHttpVerbTypeGET,
-    ToastHttpVerbTypePOST
+    ToastHttpVerbTypePOST,
+    ToastHttpVerbTypeDELETE,
+    ToastHttpVerbTypePUT,
+    ToastHttpVerbTypePATCH
 };
 
 

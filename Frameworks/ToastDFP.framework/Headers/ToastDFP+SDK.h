@@ -9,26 +9,31 @@
 #import <Foundation/Foundation.h>
 #import <ToastCore/ToastCore.h>
 #import "ToastDFPUserEvent.h"
-#import "ToastDFPConfiguration.h"
 
-@class ToastDFPConfiguration;
+NS_ASSUME_NONNULL_BEGIN
+
+typedef NS_ENUM(NSInteger, ToastDFPPriority) {
+    ToastDFPPriority_All = 0,
+    ToastDFPPriority_1,
+    ToastDFPPriority_2,
+    ToastDFPPriority_3,
+    ToastDFPPriority_4,
+};
 
 @interface ToastDFP : NSObject
-
-+ (void)initWithConfiguration:(ToastDFPConfiguration *)configuration;
 
 + (BOOL)startService;
 + (void)stopService;
 
-+ (void)startUpdatingLocation;
-+ (void)stopUpdatingLocation;
-
 + (void)setPriority:(ToastDFPPriority)priority;
 
-+ (void)setUserFieldWithValue:(NSString *)value forKey:(NSString *)key;
++ (void)setUserFieldWithValue:(nullable NSString *)value forKey:(NSString *)key;
++ (void)removeUserFieldForKey:(NSString *)key;
 + (void)removeAllUserFields;
-+ (BOOL)sendUserEvent:(ToastDFPUserEvent *)event;
++ (BOOL)sendUserEvent:(nullable ToastDFPUserEvent *)event;
 
 + (NSString *)version;
 
 @end
+
+NS_ASSUME_NONNULL_END

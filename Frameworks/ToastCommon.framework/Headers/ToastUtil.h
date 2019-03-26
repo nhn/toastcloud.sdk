@@ -101,8 +101,9 @@ extern NSString *const ToastNotApplicableString;
 + (NSArray *)getCrashDataKey;
 
 #pragma mark - enum to String ToastLogLevel
-+ (NSString *)logLevelToString:(int)input;
-+ (int)logLevelStringToLogLevel:(NSString *)input;
++ (NSString *)logLevelToString:(NSInteger)level;
++ (NSInteger)logLevelStringToLogLevel:(NSString *)level;
++ (NSString *)serviceZoneToString:(NSInteger)serviceZone;
 
 #pragma mark - Generate NSError
 + (NSError *)errorWithDomain:(NSString *)domain

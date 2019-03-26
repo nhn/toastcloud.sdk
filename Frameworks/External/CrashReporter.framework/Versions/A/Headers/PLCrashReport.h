@@ -120,6 +120,8 @@ typedef struct _PLCrashReportDecoder _PLCrashReportDecoder;
 
 - (PLCrashReportBinaryImageInfo *) imageForAddress: (uint64_t) address;
 
+- (PLCrashReportBinaryImageInfo *) imageForToastAddress: (NSNumber *) address;
+
 /**
  * System information.
  */

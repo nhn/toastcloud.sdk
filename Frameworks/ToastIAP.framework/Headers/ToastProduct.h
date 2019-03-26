@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  The type of product.
 
@@ -21,14 +23,12 @@ typedef NS_ENUM(NSInteger, ToastProductType) {
     ToastProductTypeAutoRenewableSubscription = 2,
 };
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  # ToastProduct
  
  The information of product.
  */
-@interface ToastProduct : NSObject
+@interface ToastProduct : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------
 /// @name Properties
@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *productIdentifier;
 
 /** The sequence of product. */
-@property (nonatomic, assign, readonly) long productSeq;
+@property (nonatomic, readonly) long productSeq;
 
 /** The name of product */
 @property (nonatomic, copy, readonly, nullable) NSString *productName;
@@ -56,19 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly, nullable) NSString *localizedPrice;
 
 /** If 'YES', the product is currently active. If 'NO', it is deactive. */
-@property (nonatomic, assign, readonly) BOOL active;
-
-
-/// ---------------------------------
-/// @name Gets the isActive
-/// ---------------------------------
-
-/**
- Whether or not the product is active.
-
- @return If 'YES', the product is currently active. If 'NO', it is deactive
- */
-- (BOOL)isActive;
+@property (nonatomic, readonly, getter=isActive) BOOL active;
 
 @end
 

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <ToastCore/ToastCore.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  # Toastlog
  
@@ -16,7 +18,7 @@
  
  There are methods to create a log.
  */
-@interface ToastLog : NSObject
+@interface ToastLog : NSObject <NSCoding, NSCopying>
 
 
 /// ---------------------------------
@@ -24,17 +26,17 @@
 /// ---------------------------------
 
 /** unique number of log */
-@property (strong, nonatomic) NSString *transactionID;
+@property (nonatomic, copy, readonly) NSString *transactionID;
 /** level of log (debug, info, warn, error, fatal) */
-@property (assign, nonatomic) ToastLogLevel level;
+@property (nonatomic, readonly) ToastLogLevel level;
 /** type of log*/
-@property (strong, nonatomic) NSString *type;
+@property (nonatomic, copy, readonly) NSString *type;
 /** message of log */
-@property (strong, nonatomic) NSString *message;
+@property (nonatomic, copy, readonly) NSString *message;
 /** created time of log (unix epoch) */
-@property (strong, nonatomic) NSNumber *createTime;
+@property (nonatomic, copy, readonly) NSNumber *createTime;
 /** additional fileds(key, value) of log */
-@property (strong, nonatomic) NSDictionary<NSString*, NSString*> *userFields;
+@property (nonatomic, copy, readonly) NSDictionary<NSString *, NSString *> *userFields;
 
 
 
@@ -55,7 +57,7 @@
 + (instancetype)logWithLevel:(ToastLogLevel)level
                         type:(NSString *)type
                      message:(NSString *)message
-                  userFields:(NSDictionary<NSString*, NSString*> *)userFields;
+                  userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 
 
@@ -75,6 +77,8 @@
 - (instancetype)initWithLevel:(ToastLogLevel)level
                          type:(NSString *)type
                       message:(NSString *)message
-                   userFields:(NSDictionary<NSString*, NSString*> *)userFields;
+                   userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 @end
+
+NS_ASSUME_NONNULL_END

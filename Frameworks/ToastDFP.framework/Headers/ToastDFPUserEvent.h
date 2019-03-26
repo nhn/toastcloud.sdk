@@ -8,17 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ToastDFPUserEvent : NSObject
+NS_ASSUME_NONNULL_BEGIN
 
-@property (nonatomic, copy) NSString *name;
+@interface ToastDFPUserEvent : NSObject <NSCoding, NSCopying>
 
-- (instancetype)initWithName:(NSString *)name;
-+ (instancetype)userEventWithName:(NSString *)name;
+@property (nonatomic, copy, readonly) NSString *name;
 
-- (void)setValue:(id)value forKey:(NSString *)key;
-- (id)valueForKey:(NSString *)key;
+@property (nonatomic, copy, readonly) NSDictionary<NSString *, id> *allValues;
+
+
++ (nullable instancetype)userEventWithName:(NSString *)name;
+
+- (nullable instancetype)initWithName:(NSString *)name;
+
+- (void)setValue:(nullable id)value forKey:(NSString *)key;
+
+- (nullable id)valueForKey:(NSString *)key;
+
 - (void)removeValueForKey:(NSString *)key;
+
 - (void)removeAllValues;
-- (NSDictionary *)allValues;
 
 @end
+
+NS_ASSUME_NONNULL_END

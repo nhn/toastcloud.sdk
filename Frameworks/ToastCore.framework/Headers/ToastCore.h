@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 #import "ToastSDK.h"
-#import "ToastHttpRequest.h"
 
 //! Project version number for ToastCore.
 FOUNDATION_EXPORT double ToastCoreVersionNumber;

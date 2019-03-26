@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <ToastCore/ToastCore.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NSString *ToastPushType NS_STRING_ENUM;
 
 /** When the type is not a specified value. */
@@ -20,9 +22,8 @@ extern ToastPushType const ToastPushTypeAPNS;
 /** When the type is VoIP. */
 extern ToastPushType const ToastPushTypeVoIP;
 
-NS_ASSUME_NONNULL_BEGIN
 
-@interface ToastPushConfiguration : NSObject
+@interface ToastPushConfiguration : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------
 /// @name Properties
@@ -47,11 +48,30 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Initialize ToastPushConfiguration with a given appKey.
+ 
+ @param appKey The app key of Toast Console Project key.
+ @return The instance of ToastPushConfiguration.
+ */
++ (nullable instancetype)configurationWithAppKey:(NSString *)appKey;
+
+/**
+ Initialize ToastPushConfiguration with a given appKey and pushTypes.
+ 
+ @param appKey The app key of Toast Console Project key.
+ @param pushTypes The pushType. (APNs or VoIP)
+ @return The instance of ToastPushConfiguration.
+ */
++ (nullable instancetype)configurationWithAppKey:(NSString *)appKey
+                                       pushTypes:(NSSet<ToastPushType> *)pushTypes;
+
+
+/**
+ Initialize ToastPushConfiguration with a given appKey.
 
  @param appKey The app key of Toast Console Project key.
  @return The instance of ToastPushConfiguration.
  */
-- (instancetype)initWithAppKey:(NSString *)appKey;
+- (nullable instancetype)initWithAppKey:(NSString *)appKey;
 
 /**
  Initialize ToastPushConfiguration with a given appKey and pushTypes.
@@ -60,8 +80,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param pushTypes The pushType. (APNs or VoIP)
  @return The instance of ToastPushConfiguration.
  */
-- (instancetype)initWithAppKey:(NSString *)appKey
-                     pushTypes:(NSSet<ToastPushType> *)pushTypes;
+- (nullable instancetype)initWithAppKey:(NSString *)appKey
+                              pushTypes:(NSSet<ToastPushType> *)pushTypes;
 
 @end
 

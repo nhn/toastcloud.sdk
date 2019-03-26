@@ -10,6 +10,8 @@
 #import "ToastLoggerConfiguration.h"
 #import "ToastLogFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  # ToastLogFilterHandler
  
@@ -27,7 +29,8 @@
  @param logFilter The filter to add
  @param configuration The configuration about Toast Logger
  */
-+ (void)addLogFilter:(ToastLogFilter * __nonnull)logFilter
-     withLoggerConfiguration:(ToastLoggerConfiguration * __nonnull)configuration;
++ (void)addLogFilter:(nullable ToastLogFilter *)logFilter withLoggerConfiguration:(nullable ToastLoggerConfiguration *)configuration;
 
 @end
+
+NS_ASSUME_NONNULL_END

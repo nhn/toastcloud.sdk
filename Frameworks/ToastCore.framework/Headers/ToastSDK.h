@@ -8,19 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
-    ToastServiceZoneReal = 0,
-    ToastServiceZoneAlpha,
-    ToastServiceZoneBeta    
-} ToastServiceZone;
+NS_ASSUME_NONNULL_BEGIN
 
-typedef enum {
+typedef NS_ENUM(NSInteger, ToastServiceZone) {
+    ToastServiceZoneReal = 0,
+    ToastServiceZoneAlpha = 1,
+    ToastServiceZoneBeta = 2,
+};
+
+typedef NS_ENUM(NSInteger, ToastLogLevel) {
     ToastLogLevel_DEBUG = 0,
-    ToastLogLevel_INFO,
-    ToastLogLevel_WARN,
-    ToastLogLevel_ERROR,
-    ToastLogLevel_FATAL
-} ToastLogLevel;
+    ToastLogLevel_INFO = 1,
+    ToastLogLevel_WARN = 2,
+    ToastLogLevel_ERROR = 3,
+    ToastLogLevel_FATAL = 4,
+};
 
 /**
  # ToastSDK
@@ -51,7 +53,7 @@ typedef enum {
 
  @param array List of optional policies to set.
  */
-+ (void)setOptionalPolicyWithArray:(NSArray<NSString *>*)array;
++ (void)setOptionalPolicyWithArray:(nullable NSArray<NSString *> *)array;
 
 /**
  Sets the user ID for ToastSDK.
@@ -61,14 +63,14 @@ typedef enum {
  @note The UserID that is set is common to each module of ToastSDK.
  @note Every time you call ToastLogger's log sending API, the user ID you set is sent to the server along with the log.
  */
-+ (void)setUserID:(NSString *)userID;
++ (void)setUserID:(nullable NSString *)userID;
 
 /**
  User ID for ToastSDK.
 
  @return Currently configured user ID
  */
-+ (NSString *)userID;
++ (nullable NSString *)userID;
 
 #pragma mark - DebugMode Setting
 /// ---------------------------------
@@ -97,3 +99,5 @@ typedef enum {
 + (NSString *)version;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -13,6 +13,7 @@
 #import "ToastLoggerConfiguration.h"
 #import "ToastLoggerDelegate.h"
 
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  # ToastInstanceLogger
@@ -26,7 +27,7 @@
 /// ---------------------------------
 
 /** The delegate that following ToastLoggerDelegate protocol */
-@property (weak, nonatomic) id<ToastLoggerDelegate> loggerDelegate;
+@property (weak, nonatomic, nullable) id<ToastLoggerDelegate> loggerDelegate;
 
 /// ---------------------------------
 /// @name Shared Instance
@@ -41,7 +42,7 @@
  @note The parameter, configuration includes project key, crashEnabled and ToastLoggerConfigurationSetting
  
  */
-+ (ToastInstanceLogger *)sharedInstanceWithConfiguration:(ToastLoggerConfiguration *)configuration;
++ (nullable ToastInstanceLogger *)sharedInstanceWithConfiguration:(nullable ToastLoggerConfiguration *)configuration;
 
 /// ---------------------------------
 /// @name Gets the Configuration
@@ -52,7 +53,7 @@
 
  @return The configuration currently set
  */
-- (ToastLoggerConfiguration *)configuration;
+- (nullable ToastLoggerConfiguration *)configuration;
 
 /// ---------------------------------
 /// @name Sets the user field
@@ -64,7 +65,7 @@
  @param value Value of the user field
  @param key Key of the user field
  */
-- (void)setUserFieldWithValue:(NSString *)value forKey:(NSString *)key;
+- (void)setUserFieldWithValue:(nullable NSString *)value forKey:(NSString *)key;
 
 #pragma mark - normal log
 /// ---------------------------------
@@ -158,7 +159,7 @@
  @param message The message to send
  @param userFields You have additional information to send.
  */
-- (void)debug:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
+- (void)debug:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 /**
  Sends a log message with user fields of level info.
@@ -166,7 +167,7 @@
  @param message The message to send
  @param userFields You have additional information to send.
  */
-- (void)info:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
+- (void)info:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 /**
  Sends a log message with user fields of level warn.
@@ -174,7 +175,7 @@
  @param message The message to send
  @param userFields You have additional information to send.
  */
-- (void)warn:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
+- (void)warn:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 /**
  Sends a log message with user fields of level error.
@@ -182,7 +183,7 @@
  @param message The message to send
  @param userFields You have additional information to send.
  */
-- (void)error:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
+- (void)error:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 /**
  Sends a log message with user fields of level fatal.
@@ -190,7 +191,7 @@
  @param message The message to send
  @param userFields You have additional information to send.
  */
-- (void)fatal:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
+- (void)fatal:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 #pragma mark - Type Setting log
 /// ---------------------------------
@@ -299,7 +300,7 @@ Sends a log message with logType of level info.
  @param message The message to send
  @param userFields You have additional information to send.
  */
-- (void)debugWithLogType:(NSString *)logType message:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
+- (void)debugWithLogType:(NSString *)logType message:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 /**
  Sends a log message with logType and user fields of level info.
@@ -308,7 +309,7 @@ Sends a log message with logType of level info.
  @param message The message to send
  @param userFields You have additional information to send.
  */
-- (void)infoWithLogType:(NSString *)logType message:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
+- (void)infoWithLogType:(NSString *)logType message:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 /**
  Sends a log message with logType and user fields of level warn.
@@ -317,7 +318,7 @@ Sends a log message with logType of level info.
  @param message The message to send
  @param userFields You have additional information to send.
  */
-- (void)warnWithLogType:(NSString *)logType message:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
+- (void)warnWithLogType:(NSString *)logType message:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 /**
  Sends a log message with logType and user fields of level error.
@@ -326,7 +327,7 @@ Sends a log message with logType of level info.
  @param message The message to send
  @param userFields You have additional information to send.
  */
-- (void)errorWithLogType:(NSString *)logType message:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
+- (void)errorWithLogType:(NSString *)logType message:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 /**
  Sends a log message with logType and user fields of level fatal.
@@ -335,7 +336,7 @@ Sends a log message with logType of level info.
  @param message The message to send
  @param userFields You have additional information to send.
  */
-- (void)fatalWithLogType:(NSString *)logType message:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
+- (void)fatalWithLogType:(NSString *)logType message:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 #pragma mark - User Log - private
 /// ---------------------------------
@@ -347,7 +348,7 @@ Sends a log message with logType of level info.
 
  @param log ToastLog to send
  */
-- (void)userLog:(ToastLog*)log;
+- (void)userLog:(nullable ToastLog *)log;
 
 #pragma mark - Version
 /// ---------------------------------
@@ -363,6 +364,4 @@ Sends a log message with logType of level info.
 
 @end
 
-
-
-
+NS_ASSUME_NONNULL_END

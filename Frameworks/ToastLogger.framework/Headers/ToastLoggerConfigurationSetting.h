@@ -2,13 +2,21 @@
 //  ToastLoggerConfigurationSetting.h
 //  ToastLogger
 //
-//  Created by Hyup on 2017. 10. 18..
-//  Copyright © 2017년 NHNEnt. All rights reserved.
+//  Created by JooHyun Lee on 07/03/2019.
+//  Copyright © 2019 NHNEnt. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <ToastCommon/ToastCommon.h>
 #import "ToastLog.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+typedef NS_ENUM(NSInteger, ToastLoggerConfigurationType) {
+    ToastLoggerConfigurationTypeDefault = 0,
+    ToastLoggerConfigurationTypeConsole = 1,
+    ToastLoggerConfigurationTypeUser = 2,
+};
 
 /**
  # ToastLoggerConfigurationSetting
@@ -22,13 +30,46 @@
  * user setting (Set it as you want.)
  
  */
-@interface ToastLoggerConfigurationSetting : NSObject
+@interface ToastLoggerConfigurationSetting : NSObject <NSCoding, NSCopying>
 
-typedef enum {
-    ToastLoggerConfigurationTypeDefault = 0,
-    ToastLoggerConfigurationTypeConsole,
-    ToastLoggerConfigurationTypeUser
-} ToastLoggerConfigurationType;
+@property (nonatomic, readonly) ToastLoggerConfigurationType configurationType;
+
+
+#pragma mark - Log
+/** Whether or not sending normal log is enabled. **/
+@property (nonatomic, getter=isEnableNormalLog) BOOL enableNormalLog;
+
+/** Whether or not sending crash log is enabled. **/
+@property (nonatomic, getter=isEnableCrashLog) BOOL enableCrashLog;
+
+/** Whether or not duplicate log filter is enabled. **/
+@property (nonatomic, getter=isEnableLogDuplicateFilter) BOOL enableLogDuplicateFilter;
+
+
+#pragma mark - Filter
+/** The time to check for duplicate logs **/
+@property (nonatomic, copy, nullable) NSNumber *filterLogDuplicateExpiredTime;
+
+/** Whether or not log level filter is enabled. **/
+@property (nonatomic, getter=isEnableLogLevelFilter) BOOL enableLogLevelFilter;
+
+/** The log level to filter. **/
+@property (nonatomic) ToastLogLevel filterLogLevel;
+
+/** Whether or not log type filter is enabled. **/
+@property (nonatomic, getter=isEnableLogTypeFilter) BOOL enableLogTypeFilter;
+
+/** the log types to filter. The types in this array are not sent. **/
+@property (nonatomic, copy, nullable) NSArray<NSString *> *filterLogType;
+
+
+#pragma mark - Network Insight
+@property (nonatomic, getter=isEnableNetworkInsight) BOOL enableNetworkInsight;
+
+@property (nonatomic, copy, nullable) NSArray<NSString *> *networkInsightsURLs;
+
+@property (nonatomic, copy, nullable) NSString *networkInsightsVersion;
+
 
 
 /// ---------------------------------
@@ -68,141 +109,32 @@ typedef enum {
                           enableLogLevelFilter:(BOOL)enableLogLevelFilter
                                 filterLogLevel:(ToastLogLevel)filterLogLevel
                            enableLogTypeFilter:(BOOL)enableLogTypeFilter
-                            filterLogTypeArray:(NSArray *)filterLogTypeArray
+                            filterLogTypeArray:(nullable NSArray *)filterLogTypeArray
                       enableLogDuplicateFilter:(BOOL)enableLogDuplicateFilter
-                 filterLogDuplicateExpiredTime:(NSNumber *)filterLogDuplicateExpiredTime;
-
-- (ToastLoggerConfigurationType)configurationType;
-
-#pragma mark - Filter
-/// ---------------------------------
-/// @name Filter
-/// ---------------------------------
+                 filterLogDuplicateExpiredTime:(nullable NSNumber *)filterLogDuplicateExpiredTime;
 
 /**
- Whether or not duplicate log filter is enabled.
-
- @return If `YES`, enables filtering the same log. If `NO`, disable it.
- */
-- (BOOL)isEnableLogDuplicateFilter;
-
-/**
- Sets whether duplicate log filter is enabled or disabled.
-
- @param enable If `YES`, enables filtering the same log. If `NO`, disable it.
- */
-- (void)setEnableLogDuplicateFilter:(BOOL)enable;
-
-
-/**
- Gets the time to check for duplicate logs
-
- @return Time to check for duplicate logs.(2 - 120 second)
- */
-- (NSNumber *)filterLogDuplicateExpiredTime;
-
-
-/**
- Sets the time to check for duplicate logs
-
+ Gets the instance of ToastLoggerConfigurationSetting with the user's setting values.
+ 
+ @param enableNormalLog If `YES`, enables sending normal log. If `NO`, disable it.
+ @param enableCrashLog If `YES`, enables sending crash log. If `NO`, disable it.
+ @param enableLogLevelFilter If `YES`, enables filtering by log level. If `NO`, disable it.
+ @param filterLogLevel The log level to filter. (If this value set to 'warn', only warn, error and fatal can be sent)
+ @param enableLogTypeFilter If `YES`, enables filtering by log type. If `NO`, disable it.
+ @param filterLogTypeArray The log types to filter. The types in this array are not sent.
+ @param enableLogDuplicateFilter If `YES`, enables filtering the same log. If `NO`, disable it.
  @param filterLogDuplicateExpiredTime Time to check for duplicate logs.(2 - 120 second)
+ @return The instance of ToastLoggerConfigurationSetting with the type set to the user values.
  */
-- (void)setFilterLogDuplicateExpiredTime:(NSNumber *)filterLogDuplicateExpiredTime;
-
-/**
- Whether or not log level filter is enabled.
-
- @return If `YES`, enables filtering by log level. If `NO`, disable it.
- */
-- (BOOL)isEnableLogLevelFilter;
-
-
-/**
- Sets whether log level filter is enabled or disabled.
-
- @param enable If `YES`, enables filtering by log level. If `NO`, disable it.
- */
-- (void)setEnableLogLevelFilter:(BOOL)enable;
-
-
-/**
- Gets the log level to filter.
-
- @return The log level to filter. (If this value set to 'warn', only warn, error and fatal can be sent)
- */
-- (ToastLogLevel)filterLogLevel;
-
-
-/**
- Sets the log level to filter.
-
- @param logLevel The log level to filter. (If this value set to 'warn', only warn, error and fatal can be sent)
- */
-- (void)setFilterLogLevel:(ToastLogLevel)logLevel;
-
-/**
- Whether or not log type filter is enabled.
-
- @return If `YES`, enables filtering by log type. If `NO`, disable it.
- */
-- (BOOL)isEnableLogTypeFilter;
-
-
-/**
- Sets whether or not log type filter is enabled.
-
- @param enable If `YES`, enables filtering by log type. If `NO`, disable it.
- */
-- (void)setEnableLogTypeFilter:(BOOL)enable;
-
-/**
- Gets the log types to filter. The types in this array are not sent.
-
- @return The log types to filter. The types in this array are not sent.
- */
-- (NSArray *)filterLogType;
-
-
-/**
- Sets the log types to filter. The types in this array are not sent.
-
- @param fiterLogType The log types to filter. The types in this array are not sent.
- */
-- (void)setFilterLogType:(NSArray *)fiterLogType;
-
-#pragma mark - Enable, Disable
-/// ---------------------------------
-/// @name Enable, Disable
-/// ---------------------------------
-
-/**
- Whether or not sending normal log is enabled.
-
- @return If `YES`, enables sending normal log. If `NO`, disable it.
- */
-- (BOOL)isEnableNormalLog;
-
-/**
- Sets whether or not sending normal log is enabled.
-
- @param enable If `YES`, enables sending normal log. If `NO`, disable it.
- */
-- (void)enableNormalLog:(BOOL)enable;
-
-
-/**
- Whether or not sending crash log is enabled.
- 
- @return If `YES`, enables sending crash log. If `NO`, disable it.
- */
-- (BOOL)isEnableCrashLog;
-
-/**
- Sets whether or not sending crash log is enabled.
- 
- @param enable If `YES`, enables sending crash log. If `NO`, disable it.
- */
-- (void)enableCrashLog:(BOOL)enable;
+- (instancetype)initWithEnableNormalLog:(BOOL)enableNormalLog
+                         enableCrashLog:(BOOL)enableCrashLog
+                   enableLogLevelFilter:(BOOL)enableLogLevelFilter
+                         filterLogLevel:(ToastLogLevel)filterLogLevel
+                    enableLogTypeFilter:(BOOL)enableLogTypeFilter
+                     filterLogTypeArray:(nullable NSArray *)filterLogTypeArray
+               enableLogDuplicateFilter:(BOOL)enableLogDuplicateFilter
+          filterLogDuplicateExpiredTime:(nullable NSNumber *)filterLogDuplicateExpiredTime;
 
 @end
 
+NS_ASSUME_NONNULL_END

@@ -11,15 +11,17 @@
 #import "ToastLoggerConfiguration.h"
 #import "ToastInstanceLogger.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  # ToastLogger
  
  ## Initialization
  
- Set the AppKey from Log & Crash Search to ProjectKey.
+ Set the AppKey from Log & Crash Search to AppKey.
  
  ### Initialization example
-    [ToastLogger initWithConfiguration:[ToastLoggerConfiguration configurationWithProjectKey:@"YOUR_PROJECT_KEY"]];
+    [ToastLogger initWithConfiguration:[ToastLoggerConfiguration configurationWithAppKey:@"YOUR_PROJECT_KEY"]];
  
  ## Sending a log
 
@@ -60,7 +62,7 @@
  
  @return The configuration currently set
  */
-+ (ToastLoggerConfiguration *)loggerConfiguration;
++ (nullable ToastLoggerConfiguration *)loggerConfiguration;
 
 /// ---------------------------------
 /// @name Set Methods
@@ -71,7 +73,7 @@
 
  @param delegate The delegate following ToastLoggerDelegate protocol
  */
-+ (void)setDelegate:(id<ToastLoggerDelegate>) delegate;
++ (void)setDelegate:(nullable id<ToastLoggerDelegate>) delegate;
 
 /**
  Sets the key and value of the user field to send when sending the log.
@@ -79,14 +81,14 @@
  @param value Value of the user field
  @param key Key of the user field
  */
-+ (void)setUserFieldWithValue:(NSString *)value forKey:(NSString *)key;
++ (void)setUserFieldWithValue:(nullable NSString *)value forKey:(NSString *)key;
 
 /**
  Sets the handler to be executed after a crash.
 
  @param handler The handler to be executed after a crash
  */
-+ (void)setShouldReportCrashHandler:(void (^)(void))handler;
++ (void)setShouldReportCrashHandler:(nullable void (^)(void))handler;
 
 #pragma mark - normal log
 /// ---------------------------------
@@ -139,7 +141,7 @@
  @param message The message to send
  @param userFields You have additional information to send.
  */
-+ (void)debug:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
++ (void)debug:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 /**
  Sends a log message with user fields of level info.
@@ -147,7 +149,7 @@
  @param message The message to send
  @param userFields You have additional information to send.
  */
-+ (void)info:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
++ (void)info:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 /**
  Sends a log message with user fields of level warn.
@@ -155,7 +157,7 @@
  @param message The message to send
  @param userFields You have additional information to send.
  */
-+ (void)warn:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
++ (void)warn:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 /**
  Sends a log message with user fields of level error.
@@ -163,7 +165,7 @@
  @param message The message to send
  @param userFields You have additional information to send.
  */
-+ (void)error:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
++ (void)error:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 /**
  Sends a log message with user fields of level fatal.
@@ -171,7 +173,7 @@
  @param message The message to send
  @param userFields You have additional information to send.
  */
-+ (void)fatal:(NSString *)message userFields:(NSDictionary<NSString *, NSString *> *)userFields;
++ (void)fatal:(NSString *)message userFields:(nullable NSDictionary<NSString *, NSString *> *)userFields;
 
 #pragma mark - normal log (messageFormat)
 /// ---------------------------------
@@ -223,7 +225,7 @@
  
  @param log ToastLog to send
  */
-+ (void)userLog:(ToastLog *)log;
++ (void)userLog:(nullable ToastLog *)log;
 
 #pragma mark - Version
 /// ---------------------------------
@@ -238,3 +240,5 @@
 + (NSString *)version;
 
 @end
+
+NS_ASSUME_NONNULL_END

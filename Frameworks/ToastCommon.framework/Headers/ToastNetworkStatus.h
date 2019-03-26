@@ -17,9 +17,9 @@ typedef NS_ENUM(NSUInteger, ToastNetworkType) {
 
 @interface ToastNetworkStatus : NSObject
 
-@property (nonatomic, assign, readonly, getter=isConnected) BOOL connected;
-@property (nonatomic, assign, readonly) ToastNetworkType type;
-@property (nonatomic, strong, readonly) NSString *typeString;
+@property (nonatomic, readonly, getter=isConnected) BOOL connected;
+@property (nonatomic, readonly) ToastNetworkType type;
+@property (nonatomic, readonly) NSString *typeString;
 
 - (instancetype)initWithNetworkType:(ToastNetworkType)type;
 - (instancetype)initWithReachabilityFlags:(SCNetworkReachabilityFlags)flags;

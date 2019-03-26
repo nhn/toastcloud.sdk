@@ -6,8 +6,7 @@
 //  Copyright © 2018년 NHNEnt. All rights reserved.
 //
 
-#ifndef ToastLoggerDelegate_h
-#define ToastLoggerDelegate_h
+NS_ASSUME_NONNULL_BEGIN
 
 @class ToastInstanceLogger;
 
@@ -46,6 +45,4 @@
 
 @end
 
-
-
-#endif /* ToastLoggerDelegate_h */
+NS_ASSUME_NONNULL_END

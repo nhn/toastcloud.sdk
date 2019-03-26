@@ -35,7 +35,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Initialize
 /// ---------------------------------
 
-// SDK 초기화
 /**
  Initialize SDK
 
@@ -80,6 +79,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)requestTokenInfoForPushType:(ToastPushType)type
                   completionHandler:(nullable void (^) (ToastPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler;
+
+
+// 토큰 삭제
+/**
+ Unregister token.
+ 
+ It unregisters the token according to the pushTypes and sandbox values registered in the configuration that was set at initialization.
+ 
+ */
++ (void)unregisterToken;
 
 // SDK 버전 획득
 /**
@@ -142,6 +151,28 @@ NS_ASSUME_NONNULL_BEGIN
                                 categoryIdentifier:(NSString *)categoryIdentifier
                                            payload:(NSDictionary *)payload
                                           userText:(nullable NSString *)userText;
+
+// 토큰 등록해제 성공
+/**
+ Called after the token unregistration has been successfully.
+
+ @param deviceToken A successfully unregistered device token.
+ @param type The unregistered push type.
+ */
+- (void)didUnregisterWithDeviceToken:(nullable NSString *)deviceToken
+                             forType:(ToastPushType)type;
+
+// 토큰 등록해제 실패
+/**
+ Called after the token unregistration has been failure.
+
+ @param deviceToken The deviceToken that trying to unregister.
+ @param type The push type that trying to unregister.
+ @param error The error about the cause of the token unregistration failure.
+ */
+- (void)didFailToUnregisterWithDeviceToken:(NSString *)deviceToken
+                                   forType:(ToastPushType)type
+                                     error:(NSError *)error;
 
 @end
 

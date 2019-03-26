@@ -17,17 +17,17 @@ NS_ASSUME_NONNULL_BEGIN
  The response you receive as a result of the product listing inquiry([ToastIAP requestProductsWithCompletionHandler:]).
  
  */
-@interface ToastProductsResponse : NSObject
+@interface ToastProductsResponse : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------
 /// @name Properties
 /// ---------------------------------
 
 /** A list of products whose status is active in the IAP Console and can be viewed from AppConnect (iTunseConnect). */
-@property (nonatomic, readonly) NSArray<ToastProduct *> *products;
+@property (nonatomic, copy, readonly) NSArray<ToastProduct *> *products;
 
 /** A list of products whose status is active in the IAP Console and can not be viewed by AppConnect(iTunseConnect). */
-@property (nonatomic, readonly) NSArray<ToastProduct *> *invalidProducts;
+@property (nonatomic, copy, readonly) NSArray<ToastProduct *> *invalidProducts;
 
 @end
 
