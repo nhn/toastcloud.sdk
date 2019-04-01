@@ -20,6 +20,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>ToastSDK</key>
+	<dict>
+		<key>ToastPush</key>
+		<dict>
+			<key>AppKey</key>
+			<string>[ToastProjectID]</string>
+		</dict>
+	</dict>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
@@ -46,13 +54,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>ToastSDK</key>
-	<dict>
-		<key>ToastPush</key>
-		<dict>
-			<key>AppKey</key>
-			<string>[ToastProjectID]</string>
-		</dict>
-	</dict>
 </dict>
 </plist>

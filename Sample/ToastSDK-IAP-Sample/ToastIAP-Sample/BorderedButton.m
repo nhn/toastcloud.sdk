@@ -2,8 +2,8 @@
 //  BorderedButton.m
 //  ToastIAP-Sample
 //
-//  Created by NHNEnt on 2018. 11. 12..
-//  Copyright © 2018년 NHNEnt. All rights reserved.
+//  Created by NHN on 2018. 11. 12..
+//  Copyright © 2018년 NHN. All rights reserved.
 //
 
 #import "BorderedButton.h"

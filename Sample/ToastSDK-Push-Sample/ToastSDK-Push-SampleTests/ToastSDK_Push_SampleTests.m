@@ -2,8 +2,8 @@
 //  ToastSDK_Push_SampleTests.m
 //  ToastSDK-Push-SampleTests
 //
-//  Created by NHNEnt on 2018. 12. 28..
-//  Copyright © 2018년 NHNEnt. All rights reserved.
+//  Created by NHN on 2018. 12. 28..
+//  Copyright © 2018년 NHN. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

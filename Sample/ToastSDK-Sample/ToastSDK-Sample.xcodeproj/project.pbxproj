@@ -330,7 +330,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toast.ToastSDK-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nhn.toast.sdk.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
@@ -364,7 +364,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toast.ToastSDK-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nhn.toast.sdk.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
