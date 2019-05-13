@@ -3,7 +3,7 @@
 //  ToastLogger
 //
 //  Created by Hyup on 2018. 4. 5..
-//  Copyright © 2018년 NHNEnt. All rights reserved.
+//  Copyright © 2018년 NHN. All rights reserved.
 //
 
 NS_ASSUME_NONNULL_BEGIN

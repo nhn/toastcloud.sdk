@@ -3,10 +3,23 @@
 //  ToastCommon
 //
 //  Created by Hyup on 2017. 9. 4..
-//  Copyright © 2017년 NHNEnt. All rights reserved.
+//  Copyright © 2017년 NHN. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+
+static NSString *const ToastHttpErrorDomain = @"com.toast.http";
+
+typedef NS_ENUM(NSUInteger, ToastHttpErrorCode) {
+    ToastHttpErrorNetworkNotAvailable = 100,        // 네트워크 사용 불가
+    ToastHttpErrorRequestFailed = 101,              // HTTP Status Code 가 200이 아니거나 서버에서 요청을 제대로 읽지 못함
+    ToastHttpErrorRequestTimeout = 102,             // 타임아웃
+    ToastHttpErrorRequestInvalid = 103,             // 잘못된 요청 (파라미터 오류 등)
+    ToastHttpErrorURLInvalid = 104,                 // URL 오류
+    ToastHttpErrorResponseInvalid = 105,            // 서버 응답 오류
+    ToastHttpErrorAlreadyInprogress = 106,          // 동일 요청 이미 수행중
+    ToastHttpErrorRequiresSecureConnection = 107,   // Allow Arbitrary Loads 미설정
+};
 
 /**
  Http request methods.

@@ -3,7 +3,7 @@
 //  ToastPush
 //
 //  Created by JooHyun Lee on 2018. 11. 30..
-//  Copyright © 2018년 NHNEnt. All rights reserved.
+//  Copyright © 2018년 NHN. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  * If the user ID is not set, the token registration and inquiry function will be disabled.
  * It is recommended to perform initialization from `application:didFinishLaunchingWithOptions:` function to receive a smooth message.
  * Once you register your delegate, you can do additional tasks after registering the token or after receiving the message / action.
+ * When calling initWithConfiguration: and setDelegate: separately, please call the setDelegate: function first. If the initWithConfiguration: function is called without a delegate setting, you can not receive callbacks to register token and receive push.
  
  */
 @interface ToastPush : NSObject
@@ -34,6 +35,20 @@ NS_ASSUME_NONNULL_BEGIN
 /// ---------------------------------
 /// @name Initialize
 /// ---------------------------------
+
+/**
+ Sets Delegate with a given delegate that following ToastPushDelegate
+
+ @param delegate The delegate that following ToastPushDelegate
+*/
++ (void)setDelegate:(nullable id<ToastPushDelegate>)delegate;
+
+/**
+ Initialize SDK
+ 
+ @param configuration The configuration about Push
+*/
++ (void)initWithConfiguration:(ToastPushConfiguration *)configuration;
 
 /**
  Initialize SDK

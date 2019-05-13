@@ -3,7 +3,7 @@
 //  ToastPush
 //
 //  Created by JooHyun Lee on 2018. 12. 21..
-//  Copyright © 2018년 NHNEnt. All rights reserved.
+//  Copyright © 2018년 NHN. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,15 +13,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ToastScheduleTask : NSObject
 
-@property (nonatomic, readonly) NSTimeInterval timeInterval;
-@property (readonly) NSTimeInterval remainTimeInterval;
-
 @property (readonly, getter=isExecuting) BOOL executing;
 @property (readonly, getter=isCancelled) BOOL cancelled;
 @property (readonly, getter=isFinished) BOOL finished;
 
+@property (nonatomic, readonly) NSTimeInterval timeInterval;
+@property (nonatomic, readonly) NSTimeInterval remainingTimeInterval;
+
 - (instancetype)initWithTimeInterval:(NSTimeInterval)timeInterval
-                   completionHandler:(nullable void (^) (void))completionBlock;
+                        executeBlock:(void (^) (void))executeBlock;
 
 - (void)resume;
 

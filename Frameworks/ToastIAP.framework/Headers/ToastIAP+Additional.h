@@ -3,7 +3,7 @@
 //  ToastIAP
 //
 //  Created by JooHyun Lee on 2018. 9. 27..
-//  Copyright © 2018년 NHN Entertainment Corp. All rights reserved.
+//  Copyright © 2018년 NHN Corp. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

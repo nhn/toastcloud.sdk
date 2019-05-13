@@ -3,10 +3,12 @@
 //  ToastCommon
 //
 //  Created by JooHyun Lee on 2018. 1. 5..
-//  Copyright © 2018년 NHNEnt. All rights reserved.
+//  Copyright © 2018년 NHN. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  # Cache Util
@@ -20,20 +22,49 @@
 /// ---------------------------------
 
 /**
- Caches a given value and key via a safety check.
+ Cache the object in the memory with the key.
 
- @param value Value to save
- @param key Key to save.
+ @param object Object to cache.
+ @param key Key to cache.
  */
-+ (void)setObject:(id)value forKey:(NSString *)key;
++ (void)setObject:(id)object forKey:(id)key;
+
++ (void)setInteger:(NSInteger)value forKey:(id)key;
+
++ (void)setInt:(int)value forKey:(id)key;
+
++ (void)setFloat:(float)value forKey:(id)key;
+
++ (void)setDouble:(double)value forKey:(id)key;
+
++ (void)setBool:(BOOL)value forKey:(id)key;
 
 
 /**
- Gets the values stored in the cache through the given key.
+ Return the cached object in the memory.
 
- @param key The key used to retrieve the stored value
- @return The value found through the key
+ @param key The key of th cached object
+ @return The object that is cached with key
  */
-+ (id)objectForKey:(NSString *)key;
++ (id)objectForKey:(id)key;
+
++ (NSInteger)integerForKey:(id)key;
+
++ (int)intForKey:(id)key;
+
++ (float)floatForKey:(id)key;
+
++ (double)doubleForKey:(id)key;
+
++ (BOOL)boolForKey:(id)key;
+
+/**
+ Remove the cached object in memory.
+ 
+ @param key The key of th cached object
+ */
++ (void)removeObjectForKey:(id)key;
 
 @end
+
+NS_ASSUME_NONNULL_END

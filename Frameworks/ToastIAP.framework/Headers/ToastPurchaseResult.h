@@ -3,7 +3,7 @@
 //  ToastIAP
 //
 //  Created by JooHyun Lee on 2018. 9. 12..
-//  Copyright © 2018년 NHNEnt. All rights reserved.
+//  Copyright © 2018년 NHN. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -66,6 +66,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** The expiry time of purchse */
 @property (nonatomic, readonly) NSTimeInterval expiryTime;
+
+/** Is the payment added from AppStore */
+@property (nonatomic, readonly, getter=isStorePayment) BOOL storePayment;
 
 @end
 

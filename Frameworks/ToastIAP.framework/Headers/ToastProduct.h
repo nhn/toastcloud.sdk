@@ -3,7 +3,7 @@
 //  ToastIAP
 //
 //  Created by JooHyun Lee on 2018. 9. 12..
-//  Copyright © 2018년 NHNEnt. All rights reserved.
+//  Copyright © 2018년 NHN. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

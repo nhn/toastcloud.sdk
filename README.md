@@ -9,9 +9,9 @@
 
 iOS용 TOAST SDK의 구성은 다음과 같습니다.
 
-* [TOAST Logger](./log-collector-ios) SDK
-* [TOAST In-app Purchase AppStore](./iap-ios) SDK
-* [TOAST Push](./push-ios) SDK
+* [TOAST Logger](https://docs.toast.com/ko/TOAST/ko/toast-sdk/log-collector-ios/) SDK
+* [TOAST In-app Purchase AppStore](https://docs.toast.com/ko/TOAST/ko/toast-sdk/iap-ios/) SDK
+* [TOAST Push](https://docs.toast.com/ko/TOAST/ko/toast-sdk/push-ios/) SDK
 
 TOAST SDK가 제공하는 서비스 중 원하는 기능을 선택해 적용할 수 있습니다.
 
@@ -162,6 +162,6 @@ TOAST SDK와 관련해 문의하실 때는 디버그 모드를 활성화해서 �
 
 ## TOAST Service 사용
 
-* [TOAST Log & Crash](./log-collector-ios) 사용 가이드
-* [TOAST In-app Purchase](./iap-ios) 사용 가이드
-* [TOAST Push](./push-ios) 사용 가이드
+* [TOAST Log & Crash](https://docs.toast.com/ko/TOAST/ko/toast-sdk/log-collector-ios/) 사용 가이드
+* [TOAST In-app Purchase](https://docs.toast.com/ko/TOAST/ko/toast-sdk/iap-ios/) 사용 가이드
+* [TOAST Push](https://docs.toast.com/ko/TOAST/ko/toast-sdk/push-ios/) 사용 가이드

@@ -3,7 +3,7 @@
 //  ToastCore
 //
 //  Created by Hyup on 2017. 9. 26..
-//  Copyright © 2017년 NHNEnt. All rights reserved.
+//  Copyright © 2017년 NHN. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

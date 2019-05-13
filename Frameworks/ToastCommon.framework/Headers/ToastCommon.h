@@ -3,7 +3,7 @@
 //  ToastCommon
 //
 //  Created by Hyup on 2017. 8. 25..
-//  Copyright © 2017년 NHNEnt. All rights reserved.
+//  Copyright © 2017년 NHN. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -13,14 +13,19 @@
 #import "ToastUtil.h"
 #import "ToastInfoUtil.h"
 #import "ToastCacheUtil.h"
-#import "ToastScheduleWorker.h"
 #import "ToastFieldValidator.h"
 #import "ToastBlockQueue.h"
 #import "ToastStorageManager.h"
 #import "ToastCollectorURL.h"
 #import "ToastNetworkManager.h"
 #import "ToastNetworkStatus.h"
+#import "ToastScheduleWorker.h"
 #import "ToastScheduleTask.h"
+#import "ToastTimeoutTask.h"
+#import "ToastArray.h"
+#import "ToastThreadSafeArray.h"
+#import "ToastDictionary.h"
+#import "ToastThreadSafeDictionary.h"
 
 //! Project version number for ToastCommon.
 FOUNDATION_EXPORT double ToastCommonVersionNumber;

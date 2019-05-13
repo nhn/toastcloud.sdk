@@ -3,7 +3,7 @@
 //  ToastCommon
 //
 //  Created by JooHyun Lee on 2018. 6. 29..
-//  Copyright © 2018년 NHNEnt. All rights reserved.
+//  Copyright © 2018년 NHN. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -19,9 +19,5 @@ typedef NS_ENUM(NSUInteger, ToastNetworkType) {
 
 @property (nonatomic, readonly, getter=isConnected) BOOL connected;
 @property (nonatomic, readonly) ToastNetworkType type;
-@property (nonatomic, readonly) NSString *typeString;
-
-- (instancetype)initWithNetworkType:(ToastNetworkType)type;
-- (instancetype)initWithReachabilityFlags:(SCNetworkReachabilityFlags)flags;
 
 @end
