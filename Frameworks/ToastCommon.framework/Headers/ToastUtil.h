@@ -12,6 +12,7 @@
 
 extern NSString *const ToastUnknownString;
 extern NSString *const ToastNotApplicableString;
+extern NSString *const ToastDefaultDateFormat;
 
 #pragma mark - Time Util
 + (uint64_t)unixEpochTime;
@@ -81,7 +82,8 @@ extern NSString *const ToastNotApplicableString;
 + (id)validateObject:(id)object withDefault:(id)defaultObject;
 
 #pragma mark - Date Util
-+ (NSString *)dateStringWithTimeInterval:(NSTimeInterval)timeInterval;
++ (NSString *)dateStringWithDate:(NSDate *)date format:(NSString *)format;
++ (NSString *)dateStringWithTimeInterval:(NSTimeInterval)timeInterval format:(NSString *)format;
 + (NSTimeInterval)timeIntervalWithUnixTimestamp:(long long)timestamp;
 
 #pragma mark - Type Search Util
