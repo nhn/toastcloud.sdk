@@ -122,4 +122,9 @@ extern NSString *const ToastDefaultDateFormat;
                         code:(NSInteger)code
                        error:(NSError *)error;
 
++ (NSError *)errorWithDomain:(NSString *)domain
+                        code:(NSInteger)code
+                 description:(NSString *)description
+                       error:(NSError *)error;
+
 @end

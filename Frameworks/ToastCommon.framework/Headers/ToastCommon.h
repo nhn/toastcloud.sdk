@@ -22,6 +22,7 @@
 #import "ToastScheduleWorker.h"
 #import "ToastScheduleTask.h"
 #import "ToastTimeoutTask.h"
+#import "ToastAsyncTask.h"
 #import "ToastArray.h"
 #import "ToastThreadSafeArray.h"
 #import "ToastDictionary.h"
