@@ -11,6 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class ToastPushAgreement;
+
 /**
  
  A class that contains information about the token that is passed when using the token lookup request API.( [ToastPush requestTokenInfoForPushType:completionHandler:] )
@@ -35,22 +37,42 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *languageCode;
 
 /** The type of push.( APNs or VoIP ) */
-@property (nonatomic, copy, readonly) NSString *pushType;
+@property (nonatomic, copy, readonly) ToastPushType pushType;
 
 /** Whether to accept the notification. */
-@property (nonatomic, readonly) BOOL allowNotifications;
+@property (nonatomic, readonly) BOOL allowNotifications __deprecated_msg("use agreement.allowNotifications instead.");
 
 /** Whether to accept the advertising information notification. */
-@property (nonatomic, readonly) BOOL allowAdvertisements;
+@property (nonatomic, readonly) BOOL allowAdvertisements __deprecated_msg("use agreement.allowAdvertisements instead.");
 
 /** Whether to accept the advertising information notification when night */
-@property (nonatomic, readonly) BOOL allowNightAdvertisements;
+@property (nonatomic, readonly) BOOL allowNightAdvertisements __deprecated_msg("use agreement.allowNightAdvertisements instead.");
+
+/** The agreement of notification. */
+@property (nonatomic, copy, readonly) ToastPushAgreement *agreement;
 
 /** A region of the globe that observes a uniform standard time for legal, commercial and social purposes. */
 @property (nonatomic, copy, readonly) NSString *timezone;
 
 /** The latest updated date and time. */
 @property (nonatomic, copy, readonly) NSString *updateDateTime;
+
+@end
+
+
+@interface ToastPushMutableTokenInfo : ToastPushTokenInfo
+
+@property (nonatomic, copy, nullable) NSString *userID;
+
+@property (nonatomic, copy, nullable) NSString *countryCode;
+
+@property (nonatomic, copy, nullable) NSString *languageCode;
+
+@property (nonatomic, copy, nullable) ToastPushAgreement *agreement;
+
+@property (nonatomic, copy, nullable) NSString *timezone;
+
+- (instancetype)initWithTokenInfo:(ToastPushTokenInfo *)tokenInfo;
 
 @end
 

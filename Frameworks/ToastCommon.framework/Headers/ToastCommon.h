@@ -16,7 +16,6 @@
 #import "ToastFieldValidator.h"
 #import "ToastBlockQueue.h"
 #import "ToastStorageManager.h"
-#import "ToastCollectorURL.h"
 #import "ToastNetworkManager.h"
 #import "ToastNetworkStatus.h"
 #import "ToastScheduleWorker.h"

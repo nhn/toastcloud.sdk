@@ -77,11 +77,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 카테고리 설정
 /**
- Set the category.
+ Set the notification categories.
 
- @param categories The category to set.
+ @param categories NSSet with object type UNNotificationCategory(iOS 10.0+) or UIUserNotificationCategory(iOS 8.0-10.0).
  */
-+ (void)setCategories:(nullable NSSet<UNNotificationCategory *> *)categories NS_AVAILABLE_IOS(10_0);
++ (void)setCategories:(nullable NSSet *)categories;
+
+// 알림 옵션 설정
+/**
+ Set the options for displaying notification.
+ 
+ @param options Constants indicating how the app alerts the user when push notification arrives.
+                UNAuthorizationOptions(iOS 10.0+) or UIUserNotificationType(iOS 8.0-10.0).
+ */
++ (void)setOptions:(NSInteger)options;
 
 // 토큰 조회 요청
 /**
@@ -104,6 +113,16 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 + (void)unregisterToken;
+
+// 언어코드 업데이트 요청
+/**
+ Update token's language code.
+ 
+ @param tokenInfo The token info to update.
+ @param completionHandler The handler to run after update token is complete.
+ */
++ (void)updateTokenInfo:(ToastPushTokenInfo *)tokenInfo
+      completionHandler:(nullable void (^) (NSArray<ToastPushTokenInfo *> * _Nullable results, NSError * _Nullable error))completionHandler;
 
 // SDK 버전 획득
 /**

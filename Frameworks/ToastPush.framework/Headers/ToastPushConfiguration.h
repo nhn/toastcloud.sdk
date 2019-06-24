@@ -38,6 +38,12 @@ extern ToastPushType const ToastPushTypeVoIP;
 /** The pushTypes. (APNs or VoIP) */
 @property (nonatomic, copy) NSSet<ToastPushType> *pushTypes;
 
+/** Country(ISO 3166-1 alpha-2, ISO 3166-1 alpha-3) code used for localized time when sending reservation message. */
+@property (nonatomic, copy) NSString *countryCode;
+
+/** Lanuage code(SO 639-1, ISO 639-2) used for multiple language message. */
+@property (nonatomic, copy) NSString *languageCode;
+
 /** Whther it is a sandbox environment or not. */
 @property (nonatomic) BOOL sandbox;
 

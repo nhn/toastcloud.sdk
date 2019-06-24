@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ToastCore/ToastCore.h>
 #import <ToastCommon/ToastCommon.h>
 #import "ToastLog.h"
 
