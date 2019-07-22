@@ -127,4 +127,9 @@ extern NSString *const ToastDefaultDateFormat;
                  description:(NSString *)description
                        error:(NSError *)error;
 
+#pragma mark - Thread
++ (BOOL)isMainThread;
++ (void)runOnMainThread:(void (^) (void))block;
++ (void)runOnWorkerThread:(void (^) (void))block;
+
 @end

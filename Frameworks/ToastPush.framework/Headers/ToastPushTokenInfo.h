@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "ToastPushConfiguration.h"
+#import "ToastPushAgreement.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-@class ToastPushAgreement;
 
 /**
  

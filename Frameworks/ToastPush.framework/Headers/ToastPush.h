@@ -13,6 +13,11 @@
 #import "ToastPushTokenInfo.h"
 #import "ToastPushError.h"
 #import "ToastPushServiceExtension.h"
+#import "ToastPushMessage.h"
+#import "ToastPushRichMessage.h"
+#import "ToastPushButton.h"
+#import "ToastPushMedia.h"
+#import "ToastPushAction.h"
 
 //! Project version number for ToastPush.
 FOUNDATION_EXPORT double ToastPushVersionNumber;

@@ -29,6 +29,7 @@ typedef NS_ENUM(NSUInteger, ToastIAPErrorCode) {
     ToastIAPErrorExpired = 14,                      // 구독 만료
     ToastIAPErrorRenewalPaymentNotFound = 15,       // 영수증내에 갱신 결제와 일치하는 결제 정보가 없음
     ToastIAPErrorRestoreFailed = 16,                // 복원 실패
+    ToastIAPErrorPaymentNotAvailable = 17,          // 구매 진행 불가 상태 (e.g. 앱 내 구입 제한 설정)
     
     // 네트워크 사용 불가
     ToastIAPErrorNetworkNotAvailable __deprecated_msg("use ToastHttpErrorNetworkNotAvailable instead.") = ToastHttpErrorNetworkNotAvailable,

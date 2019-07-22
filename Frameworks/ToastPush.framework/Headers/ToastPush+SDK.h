@@ -11,6 +11,8 @@
 #import "ToastPushConfiguration.h"
 #import "ToastPushAgreement.h"
 #import "ToastPushTokenInfo.h"
+#import "ToastPushMessage.h"
+#import "ToastPushAction.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -162,44 +164,20 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didFailToRegisterForType:(ToastPushType)type
                        withError:(NSError *)error;
 
-// 푸쉬 메세지 수신
-/**
- Called after the push notification has been received successfully.
-
- @param payload The received message contents.
- @param type The type of push. (APNs or VoIP)
- */
-- (void)didReceivePushWithPayload:(NSDictionary *)payload
-                          forType:(ToastPushType)type;
-
-// 알림 액션 수신
-/**
- Called after the push action has been received successfully
-
- @param actionIdentifier The identifier of action.
- @param categoryIdentifier The identifier of category.
- @param payload The received message contents.
- @param userText The text entered by the user.
- */
-- (void)didReceiveNotificationActionWithIdentifier:(NSString *)actionIdentifier
-                                categoryIdentifier:(NSString *)categoryIdentifier
-                                           payload:(NSDictionary *)payload
-                                          userText:(nullable NSString *)userText;
-
-// 토큰 등록해제 성공
+// 토큰 해제 성공
 /**
  Called after the token unregistration has been successfully.
-
+ 
  @param deviceToken A successfully unregistered device token.
  @param type The unregistered push type.
  */
 - (void)didUnregisterWithDeviceToken:(nullable NSString *)deviceToken
                              forType:(ToastPushType)type;
 
-// 토큰 등록해제 실패
+// 토큰 해제 실패
 /**
  Called after the token unregistration has been failure.
-
+ 
  @param deviceToken The deviceToken that trying to unregister.
  @param type The push type that trying to unregister.
  @param error The error about the cause of the token unregistration failure.
@@ -208,6 +186,31 @@ NS_ASSUME_NONNULL_BEGIN
                                    forType:(ToastPushType)type
                                      error:(NSError *)error;
 
+// 푸쉬 메세지 수신
+/**
+ Called after the push notification has been received successfully.
+ 
+ @param message The received message contents.
+ @param type The type of push. (APNs or VoIP)
+ */
+- (void)didReceivePushMessage:(ToastPushMessage *)message
+                      forType:(ToastPushType)type;
+
+- (void)didReceivePushWithPayload:(NSDictionary *)payload
+                          forType:(ToastPushType)type __deprecated_msg("use didReceivePushMessage:forType: instead.");
+
+// 알림 액션 수신
+/**
+ Called after the push action has been received successfully
+ 
+ @param action The received action.
+ */
+- (void)didReceivePushAction:(ToastPushAction *)action API_AVAILABLE(ios(10.0));
+
+- (void)didReceiveNotificationActionWithIdentifier:(NSString *)actionIdentifier
+                                categoryIdentifier:(NSString *)categoryIdentifier
+                                           payload:(NSDictionary *)payload
+                                          userText:(nullable NSString *)userText __deprecated_msg("use didReceivePushAction: instead.");
 @end
 
 NS_ASSUME_NONNULL_END
