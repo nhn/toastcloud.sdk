@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ToastPushMessage : NSObject
+@interface ToastPushMessage : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, readonly) NSString *identifier;
 

@@ -22,7 +22,7 @@ typedef NS_ENUM(NSUInteger, ToastPushSourceType) {
 };
 
 
-@interface ToastPushMedia : NSObject
+@interface ToastPushMedia : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, readonly) ToastPushMediaType mediaType;
 

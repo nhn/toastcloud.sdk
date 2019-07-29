@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, ToastPushActionType) {
     ToastPushActionReply = 3,
 };
 
-@interface ToastPushAction : NSObject
+@interface ToastPushAction : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, readonly) NSString *actionIdentifier;
 

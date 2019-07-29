@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, ToastPushButtonType) {
     ToastPushButtonTypeReply = 3,
 };
 
-@interface ToastPushButton : NSObject
+@interface ToastPushButton : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, readonly) NSString *identifier;
 

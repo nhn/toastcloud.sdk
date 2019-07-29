@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ToastPushRichMessage : NSObject
+@interface ToastPushRichMessage : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, readonly, nullable) ToastPushMedia *media;
 
