@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSInteger badge;
 
+@property (nonatomic, readonly, nullable) NSString *sound;
+
 @property (nonatomic, readonly, nullable) ToastPushRichMessage *richMessage;
 
 @property (nonatomic, readonly) NSDictionary<NSString *, NSString *> *payload;

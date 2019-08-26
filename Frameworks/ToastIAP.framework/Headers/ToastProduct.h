@@ -15,12 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 
  - ToastProductTypeUnknown: Unknown type
  - ToastProductTypeConsumable: Consumable type
- - ToastProductTypeAutoRenewableSubscription: Ayto renewable subscription type
+ - ToastProductTypeAutoRenewableSubscription: Auto renewable subscription type
+ - ToastProductTypeConsumableSubscription : Consumable subscription type
  */
 typedef NS_ENUM(NSInteger, ToastProductType) {
     ToastProductTypeUnknown = 0,
     ToastProductTypeConsumable = 1,
     ToastProductTypeAutoRenewableSubscription = 2,
+    ToastProductTypeConsumableSubscription = 3,
 };
 
 /**

@@ -23,7 +23,6 @@
 + (NSString *)iCloudToken;
 
 #pragma mark - Device
-
 + (NSString *)carrier;
 + (NSString *)deviceName;
 + (NSString *)deviceModel;
@@ -34,6 +33,7 @@
 + (NSNumber *)deviceScreenHeight;
 + (NSString *)deviceScreenResolution;
 + (NSString *)deviceOrientation;
++ (NSString *)deviceLanguageCode;
 + (NSString *)countryCode;
 + (NSString *)countryCodeFromLocale;
 + (NSString *)countryCodeFromUsim;
