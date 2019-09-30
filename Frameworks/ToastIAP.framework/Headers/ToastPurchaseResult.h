@@ -37,8 +37,14 @@ NS_ASSUME_NONNULL_BEGIN
 /** The userID of purchase */
 @property (nonatomic, copy, readonly) NSString *userID;
 
+/** The store code of purchase */
+@property (nonatomic, copy, readonly) NSString *storeCode;
+
 /** The product identifier of purchase */
 @property (nonatomic, copy, readonly) NSString *productIdentifier;
+
+/** The product sequence of purchase */
+@property (nonatomic, readonly) long productSeq;
 
 /** The product type of purchase */
 @property (nonatomic, readonly) ToastProductType productType;
@@ -69,6 +75,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Is the payment added from AppStore */
 @property (nonatomic, readonly, getter=isStorePayment) BOOL storePayment;
+
+/** The developer's payload of purchase */
+@property (nonatomic, readonly, copy, nullable) NSString *payload;
 
 @end
 

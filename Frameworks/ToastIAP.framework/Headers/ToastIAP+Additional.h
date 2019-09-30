@@ -30,6 +30,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)purchaseWithProductIdentifier:(NSString *)productIdentifier;
 
+/**
+ Purchase a product by only identifier. The purchase result is returned to the delegate.
+ 
+ @param productIdentifier The product identifier to purchase
+ @param payload The developer's purchase payload
+ */
++ (void)purchaseWithProductIdentifier:(NSString *)productIdentifier payload:(nullable NSString *)payload;
 
 // 소모성 상품 소비
 /**

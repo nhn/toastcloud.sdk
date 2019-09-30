@@ -16,21 +16,12 @@ typedef NS_ENUM(NSUInteger, ToastPushMediaType) {
     ToastPushMediaTypeAudio,
 };
 
-typedef NS_ENUM(NSUInteger, ToastPushSourceType) {
-    ToastPushSourceTypeRemote,
-    ToastPushSourceTypeLocal,
-};
-
 
 @interface ToastPushMedia : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, readonly) ToastPushMediaType mediaType;
 
 @property (nonatomic, readonly) NSString *source;
-
-@property (nonatomic, readonly) ToastPushSourceType sourceType;
-
-@property (nonatomic, readonly) NSString *extension;
 
 @end
 

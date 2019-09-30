@@ -58,7 +58,7 @@ extern ToastPushType const ToastPushTypeVoIP;
  @param appKey The app key of Toast Console Project key.
  @return The instance of ToastPushConfiguration.
  */
-+ (nullable instancetype)configurationWithAppKey:(NSString *)appKey;
++ (instancetype)configurationWithAppKey:(NSString *)appKey;
 
 /**
  Initialize ToastPushConfiguration with a given appKey and pushTypes.
@@ -67,8 +67,8 @@ extern ToastPushType const ToastPushTypeVoIP;
  @param pushTypes The pushType. (APNs or VoIP)
  @return The instance of ToastPushConfiguration.
  */
-+ (nullable instancetype)configurationWithAppKey:(NSString *)appKey
-                                       pushTypes:(NSSet<ToastPushType> *)pushTypes;
++ (instancetype)configurationWithAppKey:(NSString *)appKey
+                              pushTypes:(NSSet<ToastPushType> *)pushTypes;
 
 
 /**
@@ -77,7 +77,7 @@ extern ToastPushType const ToastPushTypeVoIP;
  @param appKey The app key of Toast Console Project key.
  @return The instance of ToastPushConfiguration.
  */
-- (nullable instancetype)initWithAppKey:(NSString *)appKey;
+- (instancetype)initWithAppKey:(NSString *)appKey;
 
 /**
  Initialize ToastPushConfiguration with a given appKey and pushTypes.
@@ -86,8 +86,8 @@ extern ToastPushType const ToastPushTypeVoIP;
  @param pushTypes The pushType. (APNs or VoIP)
  @return The instance of ToastPushConfiguration.
  */
-- (nullable instancetype)initWithAppKey:(NSString *)appKey
-                              pushTypes:(NSSet<ToastPushType> *)pushTypes;
+- (instancetype)initWithAppKey:(NSString *)appKey
+                     pushTypes:(NSSet<ToastPushType> *)pushTypes;
 
 @end
 

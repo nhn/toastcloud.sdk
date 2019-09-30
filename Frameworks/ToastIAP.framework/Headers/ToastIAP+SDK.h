@@ -90,6 +90,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)purchaseWithProduct:(ToastProduct *)product;
 
+/**
+ Purchase a product acquired through the request. The purchase result is returned to the delegate.
+ 
+ @param product The product to purchase
+ @param payload The developer's purchase payload
+ */
++ (void)purchaseWithProduct:(ToastProduct *)product payload:(nullable NSString *)payload;
+
 // 구매 복원
 /**
  Restore auto-renewable subscription products.
@@ -97,7 +105,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param completionHandler The handler to execute after the restore is complete.
  */
-+ (void)restoreWithCompletionHandler:(nullable void (^)(NSArray<ToastPurchaseResult *> * _Nullable purchases, NSError * _Nullable error))completionHandler;
++ (void)restoreWithCompletionHandler:(nullable void (^)(NSArray<ToastPurchaseResult *> * _Nullable restoredPurchases, NSError * _Nullable error))completionHandler;
 
 // 활성화된 구매 목록 조회
 /**

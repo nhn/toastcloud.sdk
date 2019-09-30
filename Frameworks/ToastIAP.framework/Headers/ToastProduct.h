@@ -60,6 +60,9 @@ typedef NS_ENUM(NSInteger, ToastProductType) {
 /** If 'YES', the product is currently active. If 'NO', it is deactive. */
 @property (nonatomic, readonly, getter=isActive) BOOL active;
 
+/** The store code of purchase */
+@property (nonatomic, copy, readonly) NSString *storeCode;
+
 @end
 
 NS_ASSUME_NONNULL_END
