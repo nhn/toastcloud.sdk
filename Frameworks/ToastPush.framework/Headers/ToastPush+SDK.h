@@ -199,18 +199,28 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didReceivePushWithPayload:(NSDictionary *)payload
                           forType:(ToastPushType)type __deprecated_msg("use didReceivePushMessage:forType: instead.");
 
+
 // 알림 액션 수신
 /**
  Called after the push action has been received successfully
  
  @param action The received action.
  */
-- (void)didReceivePushAction:(ToastPushAction *)action API_AVAILABLE(ios(10.0));
+- (void)didReceivePushAction:(ToastPushAction *)action;
 
 - (void)didReceiveNotificationActionWithIdentifier:(NSString *)actionIdentifier
                                 categoryIdentifier:(NSString *)categoryIdentifier
                                            payload:(NSDictionary *)payload
                                           userText:(nullable NSString *)userText __deprecated_msg("use didReceivePushAction: instead.");
+
+// 알림에 의한 앱 실행
+/**
+ Called after the push action has been received successfully
+ 
+ @param message The message contents of touched notification.
+ */
+- (void)didReceiveNotificationResponseForPushMessage:(ToastPushMessage *)message;
+
 @end
 
 NS_ASSUME_NONNULL_END

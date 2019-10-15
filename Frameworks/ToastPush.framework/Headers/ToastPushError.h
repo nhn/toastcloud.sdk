@@ -22,6 +22,7 @@ typedef NS_ENUM(NSUInteger, ToastPushErrorCode) {
     ToastPushErrorTokenInvalid          = 5,    // 토큰 값이 없거나 유효하지 않음
     ToastPushErrorAlreadyInProgress     = 6,    // 이미 진행중
     ToastPushErrorParameterInvalid      = 7,    // 매계변수 오류
+    ToastPushErrorNotSupported          = 8,    // 지원하지 않는 기능
     
     // 네트워크 사용 불가
     ToastPushErrorNetworkNotAvailable __deprecated_msg("use ToastHttpErrorNetworkNotAvailable instead.")    = ToastHttpErrorNetworkNotAvailable,

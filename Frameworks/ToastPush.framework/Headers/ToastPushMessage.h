@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ToastPushStyle.h"
 #import "ToastPushRichMessage.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -22,6 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSInteger badge;
 
 @property (nonatomic, readonly, nullable) NSString *sound;
+
+@property (nonatomic, readonly, nullable) NSString *clickAction;
+
+@property (nonatomic, readonly, nullable) ToastPushStyle *style;
 
 @property (nonatomic, readonly, nullable) ToastPushRichMessage *richMessage;
 
