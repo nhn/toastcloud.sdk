@@ -132,4 +132,11 @@ extern NSString *const ToastDefaultDateFormat;
 + (void)runOnMainThread:(void (^) (void))block;
 + (void)runOnWorkerThread:(void (^) (void))block;
 
+#pragma mark - Version check
++ (BOOL)isVersion:(NSString *)version equalTo:(NSString *)targetVersion;
++ (BOOL)isVersion:(NSString *)version greaterThan:(NSString *)targetVersion;
++ (BOOL)isVersion:(NSString *)version greaterThanOrEqualTo:(NSString *)targetVersion;
++ (BOOL)isVersion:(NSString *)version lessThan:(NSString *)targetVersion;
++ (BOOL)isVersion:(NSString *)version lessThanOrEqualTo:(NSString *)targetVersion;
+
 @end

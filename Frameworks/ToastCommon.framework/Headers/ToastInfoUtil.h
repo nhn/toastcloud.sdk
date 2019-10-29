@@ -59,6 +59,7 @@
 + (NSString *)mobileNetworkCode;
 + (BOOL)isSimulator;
 + (NSString *)cpuArchitecture;
++ (BOOL)isAvailableSystemVersion:(NSString *)version;
 
 #pragma mark - Identifier
 + (NSString *)idfa;
