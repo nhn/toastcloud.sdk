@@ -6,7 +6,7 @@
 //  Copyright © 2018년 NHN. All rights reserved.
 //
 
-#import <ToastCommon/ToastCommon.h>
+#import <ToastCore/ToastCore.h>
 
 static NSString *const ToastIAPErrorDomain = @"com.toast.iap";
 

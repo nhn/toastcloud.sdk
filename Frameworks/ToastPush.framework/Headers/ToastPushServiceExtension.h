@@ -11,14 +11,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  # ToastPushServiceExtension
  
- Support from iOS 10.0+.
- 
- You must create and set a NotificationServiceExtension in your application to receive rich message and to collect received event.
- 
+ You must create and set a NotificationServiceExtension target in your project to receive rich message notification and to collect received analytics event.
  
  ## NotificationServiceExtension configuration
  
@@ -28,7 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
      @interface NotificationService : ToastPushServiceExtension
  
      @end
- 
  */
 API_AVAILABLE(ios(10.0))
 @interface ToastPushServiceExtension : UNNotificationServiceExtension

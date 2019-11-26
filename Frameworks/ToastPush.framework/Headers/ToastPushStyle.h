@@ -10,8 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+# ToastPushStyle
+
+A class that has information about notification's style.
+*/
 @interface ToastPushStyle : NSObject <NSCoding, NSCopying>
 
+/// ---------------------------------
+/// @name Properties
+/// ---------------------------------
+
+/** Wether to use html markup string. */
 @property (nonatomic, readonly, getter=isUseHtml) BOOL useHtml;
 
 @end

@@ -17,7 +17,7 @@
 #import "ToastPushRichMessage.h"
 #import "ToastPushButton.h"
 #import "ToastPushMedia.h"
-#import "ToastPushAction.h"
+#import "ToastPushNotificationAction.h"
 
 //! Project version number for ToastPush.
 FOUNDATION_EXPORT double ToastPushVersionNumber;

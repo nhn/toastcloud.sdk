@@ -13,8 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  # ToastPushAgreement
  
- A class that has the user's response as to whether or not to accept the notification.
- 
+ A class that has the user's agreement as to whether or not to receive message.
  */
 @interface ToastPushAgreement : NSObject <NSCoding, NSCopying>
 
@@ -50,7 +49,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param allowNotifications  Whether to accept the notification.
  @return The instance of ToastPushAgreement.
  */
-- (instancetype)initWithAllowNotifications:(BOOL)allowNotifications;
+- (instancetype)initWithAllowNotifications:(BOOL)allowNotifications
+NS_SWIFT_NAME(init(allowNotifications:));
 
 @end
 

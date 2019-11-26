@@ -12,25 +12,61 @@
 #import "ToastPushAgreement.h"
 #import "ToastPushTokenInfo.h"
 #import "ToastPushMessage.h"
-#import "ToastPushAction.h"
+#import "ToastPushNotificationAction.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ToastPushDelegate;
+typedef NS_OPTIONS(NSUInteger, ToastPushNotificationOptions) {
+    ToastPushNotificationOptionBadge NS_SWIFT_NAME(badge) = (1 << 0),
+    ToastPushNotificationOptionSound NS_SWIFT_NAME(sound) = (1 << 1),
+    ToastPushNotificationOptionAlert NS_SWIFT_NAME(alert) = (1 << 2),
+};
+
+
+/**
+ # ToastPushDelegate
+ 
+ Delegate to receive notifications.
+ */
+@protocol ToastPushDelegate <NSObject>
+
+@optional
+
+// 알림 수신
+/**
+ Delegate the receiving notification.
+ 
+ @param message The received notification's message.
+ */
+- (void)didReceiveNotificationWithMessage:(ToastPushMessage *)message
+NS_SWIFT_NAME(didReceiveNotification(message:));
+
+// 알림 실행
+/**
+ Delegate the receiving notification's response.
+ 
+ @param message The message for notification that have received response.
+ */
+- (void)didReceiveNotificationResponseWithMessage:(ToastPushMessage *)message
+NS_SWIFT_NAME(didReceiveNotificationResponse(message:));
+
+
+// 알림 버튼 액션 수신
+/**
+ Delegate the receiving notification action.
+ 
+ @param action The received notification action.
+ */
+- (void)didReceiveNotificationAction:(ToastPushNotificationAction *)action
+NS_SWIFT_NAME(didReceiveNotificationAction(action:));
+
+@end
+
 
 /**
  # ToastPush
  
- SDK to manage push notification.
- 
- ## Initialize Precautions
- * ToastPush SDK uses the UserID set in ToastSDK.
- * After you set the UserID, you need to initialize the ToastPush Module.
- * If the user ID is not set, the token registration and inquiry function will be disabled.
- * It is recommended to perform initialization from `application:didFinishLaunchingWithOptions:` function to receive a smooth message.
- * Once you register your delegate, you can do additional tasks after registering the token or after receiving the message / action.
- * When calling initWithConfiguration: and setDelegate: separately, please call the setDelegate: function first. If the initWithConfiguration: function is called without a delegate setting, you can not receive callbacks to register token and receive push.
- 
+ SDK to manage remote notifications. (APNS)
  */
 @interface ToastPush : NSObject
 
@@ -39,188 +75,148 @@ NS_ASSUME_NONNULL_BEGIN
 /// ---------------------------------
 
 /**
- Sets Delegate with a given delegate that following ToastPushDelegate
+ Set the delegate for receiving notification.
 
- @param delegate The delegate that following ToastPushDelegate
+ @param delegate The delegate.
 */
-+ (void)setDelegate:(nullable id<ToastPushDelegate>)delegate;
++ (void)setDelegate:(nullable id<ToastPushDelegate>)delegate
+NS_SWIFT_NAME(setDelegate(_:));
 
 /**
  Initialize SDK
  
- @param configuration The configuration about Push
+ @param configuration The configuration.
 */
-+ (void)initWithConfiguration:(ToastPushConfiguration *)configuration;
++ (void)initWithConfiguration:(ToastPushConfiguration *)configuration
+NS_SWIFT_NAME(initialize(configuration:));
 
 /**
  Initialize SDK
 
- @param configuration The configuration about Push
- @param delegate The delegate to be executed according to the token registration result and upon receiving the notification.
+ @param configuration The configuration.
+ @param delegate The delegate.
  */
 + (void)initWithConfiguration:(ToastPushConfiguration *)configuration
-                     delegate:(nullable id<ToastPushDelegate>)delegate;
+                     delegate:(nullable id<ToastPushDelegate>)delegate
+NS_SWIFT_NAME(initialize(configuration:delegate:));
 
 /// ---------------------------------
 /// @name Push Methods
 /// ---------------------------------
 
-// 토큰 등록 요청
+// 토큰 조회
 /**
- Request token registration.
+ Queries the token's information.
  
- Registers to the OS according to the push type set at initialization, and registers the issued token information to the toast cloud server.
+ Queries last registered token's information on the current device.
  
- The token registration result is passed through the delegate set at initialization.
- 
- @param agreement Whether or not to accept the notification.
+ @param completionHandler The completion handler for result.
  */
-+ (void)registerWithAgreement:(ToastPushAgreement *)agreement;
++ (void)queryTokenInfoWithCompletionHandler:(void (^)(ToastPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(queryTokenInfo(completion:));
 
-// 카테고리 설정
+
+// 토큰 등록
 /**
- Set the notification categories.
-
- @param categories NSSet with object type UNNotificationCategory(iOS 10.0+) or UIUserNotificationCategory(iOS 8.0-10.0).
+ Register the token.
+ 
+ Register the remote notification with APNS and register the received device token to the toast cloud server.
+ 
+ @param agreement Whether or not to accept the notifications.
+ @param completionHandler The completion handler for result.
  */
-+ (void)setCategories:(nullable NSSet *)categories;
++ (void)registerWithAgreement:(ToastPushAgreement *)agreement
+            completionHandler:(nullable void (^)(ToastPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(register(agreement:completion:));
 
-// 알림 옵션 설정
 /**
- Set the options for displaying notification.
- 
- @param options Constants indicating how the app alerts the user when push notification arrives.
-                UNAuthorizationOptions(iOS 10.0+) or UIUserNotificationType(iOS 8.0-10.0).
- */
-+ (void)setOptions:(NSInteger)options;
+Register the token.
 
-// 토큰 조회 요청
+Register the remote notification with APNS and set the notification options and categories.
+Then register the received device token to the toast cloud server.
+
+@param agreement Whether or not to accept the notifications.
+@param options Notification options (UNAuthorizationOptions or UIUserNotificationType)
+@param completionHandler The completion handler for result.
+*/
++ (void)registerWithAgreement:(ToastPushAgreement *)agreement
+                      options:(ToastPushNotificationOptions)options
+            completionHandler:(nullable void (^)(ToastPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(register(agreement:options:completion:));
+
 /**
- Request token lookup.
- 
- View the most recent token and configuration information registered with the current user ID.
- 
- @param type The type of push. (APNs or VoIP)
- @param completionHandler The handler to run after token lookup is complete.
- */
-+ (void)requestTokenInfoForPushType:(ToastPushType)type
-                  completionHandler:(nullable void (^) (ToastPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler;
+Register the token.
+
+Register the remote notification with APNS and if the received device token is already registered with the toast cloud server, update the token's information with current configuration.
+
+@param completionHandler The completion handler for result.
+*/
++ (void)registerWithCompletionHandler:(nullable void (^)(ToastPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(register(completion:));
+
+/**
+Register the token.
+
+Register the remote notification with APNS and set the notification options and categories.
+Then if the received device token is already registered with the toast cloud server, update the token's information with current configuration.
+
+@param options Notification options (UNAuthorizationOptions or UIUserNotificationType)
+@param completionHandler The completion handler for result.
+*/
++ (void)registerWithOptions:(ToastPushNotificationOptions)options
+          completionHandler:(nullable void (^)(ToastPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(register(options:completion:));
 
 
 // 토큰 삭제
 /**
- Unregister token.
+ Unregister the token.
  
- It unregisters the token according to the pushTypes and sandbox values registered in the configuration that was set at initialization.
+ Unregister the token on the current device from the toast cloud server.
  
+ @param completionHandler The completion handler for result.
  */
-+ (void)unregisterToken;
++ (void)unregisterWithCompletionHandler:(nullable void (^)(NSString * _Nullable deviceToken, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(unregister(completion:));
 
-// 언어코드 업데이트 요청
+// 알림 카테고리 설정
 /**
- Update token's language code.
- 
- @param tokenInfo The token info to update.
- @param completionHandler The handler to run after update token is complete.
- */
-+ (void)updateTokenInfo:(ToastPushTokenInfo *)tokenInfo
-      completionHandler:(nullable void (^) (NSArray<ToastPushTokenInfo *> * _Nullable results, NSError * _Nullable error))completionHandler;
+Set the notification categories.
+
+Register notification categories in the notification center.
+
+@param categories Set of notification categories
+*/
++ (void)setNotificationCategories:(NSSet<UNNotificationCategory *> *)categories API_AVAILABLE(ios(10.0))
+NS_SWIFT_NAME(setNotificationCategories(_:));
+
++ (void)setUserNotificationCategories:(NSSet<UIUserNotificationCategory *> *)categories
+NS_SWIFT_NAME(setUserNotificationCategories(_:));
+
+// 알림 카테고리 획득
+/**
+Get the notifications categories.
+
+Get the notification categories registered in the notification center.
+
+@param completionHandler The completion handler for result.
+*/
++ (void)getNotificationCategoriesWithCompletionHandler:(void (^)(NSSet<UNNotificationCategory *> *categories))completionHandler API_AVAILABLE(ios(10.0))
+NS_SWIFT_NAME(getNotificationCategories(completion:));
+
++ (void)getUserNotificationCategoriesWithCompletionHandler:(void (^)(NSSet<UIUserNotificationCategory *> * _Nullable categories))completionHandler
+NS_SWIFT_NAME(getUserNotificationCategories(completion:));
 
 // SDK 버전 획득
 /**
  Gets the version of SDK.
  
- @return The version of SDK
+ @return The version.
  */
-+ (NSString *)version;
-
-@end
-
-
-/**
- The delegate to be executed according to the token registration result and upon receiving the notification.
- */
-@protocol ToastPushDelegate <NSObject>
-
-@optional
-
-// 토큰 등록 성공
-/**
- Called after the token registration has been successfully.
-
- @param deviceToken A successfully registered device token.
- @param type Registered push type.
- */
-- (void)didRegisterWithDeviceToken:(NSString *)deviceToken
-                           forType:(ToastPushType)type;
-
-// 토큰 등록 실패
-/**
- Called after the token registration has been failure.
-
- @param type The push type that trying to register.
- @param error The error about the cause of the token registration failure.
- */
-- (void)didFailToRegisterForType:(ToastPushType)type
-                       withError:(NSError *)error;
-
-// 토큰 해제 성공
-/**
- Called after the token unregistration has been successfully.
- 
- @param deviceToken A successfully unregistered device token.
- @param type The unregistered push type.
- */
-- (void)didUnregisterWithDeviceToken:(nullable NSString *)deviceToken
-                             forType:(ToastPushType)type;
-
-// 토큰 해제 실패
-/**
- Called after the token unregistration has been failure.
- 
- @param deviceToken The deviceToken that trying to unregister.
- @param type The push type that trying to unregister.
- @param error The error about the cause of the token unregistration failure.
- */
-- (void)didFailToUnregisterWithDeviceToken:(NSString *)deviceToken
-                                   forType:(ToastPushType)type
-                                     error:(NSError *)error;
-
-// 푸쉬 메세지 수신
-/**
- Called after the push notification has been received successfully.
- 
- @param message The received message contents.
- @param type The type of push. (APNs or VoIP)
- */
-- (void)didReceivePushMessage:(ToastPushMessage *)message
-                      forType:(ToastPushType)type;
-
-- (void)didReceivePushWithPayload:(NSDictionary *)payload
-                          forType:(ToastPushType)type __deprecated_msg("use didReceivePushMessage:forType: instead.");
-
-
-// 알림 액션 수신
-/**
- Called after the push action has been received successfully
- 
- @param action The received action.
- */
-- (void)didReceivePushAction:(ToastPushAction *)action;
-
-- (void)didReceiveNotificationActionWithIdentifier:(NSString *)actionIdentifier
-                                categoryIdentifier:(NSString *)categoryIdentifier
-                                           payload:(NSDictionary *)payload
-                                          userText:(nullable NSString *)userText __deprecated_msg("use didReceivePushAction: instead.");
-
-// 알림에 의한 앱 실행
-/**
- Called after the push action has been received successfully
- 
- @param message The message contents of touched notification.
- */
-- (void)didReceiveNotificationResponseForPushMessage:(ToastPushMessage *)message;
++ (NSString *)version
+NS_SWIFT_NAME(version());
 
 @end
 
 NS_ASSUME_NONNULL_END
+

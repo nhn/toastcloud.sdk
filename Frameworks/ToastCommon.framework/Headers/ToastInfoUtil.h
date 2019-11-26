@@ -87,6 +87,7 @@
 + (NSString *)proxy;
 
 #pragma mark - Common
++ (void)initUserAgent;
 + (NSString *)userAgent;
 + (NSString *)userAgentWithSDKName:(NSString *)aName currentVersion:(NSString *)aVersion;
 

@@ -11,38 +11,31 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NSString *ToastPushType NS_STRING_ENUM;
+/**
+# ToastPushConfiguration
 
-/** When the type is not a specified value. */
-extern ToastPushType const ToastPushTypeNone;
-
-/** When the type is APNs. */
-extern ToastPushType const ToastPushTypeAPNS;
-
-/** When the type is VoIP. */
-extern ToastPushType const ToastPushTypeVoIP;
-
-
+A class that has configuration about push service required for initialization.
+*/
 @interface ToastPushConfiguration : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------
 /// @name Properties
 /// ---------------------------------
 
-/** The app key of Toast Console Project key. */
+/** The app key of push service in your toast console project. */
 @property (nonatomic, copy, readonly) NSString *appKey;
 
-/** The service zone. (Real or Alpha or Beta)  */
+/** The toast cloud service zone. (Real or Alpha or Beta)  */
 @property (nonatomic) ToastServiceZone serviceZone;
 
-/** The pushTypes. (APNs or VoIP) */
-@property (nonatomic, copy) NSSet<ToastPushType> *pushTypes;
-
-/** Country(ISO 3166-1 alpha-2, ISO 3166-1 alpha-3) code used for localized time when sending reservation message. */
+/** Country code (ISO 3166-1 alpha-2, ISO 3166-1 alpha-3) used for localized time when sending reservation message. */
 @property (nonatomic, copy) NSString *countryCode;
 
-/** Lanuage code(SO 639-1, ISO 639-2) used for multiple language message. */
+/** Lanuage code (SO 639-1, ISO 639-2) used for multiple language message. */
 @property (nonatomic, copy) NSString *languageCode;
+
+/** A region of the globe that observes a uniform standard time for legal, commercial and social purposes. */
+@property (nonatomic, copy) NSString *timezone;
 
 /** Whther it is a sandbox environment or not. */
 @property (nonatomic) BOOL sandbox;
@@ -53,41 +46,21 @@ extern ToastPushType const ToastPushTypeVoIP;
 /// ---------------------------------
 
 /**
- Initialize ToastPushConfiguration with a given appKey.
+ Initialize with push service app key.
  
- @param appKey The app key of Toast Console Project key.
+ @param appKey The app key of push service in your toast console project.
  @return The instance of ToastPushConfiguration.
  */
 + (instancetype)configurationWithAppKey:(NSString *)appKey;
 
 /**
- Initialize ToastPushConfiguration with a given appKey and pushTypes.
- 
- @param appKey The app key of Toast Console Project key.
- @param pushTypes The pushType. (APNs or VoIP)
- @return The instance of ToastPushConfiguration.
- */
-+ (instancetype)configurationWithAppKey:(NSString *)appKey
-                              pushTypes:(NSSet<ToastPushType> *)pushTypes;
+ Initialize with push service app key.
 
-
-/**
- Initialize ToastPushConfiguration with a given appKey.
-
- @param appKey The app key of Toast Console Project key.
- @return The instance of ToastPushConfiguration.
- */
-- (instancetype)initWithAppKey:(NSString *)appKey;
-
-/**
- Initialize ToastPushConfiguration with a given appKey and pushTypes.
-
- @param appKey The app key of Toast Console Project key.
- @param pushTypes The pushType. (APNs or VoIP)
+ @param appKey The app key of push service in your toast console project.
  @return The instance of ToastPushConfiguration.
  */
 - (instancetype)initWithAppKey:(NSString *)appKey
-                     pushTypes:(NSSet<ToastPushType> *)pushTypes;
+NS_SWIFT_NAME(init(appKey:));
 
 @end
 

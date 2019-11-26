@@ -67,10 +67,11 @@ extern NSString *const ToastDefaultDateFormat;
 + (const char *)NSStringToCString:(NSString *)str;
 + (NSString *)CStringToNSString:(const char*)str;
 
-+ (NSString *)hexStringFromData:(NSData *)sourceData;
++ (NSString *)hexStringFromData:(NSData *)data;
 + (NSData *)dataFromHexString:(NSString *)string;
 
 + (const char *)createThreadLabel:(NSString *)threadName projectKey:(NSString *)projectKey;
++ (NSString *)stringWithFormat:(NSString *)format arguments:(va_list)args;
 
 #pragma mark - Object Util
 + (NSString *)stringWithJSONObject:(id)object;
@@ -126,6 +127,8 @@ extern NSString *const ToastDefaultDateFormat;
                         code:(NSInteger)code
                  description:(NSString *)description
                        error:(NSError *)error;
+
++ (NSDictionary *)dictionaryWithError:(NSError *)error;
 
 #pragma mark - Thread
 + (BOOL)isMainThread;
