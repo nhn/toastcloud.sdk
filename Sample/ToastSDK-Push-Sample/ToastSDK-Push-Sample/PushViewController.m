@@ -92,10 +92,11 @@ static NSString *const ToastUserID      = @"sample-app-test-user";
     // 서비스 로그인 완료 후 사용자 ID 설정
     [ToastSDK setUserID:self.userIdTextField.text];
     
-    ToastPushConfiguration *configuration = [[ToastPushConfiguration alloc] initWithAppKey:ToastPushAppKey
-                                                                                 pushTypes:self.pushTypes];
-    // 개발환경(Debug)에서는 꼭 아래 sandbox 프로퍼티를 YES로 설정해야합니다.
+    ToastPushConfiguration *configuration = [[ToastPushConfiguration alloc] initWithAppKey:ToastPushAppKey];
+    // 개발환경(Debug)에서는 꼭 아래 sandbox 프로퍼티를 YES로 설정해야만 개발 인증서로 등록됩니다.
+#if DEBUG
     configuration.sandbox = YES;
+#endif
     
     // ToastPush 초기화 및 delegate를 설정합니다.
     // AppDelegate의 application:didFinishLaunchingWithOptions: 에서 초기화하는 것이 좋습니다.
@@ -118,27 +119,35 @@ static NSString *const ToastUserID      = @"sample-app-test-user";
     // 야간 광고성 알림 동의 여부
     agreement.allowNightAdvertisements = self.nightAdSwitch.isOn;
     // 토큰 등록
-    [ToastPush registerWithAgreement:agreement];
+    [ToastPush registerWithAgreement:agreement
+                   completionHandler:^(ToastPushTokenInfo *tokenInfo, NSError *error) {
+        
+        if (error == nil) {
+            NSLog(@"[ToastPush] Succesully registered : %@", tokenInfo.deviceToken);
+            [self showAlertWithTitle:@"Success Registration" message:[NSString stringWithFormat:@"(APNS) token: %@", tokenInfo.deviceToken]];
+            
+        } else {
+            NSLog(@"[ToastPush] Failed to register : %@", error);
+            [self showAlertWithTitle:@"Failed Registration" message:[NSString stringWithFormat:@"(APNS) error: %@", error]];
+        }
+    }];
 }
 
 - (IBAction)queryButtonDidTap:(id)sender {
-    for (ToastPushType type in self.pushTypes) {
-        // 토큰 조회
-        [ToastPush requestTokenInfoForPushType:type
-                             completionHandler:^(ToastPushTokenInfo *tokenInfo, NSError *error) {
-                                 if (error == nil) {
-                                     NSLog(@"[Success query] TokenInfo : %@", tokenInfo);
-                                     [self showAlertWithTitle:@"Success query"
-                                                      message:[NSString stringWithFormat:@"tokenInfo : %@", tokenInfo]];
-                                     
-                                     
-                                 } else {
-                                     NSLog(@"[Failed to query] tokenInfo : %@", error);
-                                     [self showAlertWithTitle:@"Failed query"
-                                                      message:[NSString stringWithFormat:@"error : %@", error]];
-                                 }
-                             }];
-    }
+    // 토큰 조회
+    [ToastPush queryTokenInfoWithCompletionHandler:^(ToastPushTokenInfo *tokenInfo, NSError *error) {
+        if (error == nil) {
+            NSLog(@"[ToastPush] Successfully get token info : %@", tokenInfo);
+            [self showAlertWithTitle:@"Success query"
+                             message:[NSString stringWithFormat:@"tokenInfo : %@", tokenInfo]];
+            
+            
+        } else {
+            NSLog(@"[ToastPush] Failed to get token info : %@", error);
+            [self showAlertWithTitle:@"Failed query"
+                             message:[NSString stringWithFormat:@"error : %@", error]];
+        }
+    }];
 }
 
 - (IBAction)togglePushSwitch:(id)sender {
@@ -147,6 +156,7 @@ static NSString *const ToastUserID      = @"sample-app-test-user";
         self.nightAdSwitch.enabled  = true;
         self.adSwitch.on            = true;
         self.nightAdSwitch.on       = true;
+        
     } else {
         self.adSwitch.enabled       = false;
         self.nightAdSwitch.enabled  = false;
@@ -234,70 +244,34 @@ static NSString *const ToastUserID      = @"sample-app-test-user";
     
 }
 
-
-#pragma mark - ToastPushDelegates
-
-// 토큰 등록 성공
-- (void)didRegisterWithDeviceToken:(NSString *)deviceToken
-                           forType:(ToastPushType)type {
-    
-    NSLog(@"[ToastPush] didRegisterWithDeviceToken:%@ forType:%@", deviceToken, type);
-    [self showAlertWithTitle:@"Success Registration" message:[NSString stringWithFormat:@"(%@) token: %@", type, deviceToken]];
-    
-}
-
-// 토큰 등록 실패
-- (void)didFailToRegisterForType:(ToastPushType)type
-                       withError:(NSError *)error {
-    
-    NSLog(@"[ToastPush] didFailToRegisterForType:%@ withError:%@", type, [error description]);
-    [self showAlertWithTitle:@"Failed Registration" message:[NSString stringWithFormat:@"(%@) error: %@", type, error]];
-}
-
+#pragma mark - ToastPushDelegate
 // 메세지 수신
-- (void)didReceivePushWithPayload:(NSDictionary *)payload
-                          forType:(ToastPushType)type {
+- (void)didReceiveNotificationWithMessage:(ToastPushMessage *)message {
+    NSLog(@"[ToastPush] didReceiveNotificationWithMessage:%@", message);
     
-    NSLog(@"[ToastPush] didReceivePushWithPayload:%@ forType:%@", payload, type);
-    
-    NSString *title = [NSString stringWithFormat:@"Received \"%@\" push", type];
-    
-    if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
-        [self showAlertWithTitle:title
-                         message:[NSString stringWithFormat:@"%@", payload]];
-        
-    } else {
-        NSString *body = @"";
-        NSDictionary *aps = [payload objectForKey:@"aps"];
-        
-        if (aps != nil) {
-            NSDictionary *alert = [aps objectForKey:@"alert"];
-            if (alert != nil) {
-                body = [alert objectForKey:@"body"];
-            }
-        }
-        
-        [self requestLocalNotificationWithTitle:title
-                                        message:body];
-    }
+    [self showAlertWithTitle:@"Received Notification Message"
+                     message:[NSString stringWithFormat:@"%@", message.payload]];
 }
 
-// 알림 액션(버튼) 수신 (iOS 10.0+)
-- (void)didReceiveNotificationActionWithIdentifier:(NSString *)actionIdentifier
-                                categoryIdentifier:(NSString *)categoryIdentifier
-                                           payload:(NSDictionary *)payload
-                                          userText:(nullable NSString *)userText NS_AVAILABLE_IOS(10_0) {
+- (void)didReceiveNotificationResponseWithMessage:(ToastPushMessage *)message {
+    NSLog(@"[ToastPush] didReceiveNotificationResponseWithMessage:%@", message);
     
-    NSLog(@"[ToastPush] didReceiveNotificationActionWithIdentifier:%@ categoryIdentifier:%@ payload:%@ userText:%@", actionIdentifier, categoryIdentifier, payload, userText);
+    [self showAlertWithTitle:@"Received Notification Response"
+                     message:[NSString stringWithFormat:@"%@", message.payload]];
+}
+
+// 알림 액션(버튼) 수신
+- (void)didReceiveNotificationAction:(ToastPushNotificationAction *)action {
+    NSLog(@"[ToastPush] didReceiveNotificationAction:%@", action);
     
-    [self showAlertWithTitle:@"Received Push With Action" message:[NSString stringWithFormat:@"action: %@\ncategory: %@\npayload: %@\nuserText: %@\n", actionIdentifier, categoryIdentifier, payload, userText]];
+    [self showAlertWithTitle:@"Received Notification Action"
+                     message:[NSString stringWithFormat:@"action: %@\ncategory: %@\npayload: %@\nuserText: %@\n", action.actionIdentifier, action.categoryIdentifier, action.message.payload, action.userText]];
     
-    if (userText != nil) {
+    if (action.userText != nil) {
         [self requestLocalNotificationWithTitle:@"Received Text Action"
-                                        message:[NSString stringWithFormat:@"Input : %@", userText]];
+                                        message:[NSString stringWithFormat:@"Input : %@", action.userText]];
     }
 }
-
-
 
 @end
+
