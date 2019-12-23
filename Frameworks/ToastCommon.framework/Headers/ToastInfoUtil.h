@@ -18,6 +18,9 @@
 + (NSString *)rootViewControllerTitle;
 + (NSString *)buildNumber;
 + (NSString *)appState;
++ (NSString *)executable;
++ (NSString *)progname;
++ (NSString *)processName;
 
 #pragma mark - Account
 + (NSString *)iCloudToken;

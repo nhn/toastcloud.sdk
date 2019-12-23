@@ -22,8 +22,17 @@ extern NSString *const ToastDefaultDateFormat;
 + (NSString *)URLEncodedStringWithData:(NSData *)data;
 
 #pragma mark - Data Util 
-+ (NSString *)hash_SHA1:(NSString *)str;
-+ (NSString *)hash_MD5:(NSString *)str;
++ (NSString *)createHashStringSHA1:(NSString *)str;
++ (NSString *)createHashStringSHA256:(NSString *)str;
++ (NSString *)createHashStringSHA512:(NSString *)str;
++ (NSString *)createHashStringMD5:(NSString *)str;
+
++ (NSData *)createHashDataSHA1:(NSString *)str;
++ (NSData *)createHashDataSHA256:(NSString *)str;
++ (NSData *)createHashDataSHA512:(NSString *)str;
++ (NSData *)createHashDataMD5:(NSString *)str;
+
++ (NSData *)createHashDataHmacSHA256ForKey:(NSString *)key str:(NSString *)str;
 
 + (NSString *)base64Encode:(id)sourc;
 + (NSData *)base64Decode:(NSString *)source;
@@ -85,6 +94,7 @@ extern NSString *const ToastDefaultDateFormat;
 #pragma mark - Date Util
 + (NSString *)dateStringWithDate:(NSDate *)date format:(NSString *)format;
 + (NSString *)dateStringWithTimeInterval:(NSTimeInterval)timeInterval format:(NSString *)format;
++ (NSString *)dateStringWithTimeInterval:(NSTimeInterval)timeInterval format:(NSString *)format timeZone:(NSTimeZone *)timeZone;
 + (NSTimeInterval)timeIntervalWithUnixTimestamp:(long long)timestamp;
 
 #pragma mark - Type Search Util

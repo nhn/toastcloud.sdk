@@ -108,6 +108,8 @@ typedef NS_ENUM(NSInteger, ToastHttpVerbType) {
  */
 - (void)sendGetURLRequestWithCompletionBlock:(void (^)(NSData *aResponseData, NSDictionary *aResponseBody, NSError *aError))aBlock;
 
+- (void)sendGetURLRequestWithPreporcess:(BOOL (^)(NSMutableURLRequest *request))preprocess
+                        completionBlock:(void (^)(NSData *aResponseData, NSDictionary *aResponseBody, NSError *aError))aBlock;
 /**
  Sends the post request with encoded data asynchronously.
  
@@ -122,6 +124,10 @@ typedef NS_ENUM(NSInteger, ToastHttpVerbType) {
  @param aBlock The block to execute after request is finished
  */
 - (void)sendPostJsonBodyRequestWithCompletionBlock:(void (^)(NSData *aResponseData, NSDictionary *aResponseBody, NSError *aError))aBlock;
+
+
+- (void)sendPostJsonBodyRequestWithPreporcess:(BOOL (^)(NSMutableURLRequest *request))preprocess
+                              completionBlock:(void (^)(NSData *aResponseData, NSDictionary *aResponseBody, NSError *aError))aBlock;
 
 /**
  Sends the post request with string body parameter asynchronously.

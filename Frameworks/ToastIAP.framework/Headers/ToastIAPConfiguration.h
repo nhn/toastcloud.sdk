@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param appKey The app key of Toast Console Project key
  @return The instance of ToastIAPConfiguration
  */
-+ (nullable instancetype)configurationWithAppKey:(NSString *)appKey;
++ (instancetype)configurationWithAppKey:(NSString *)appKey;
 
 /**
  Initialize ToastIAPConfiguration with a given appKey.
@@ -47,7 +47,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param appKey The app key of Toast Console Project key.
  @return The instance of ToastIAPConfiguration.
  */
-- (nullable instancetype)initWithAppKey:(NSString *)appKey;
+- (instancetype)initWithAppKey:(NSString *)appKey
+NS_SWIFT_NAME(init(appKey:));
 
 @end
 

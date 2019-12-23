@@ -190,9 +190,6 @@ Register notification categories in the notification center.
 + (void)setNotificationCategories:(NSSet<UNNotificationCategory *> *)categories API_AVAILABLE(ios(10.0))
 NS_SWIFT_NAME(setNotificationCategories(_:));
 
-+ (void)setUserNotificationCategories:(NSSet<UIUserNotificationCategory *> *)categories
-NS_SWIFT_NAME(setUserNotificationCategories(_:));
-
 // 알림 카테고리 획득
 /**
 Get the notifications categories.
@@ -204,8 +201,14 @@ Get the notification categories registered in the notification center.
 + (void)getNotificationCategoriesWithCompletionHandler:(void (^)(NSSet<UNNotificationCategory *> *categories))completionHandler API_AVAILABLE(ios(10.0))
 NS_SWIFT_NAME(getNotificationCategories(completion:));
 
+// iOS 10 미만의 단말기에서는 UIUserNotificationCategory를 사용
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_10_0
++ (void)setUserNotificationCategories:(NSSet<UIUserNotificationCategory *> *)categories
+NS_SWIFT_NAME(setUserNotificationCategories(_:));
+
 + (void)getUserNotificationCategoriesWithCompletionHandler:(void (^)(NSSet<UIUserNotificationCategory *> * _Nullable categories))completionHandler
 NS_SWIFT_NAME(getUserNotificationCategories(completion:));
+#endif
 
 // SDK 버전 획득
 /**

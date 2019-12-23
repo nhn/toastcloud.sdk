@@ -28,7 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param productIdentifier The product identifier to purchase
  */
-+ (void)purchaseWithProductIdentifier:(NSString *)productIdentifier;
++ (void)purchaseWithProductIdentifier:(NSString *)productIdentifier
+NS_SWIFT_NAME(purchase(productIdentifier:));
 
 /**
  Purchase a product by only identifier. The purchase result is returned to the delegate.
@@ -36,7 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param productIdentifier The product identifier to purchase
  @param payload The developer's purchase payload
  */
-+ (void)purchaseWithProductIdentifier:(NSString *)productIdentifier payload:(nullable NSString *)payload;
++ (void)purchaseWithProductIdentifier:(NSString *)productIdentifier payload:(nullable NSString *)payload
+NS_SWIFT_NAME(purchase(productIdentifier:payload:));
 
 // 소모성 상품 소비
 /**
@@ -46,7 +48,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param completionHandler The handler to execute after consume
  */
 + (void)consumeWithPurchaseResult:(ToastPurchaseResult *)result
-                completionHandler:(nullable void (^)(NSError * _Nullable error))completionHandler;
+                completionHandler:(nullable void (^)(NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(consume(result:completion:));
 
 
 /// ---------------------------------
@@ -63,7 +66,8 @@ NS_ASSUME_NONNULL_BEGIN
  @note If the item purchased from the IAP SDK is not completed, the ToastIAP SDK processes the obsolete items in the LocalDB.
  @note Need to add libsqlite3.tdb to Linked Framework
  */
-+ (void)processesIncompletePurchasesWithCompletionHandler:(nullable void (^)(NSArray <ToastPurchaseResult *> * _Nullable results, NSError * _Nullable error))completionHandler;
++ (void)processesIncompletePurchasesWithCompletionHandler:(nullable void (^)(NSArray <ToastPurchaseResult *> * _Nullable results, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(processesIncompletePurchases(completion:));
 
 @end
 

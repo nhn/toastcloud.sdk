@@ -40,7 +40,8 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param delegate The delegate that following ToastInAppPurchaseDelegate
  */
-+ (void)setDelegate:(nullable id<ToastInAppPurchaseDelegate>)delegate;
++ (void)setDelegate:(nullable id<ToastInAppPurchaseDelegate>)delegate
+NS_SWIFT_NAME(setDelegate(_:));
 
 /// ---------------------------------
 /// @name Initialize
@@ -51,7 +52,8 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param configuration The configuration about IAP
  */
-+ (void)initWithConfiguration:(ToastIAPConfiguration *)configuration;
++ (void)initWithConfiguration:(ToastIAPConfiguration *)configuration
+NS_SWIFT_NAME(initialize(configuration:));
 
 /**
  Initialize SDK
@@ -60,7 +62,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param delegate The delegate to be executed according to the purchase result.
  */
 + (void)initWithConfiguration:(ToastIAPConfiguration *)configuration
-                     delegate:(nullable id<ToastInAppPurchaseDelegate>)delegate;
+                     delegate:(nullable id<ToastInAppPurchaseDelegate>)delegate
+NS_SWIFT_NAME(initialize(configuration:delegate:));
 
 /// ---------------------------------
 /// @name IAP Methods
@@ -72,7 +75,8 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param completionHandler The handler to execute after the list of products is complete
  */
-+ (void)requestProductsWithCompletionHandler:(nullable void (^)(ToastProductsResponse * _Nullable response, NSError * _Nullable error))completionHandler;
++ (void)requestProductsWithCompletionHandler:(nullable void (^)(ToastProductsResponse * _Nullable response, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(requestProducts(completion:));
 
 // 미소비 결제 내역 조회
 /**
@@ -80,7 +84,8 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param completionHandler The handler to execute after the list of products is complete
  */
-+ (void)requestConsumablePurchasesWithCompletionHandler:(nullable void (^)(NSArray<ToastPurchaseResult *> * _Nullable purchases, NSError * _Nullable error))completionHandler;
++ (void)requestConsumablePurchasesWithCompletionHandler:(nullable void (^)(NSArray<ToastPurchaseResult *> * _Nullable purchases, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(requestConsumablePurchases(completion:));
 
 // 상품 구매
 /**
@@ -88,7 +93,8 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param product The product to purchase
  */
-+ (void)purchaseWithProduct:(ToastProduct *)product;
++ (void)purchaseWithProduct:(ToastProduct *)product
+NS_SWIFT_NAME(purchase(product:));
 
 /**
  Purchase a product acquired through the request. The purchase result is returned to the delegate.
@@ -96,7 +102,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param product The product to purchase
  @param payload The developer's purchase payload
  */
-+ (void)purchaseWithProduct:(ToastProduct *)product payload:(nullable NSString *)payload;
++ (void)purchaseWithProduct:(ToastProduct *)product payload:(nullable NSString *)payload
+NS_SWIFT_NAME(purchase(product:payload:));
 
 // 구매 복원
 /**
@@ -105,7 +112,8 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param completionHandler The handler to execute after the restore is complete.
  */
-+ (void)restoreWithCompletionHandler:(nullable void (^)(NSArray<ToastPurchaseResult *> * _Nullable restoredPurchases, NSError * _Nullable error))completionHandler;
++ (void)restoreWithCompletionHandler:(nullable void (^)(NSArray<ToastPurchaseResult *> * _Nullable restoredPurchases, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(restore(completion:));
 
 // 활성화된 구매 목록 조회
 /**
@@ -113,7 +121,8 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param completionHandler The handler to execute after the list of products is complete
  */
-+ (void)requestActivePurchasesWithCompletionHandler:(nullable void (^)(NSArray<ToastPurchaseResult *> * _Nullable purchases, NSError * _Nullable error))completionHandler;
++ (void)requestActivePurchasesWithCompletionHandler:(nullable void (^)(NSArray<ToastPurchaseResult *> * _Nullable purchases, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(requestActivePurchases(completion:));
 
 /// ---------------------------------
 /// @name Gets the version
@@ -125,7 +134,8 @@ NS_ASSUME_NONNULL_BEGIN
 
  @return The version of SDK
  */
-+ (NSString *)version;
++ (NSString *)version
+NS_SWIFT_NAME(version());
 
 @end
 
@@ -141,7 +151,8 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param purchase The purchase that successfully complete
  */
-- (void)didReceivePurchaseResult:(ToastPurchaseResult *)purchase;
+- (void)didReceivePurchaseResult:(ToastPurchaseResult *)purchase
+NS_SWIFT_NAME(didReceivePurchase(purchase:));
 
 // 결제 실패
 /**
@@ -150,7 +161,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param productIdentifier The identifier of product that has been failure
  @param error The error about the cause of the payment failure.
  */
-- (void)didFailPurchaseProduct:(NSString *)productIdentifier withError:(NSError *)error;
+- (void)didFailPurchaseProduct:(NSString *)productIdentifier withError:(NSError *)error
+NS_SWIFT_NAME(didFailPurchase(productIdentifier:error:));
 
 @end
 
