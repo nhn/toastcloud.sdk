@@ -92,7 +92,9 @@ extern NSString *const ToastDefaultDateFormat;
 + (id)validateObject:(id)object withDefault:(id)defaultObject;
 
 #pragma mark - Date Util
++ (NSDateComponents *)dateConponentsWithTimeInterval:(NSTimeInterval)timeInterval;
 + (NSString *)dateStringWithDate:(NSDate *)date format:(NSString *)format;
++ (NSString *)dateStringWithDate:(NSDate *)date format:(NSString *)format timeZone:(NSTimeZone *)timeZone;
 + (NSString *)dateStringWithTimeInterval:(NSTimeInterval)timeInterval format:(NSString *)format;
 + (NSString *)dateStringWithTimeInterval:(NSTimeInterval)timeInterval format:(NSString *)format timeZone:(NSTimeZone *)timeZone;
 + (NSTimeInterval)timeIntervalWithUnixTimestamp:(long long)timestamp;
