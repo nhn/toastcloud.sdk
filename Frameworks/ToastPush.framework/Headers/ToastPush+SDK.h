@@ -139,7 +139,7 @@ Then register the received device token to the toast cloud server.
 @param options Notification options (UNAuthorizationOptions or UIUserNotificationType)
 @param completionHandler The completion handler for result.
 */
-+ (void)registerWithAgreement:(ToastPushAgreement *)agreement
++ (void)registerWithAgreement:(nullable ToastPushAgreement *)agreement
                       options:(ToastPushNotificationOptions)options
             completionHandler:(nullable void (^)(ToastPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler
 NS_SWIFT_NAME(register(agreement:options:completion:));
