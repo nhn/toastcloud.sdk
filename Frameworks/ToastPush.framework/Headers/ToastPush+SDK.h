@@ -13,15 +13,9 @@
 #import "ToastPushTokenInfo.h"
 #import "ToastPushMessage.h"
 #import "ToastPushNotificationAction.h"
+#import "ToastPushTenant.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-typedef NS_OPTIONS(NSUInteger, ToastPushNotificationOptions) {
-    ToastPushNotificationOptionBadge NS_SWIFT_NAME(badge) = (1 << 0),
-    ToastPushNotificationOptionSound NS_SWIFT_NAME(sound) = (1 << 1),
-    ToastPushNotificationOptionAlert NS_SWIFT_NAME(alert) = (1 << 2),
-};
-
 
 /**
  # ToastPushDelegate
@@ -118,7 +112,7 @@ NS_SWIFT_NAME(queryTokenInfo(completion:));
 
 // 토큰 등록
 /**
- Register the token.
+ Register the token with agreement.
  
  Register the remote notification with APNS and register the received device token to the toast cloud server.
  
@@ -132,41 +126,12 @@ NS_SWIFT_NAME(register(agreement:completion:));
 /**
 Register the token.
 
-Register the remote notification with APNS and set the notification options and categories.
-Then register the received device token to the toast cloud server.
-
-@param agreement Whether or not to accept the notifications.
-@param options Notification options (UNAuthorizationOptions or UIUserNotificationType)
-@param completionHandler The completion handler for result.
-*/
-+ (void)registerWithAgreement:(nullable ToastPushAgreement *)agreement
-                      options:(ToastPushNotificationOptions)options
-            completionHandler:(nullable void (^)(ToastPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler
-NS_SWIFT_NAME(register(agreement:options:completion:));
-
-/**
-Register the token.
-
 Register the remote notification with APNS and if the received device token is already registered with the toast cloud server, update the token's information with current configuration.
 
 @param completionHandler The completion handler for result.
 */
 + (void)registerWithCompletionHandler:(nullable void (^)(ToastPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler
 NS_SWIFT_NAME(register(completion:));
-
-/**
-Register the token.
-
-Register the remote notification with APNS and set the notification options and categories.
-Then if the received device token is already registered with the toast cloud server, update the token's information with current configuration.
-
-@param options Notification options (UNAuthorizationOptions or UIUserNotificationType)
-@param completionHandler The completion handler for result.
-*/
-+ (void)registerWithOptions:(ToastPushNotificationOptions)options
-          completionHandler:(nullable void (^)(ToastPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler
-NS_SWIFT_NAME(register(options:completion:));
-
 
 // 토큰 삭제
 /**
@@ -209,6 +174,9 @@ NS_SWIFT_NAME(setUserNotificationCategories(_:));
 + (void)getUserNotificationCategoriesWithCompletionHandler:(void (^)(NSSet<UIUserNotificationCategory *> * _Nullable categories))completionHandler
 NS_SWIFT_NAME(getUserNotificationCategories(completion:));
 #endif
+
+// Tenant 설정
++ (void)setTenant:(nullable ToastPushTenant *)tenant;
 
 // SDK 버전 획득
 /**
