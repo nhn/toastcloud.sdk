@@ -12,7 +12,6 @@
 #import "ToastHttpManager.h"
 #import "ToastUtil.h"
 #import "ToastInfoUtil.h"
-#import "ToastCacheUtil.h"
 #import "ToastFieldValidator.h"
 #import "ToastBlockQueue.h"
 #import "ToastStorageManager.h"
@@ -26,6 +25,11 @@
 #import "ToastThreadSafeArray.h"
 #import "ToastDictionary.h"
 #import "ToastThreadSafeDictionary.h"
+#import "ToastCache.h"
+#import "ToastMemoryCache.h"
+#import "ToastFileCache.h"
+#import "ToastKeychainCache.h"
+#import "ToastPreferences.h"
 
 //! Project version number for ToastCommon.
 FOUNDATION_EXPORT double ToastCommonVersionNumber;

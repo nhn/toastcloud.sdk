@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ToastIAP+SDK.h"
+#import "ToastInAppPurchaseDelegate.h"
 #import "ToastIAP+Additional.h"
 #import "ToastIAPConfiguration.h"
 #import "ToastProduct.h"

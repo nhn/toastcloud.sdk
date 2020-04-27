@@ -176,6 +176,11 @@ NS_SWIFT_NAME(getUserNotificationCategories(completion:));
 #endif
 
 // Tenant 설정
+/**
+Set tenant information.
+
+@param tenant The tenant information.
+*/
 + (void)setTenant:(nullable ToastPushTenant *)tenant;
 
 // SDK 버전 획득

@@ -12,6 +12,7 @@
 #import "ToastProduct.h"
 #import "ToastProductsResponse.h"
 #import "ToastPurchaseResult.h"
+#import "ToastInAppPurchaseDelegate.h"
 
 @protocol ToastInAppPurchaseDelegate;
 
@@ -140,30 +141,6 @@ NS_SWIFT_NAME(version());
 @end
 
 
-/**
- The delegate to be executed according to the purchase result.
- */
-@protocol ToastInAppPurchaseDelegate <NSObject>
 
-// 결제 성공
-/**
- Called after the purchase has been successfully.
-
- @param purchase The purchase that successfully complete
- */
-- (void)didReceivePurchaseResult:(ToastPurchaseResult *)purchase
-NS_SWIFT_NAME(didReceivePurchase(purchase:));
-
-// 결제 실패
-/**
- Called after the purchase has been failure.
-
- @param productIdentifier The identifier of product that has been failure
- @param error The error about the cause of the payment failure.
- */
-- (void)didFailPurchaseProduct:(NSString *)productIdentifier withError:(NSError *)error
-NS_SWIFT_NAME(didFailPurchase(productIdentifier:error:));
-
-@end
 
 NS_ASSUME_NONNULL_END

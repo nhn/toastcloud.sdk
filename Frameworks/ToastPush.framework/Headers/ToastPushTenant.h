@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString *const ToastPushTenantSeparator;
+
 @interface ToastPushTenant : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, readonly) NSString *tenantIdentifier;

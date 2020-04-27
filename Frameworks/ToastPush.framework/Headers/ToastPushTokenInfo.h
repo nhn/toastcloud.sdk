@@ -14,9 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef NSString *ToastPushType NS_STRING_ENUM;
 
-/** When the type is not a specified value. */
-extern ToastPushType const ToastPushTypeNone NS_SWIFT_NAME(none);
-
 /** When the type is APNs. */
 extern ToastPushType const ToastPushTypeAPNS NS_SWIFT_NAME(apns);
 
