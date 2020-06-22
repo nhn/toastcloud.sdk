@@ -61,6 +61,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)insertObjects:(nullable NSArray<ObjectType> *)objects atIndexes:(NSIndexSet *)indexes;
 
+- (void)removeFirstObject;
+
 - (void)removeLastObject;
 
 - (void)removeAllObjects;

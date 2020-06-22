@@ -11,6 +11,7 @@
 #import "ToastPushAgreement.h"
 #import "ToastPushTokenInfo.h"
 #import "ToastPushTenant.h"
+#import "ToastNotificationOptions.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,8 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) BOOL isDefaultInstance;
 @property (nonatomic, readonly) ToastPushConfiguration *configuration;
-@property (nonatomic, readonly) NSString *userID;
-@property (nonatomic, readonly) ToastPushTenant *tenant;
+@property (nonatomic, readonly) ToastNotificationOptions *notificationOptions;
+@property (nonatomic, readonly, nullable) NSString *userID;
+@property (nonatomic, readonly, nullable) ToastPushAgreement *agreement;
+@property (nonatomic, readonly, nullable) ToastPushTenant *tenant;
 
 /**
 Get instance for app key.
@@ -39,6 +42,9 @@ If no instance exists, create and return instance.
 + (instancetype)sharedInstanceWithConfiguration:(ToastPushConfiguration *)configuration
 NS_SWIFT_NAME(shared(configuration:));
 
+- (void)setNotificationOptions:(nullable ToastNotificationOptions *)options
+NS_SWIFT_NAME(setNotificationOptions(_:));
+
 /**
 Set the user identifier.
 
@@ -46,6 +52,14 @@ Set the user identifier.
 */
 - (void)setUserID:(nullable NSString *)userID
 NS_SWIFT_NAME(setUserID(_:));
+
+/**
+Set tenant information.
+
+@param agreement The agreement information.
+*/
+- (void)setAgreement:(nullable ToastPushAgreement *)agreement
+NS_SWIFT_NAME(setAgreement(_:));
 
 /**
 Set tenant information.
@@ -59,13 +73,11 @@ NS_SWIFT_NAME(setTenant(_:));
 Register the token.
 
 @param pushType PushType (ToastPushTypeAPNS / ToastPushTypeVoIP)
-@param agreement Whether or not to accept the notifications.
 @param completionHandler The completion handler for result.
 */
 - (void)registerWithPushType:(ToastPushType)pushType
-                   agreement:(nullable ToastPushAgreement *)agreement
            completionHandler:(nullable void (^)(ToastPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler
-NS_SWIFT_NAME(register(pushType:agreement:completion:));
+NS_SWIFT_NAME(register(pushType:completion:));
 
 /**
 Queries the token's information.

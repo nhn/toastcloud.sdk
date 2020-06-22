@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <ToastCore/ToastCore.h>
-#import "ToastNotificationOptions.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -40,8 +39,6 @@ A class that has configuration about push service required for initialization.
 
 /** Whther it is a sandbox environment or not. */
 @property (nonatomic) BOOL sandbox;
-
-@property (nonatomic, copy, nullable) ToastNotificationOptions *notificationOptions;
 
 
 /// ---------------------------------

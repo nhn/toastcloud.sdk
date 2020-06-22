@@ -14,6 +14,7 @@
 #import "ToastPushMessage.h"
 #import "ToastPushNotificationAction.h"
 #import "ToastPushTenant.h"
+#import "ToastNotificationOptions.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -143,6 +144,17 @@ NS_SWIFT_NAME(register(completion:));
  */
 + (void)unregisterWithCompletionHandler:(nullable void (^)(NSString * _Nullable deviceToken, NSError * _Nullable error))completionHandler
 NS_SWIFT_NAME(unregister(completion:));
+
+// 알림 옵션 설정
+/**
+Set the notification options.
+
+Register notification options in the notification center.
+
+@param options Set of notification options
+*/
++ (void)setNotificationOptions:(nullable ToastNotificationOptions *)options
+NS_SWIFT_NAME(setNotificationOptions(_:));
 
 // 알림 카테고리 설정
 /**
