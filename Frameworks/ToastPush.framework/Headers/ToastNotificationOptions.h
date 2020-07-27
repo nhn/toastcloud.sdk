@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) BOOL soundEnabled;
 @property (nonatomic) BOOL foregroundEnabled;
 
+- (instancetype)init;
+
+- (instancetype)initWithOptions:(NSUInteger)options;
+
 @end
 
 NS_ASSUME_NONNULL_END

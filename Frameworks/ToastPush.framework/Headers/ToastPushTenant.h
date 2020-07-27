@@ -17,6 +17,8 @@ extern NSString *const ToastPushTenantSeparator;
 @property (nonatomic, readonly) NSString *tenantIdentifier;
 @property (nonatomic, nullable) NSString *userIdentifier;
 
+- (instancetype)init NS_UNAVAILABLE;
+
 - (instancetype)initWithTenantIdentifier:(NSString *)identifier;
 
 @end

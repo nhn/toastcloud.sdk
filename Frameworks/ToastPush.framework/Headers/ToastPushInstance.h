@@ -99,6 +99,52 @@ Unregister the token.
              completionHandler:(nullable void (^)(NSString * _Nullable deviceToken, NSError * _Nullable error))completionHandler
 NS_SWIFT_NAME(unregister(pushType:completion:));
 
+/**
+Get user tag.
+
+@param completionHandler The completion handler for result.
+*/
+- (void)getUserTagWithCompletionHandler:(void (^)(NSSet<NSString *> * _Nullable tagIdentifiers, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(getUserTag(completion:));
+
+/**
+Add tag identifiers to user tag.
+
+@param tagIdentifiers The tag identifiers.
+@param completionHandler The completion handler for result.
+*/
+- (void)addUserTagWithIdentifiers:(NSSet<NSString *> *)tagIdentifiers
+                completionHandler:(nullable void (^)(NSSet<NSString *> * _Nullable tagIdentifiers, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(addUserTag(_:completion:));
+
+/**
+Set tag identifiers to user tag.
+
+@param tagIdentifiers The tag identifiers.
+@param completionHandler The completion handler for result.
+*/
+- (void)setUserTagWithIdentifiers:(NSSet<NSString *> *)tagIdentifiers
+                completionHandler:(nullable void (^)(NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(setUserTag(_:completion:));
+
+/**
+Remove tag identifiers from the user tag.
+
+@param tagIdentifiers The tag identifiers.
+@param completionHandler The completion handler for result.
+*/
+- (void)removeUserTagWithIdentifiers:(NSSet<NSString *> *)tagIdentifiers
+                   completionHandler:(nullable void (^)(NSSet<NSString *> * _Nullable tagIdentifiers, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(removeUserTag(_:completion:));
+
+/**
+Remove all user tag.
+
+@param completionHandler The completion handler for result.
+*/
+- (void)removeAllUserTagWithCompletionHandler:(nullable void (^)(NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(removeAllUserTag(completion:));
+
 @end
 
 NS_ASSUME_NONNULL_END

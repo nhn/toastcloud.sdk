@@ -25,6 +25,7 @@ typedef NS_ERROR_ENUM(ToastPushErrorDomain, ToastPushError) {
     ToastPushErrorAlreadyInProgress = 6,    // 이미 진행중
     ToastPushErrorParameterInvalid = 7,     // 매계변수 오류
     ToastPushErrorNotSupported = 8,         // 지원하지 않는 기능
+    ToaStPushErrorClientFailed = 9,         // 서버 오류
 };
 
 NS_ASSUME_NONNULL_END

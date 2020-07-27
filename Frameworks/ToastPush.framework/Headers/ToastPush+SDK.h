@@ -156,6 +156,14 @@ Register notification options in the notification center.
 + (void)setNotificationOptions:(nullable ToastNotificationOptions *)options
 NS_SWIFT_NAME(setNotificationOptions(_:));
 
+/**
+Get the notification options.
+
+Returns registered notification options in the notification center.
+*/
++ (nullable ToastNotificationOptions *)notificationOptions
+NS_SWIFT_NAME(notificationOptions());
+
 // 알림 카테고리 설정
 /**
 Set the notification categories.
@@ -194,6 +202,53 @@ Set tenant information.
 @param tenant The tenant information.
 */
 + (void)setTenant:(nullable ToastPushTenant *)tenant;
+
+// User Tag 설정
+/**
+Get user tag.
+
+@param completionHandler The completion handler for result.
+*/
++ (void)getUserTagWithCompletionHandler:(void (^)(NSSet<NSString *> * _Nullable tagIdentifiers, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(getUserTag(completion:));
+
+/**
+Add tag identifiers to user tag.
+
+@param tagIdentifiers The tag identifiers.
+@param completionHandler The completion handler for result.
+*/
++ (void)addUserTagWithIdentifiers:(NSSet<NSString *> *)tagIdentifiers
+                completionHandler:(nullable void (^)(NSSet<NSString *> * _Nullable tagIdentifiers, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(addUserTag(_:completion:));
+
+/**
+Set tag identifiers to user tag.
+
+@param tagIdentifiers The tag identifiers.
+@param completionHandler The completion handler for result.
+*/
++ (void)setUserTagWithIdentifiers:(nullable NSSet<NSString *> *)tagIdentifiers
+                completionHandler:(nullable void (^)(NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(setUserTag(_:completion:));
+
+/**
+Remove tag identifiers from the user tag.
+
+@param tagIdentifiers The tag identifiers.
+@param completionHandler The completion handler for result.
+*/
++ (void)removeUserTagWithIdentifiers:(NSSet<NSString *> *)tagIdentifiers
+                   completionHandler:(nullable void (^)(NSSet<NSString *> * _Nullable tagIdentifiers, NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(removeUserTag(_:completion:));
+
+/**
+Remove all user tag.
+
+@param completionHandler The completion handler for result.
+*/
++ (void)removeAllUserTagWithCompletionHandler:(nullable void (^)(NSError * _Nullable error))completionHandler
+NS_SWIFT_NAME(removeAllUserTag(completion:));
 
 // SDK 버전 획득
 /**

@@ -62,6 +62,8 @@ A class that has configuration about push service required for initialization.
 - (instancetype)initWithAppKey:(NSString *)appKey
 NS_SWIFT_NAME(init(appKey:));
 
+- (instancetype)init NS_UNAVAILABLE;
+
 @end
 
 NS_ASSUME_NONNULL_END
