@@ -54,6 +54,12 @@ typedef NS_ENUM(NSInteger, ToastProductType) {
 /** The currency of product */
 @property (nonatomic, copy, readonly, nullable) NSString *currency;
 
+/** The title of appstore product*/
+@property (nonatomic, copy, readonly, nullable) NSString *localizedTitle;
+
+/** The description of appstore product*/
+@property (nonatomic, copy, readonly, nullable) NSString *localizedDescription;
+
 /** The localized price of product */
 @property (nonatomic, copy, readonly, nullable) NSString *localizedPrice;
 
