@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/ToastIAPError.h</key>
 		<data>
-		fVueo3lNlj9+MUBPyLmfDDt7RLw=
+		tT6nInOzxYrTb35J6Dcl2NlK9bo=
 		</data>
 		<key>Headers/ToastInAppPurchaseDelegate.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rTo26/AZSNXIvykYXTqPim22uwU=
+		I5xn78MRXkvCaLY25LsLVv5XBEc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -99,11 +99,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fVueo3lNlj9+MUBPyLmfDDt7RLw=
+			tT6nInOzxYrTb35J6Dcl2NlK9bo=
 			</data>
 			<key>hash2</key>
 			<data>
-			SYO9y6dV+QVTQzmjmhojwz6UxsDPmNh9UMB8ilNtBFg=
+			BcBQcKJdEjJrNyC6CwUFgeIjwaSXJu4p/LjIiBeKBn0=
 			</data>
 		</dict>
 		<key>Headers/ToastInAppPurchaseDelegate.h</key>
