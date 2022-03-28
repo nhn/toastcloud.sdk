@@ -76,6 +76,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** Is the payment added from AppStore */
 @property (nonatomic, readonly, getter=isStorePayment) BOOL storePayment;
 
+/** Is the payment made in a sandbox environment */
+@property (nonatomic, readonly, getter=isSandboxPayment) BOOL sandboxPayment;
+
 /** The developer's payload of purchase */
 @property (nonatomic, readonly, copy, nullable) NSString *payload;
 
