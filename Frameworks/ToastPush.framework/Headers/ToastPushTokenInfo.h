@@ -12,12 +12,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+__attribute__((deprecated("use NHNCloudPushType instead.")))
 typedef NSString *ToastPushType NS_STRING_ENUM;
 
 /** When the type is APNs. */
+__attribute__((deprecated("use NHNCloudPushTypeAPNS instead.")))
 extern ToastPushType const ToastPushTypeAPNS NS_SWIFT_NAME(apns);
 
 /** When the type is VoIP. */
+__attribute__((deprecated("use NHNCloudPushTypeVoIP instead.")))
 extern ToastPushType const ToastPushTypeVoIP NS_SWIFT_NAME(voip);
 
 
@@ -26,6 +29,7 @@ extern ToastPushType const ToastPushTypeVoIP NS_SWIFT_NAME(voip);
 
 A class that contains information about the registered token.
 */
+__attribute__((deprecated("use NHNCloudPushTokenInfo instead.")))
 @interface ToastPushTokenInfo : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------

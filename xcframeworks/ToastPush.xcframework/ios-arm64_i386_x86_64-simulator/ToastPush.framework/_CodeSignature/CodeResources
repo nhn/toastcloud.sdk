@@ -6,75 +6,75 @@
 	<dict>
 		<key>Headers/ToastNotificationOptions.h</key>
 		<data>
-		DBElwRZQIhJkBis+6NqyXeZ3cgY=
+		T6OO+UGRaBEYVIMf/f3bz299Ywk=
 		</data>
 		<key>Headers/ToastPush+SDK.h</key>
 		<data>
-		SyuQ4E+u+hMr95cCbwDd38mFtek=
+		wtwA26N77ZgJLIXykFpMj9l0Wj8=
 		</data>
 		<key>Headers/ToastPush.h</key>
 		<data>
-		GbqkSMlIJE6/nBZ7AlvVuOqHzIA=
+		TAXB/DYfMhFExWA55vxn2yPFORM=
 		</data>
 		<key>Headers/ToastPushAgreement.h</key>
 		<data>
-		4EsTsYUlm85FdCkpbJ19xjGz2wc=
+		+UqFILDHjXzNmC1hAmRazAFGhjs=
 		</data>
 		<key>Headers/ToastPushButton.h</key>
 		<data>
-		kOg1CFtLOZKDGZ9lPh87DoDQauo=
+		sn7bR/tImV8pAC0q4ivjzbQ4A4U=
 		</data>
 		<key>Headers/ToastPushConfiguration.h</key>
 		<data>
-		9DccX9mmblXVXX5pOWviqAHAARU=
+		bC1HBHAvU8JfwzvvqCimveJHr+0=
 		</data>
 		<key>Headers/ToastPushError.h</key>
 		<data>
-		dk4BKN+lnTjvHGYHSstMfEaq0Mc=
+		Q6vffkox7rmThGTDuRTg2fw/VYE=
 		</data>
 		<key>Headers/ToastPushInstance.h</key>
 		<data>
-		nlcY65tsKnGB51pFWdIEgo1iCN4=
+		6jAUTXDxil/ULplHa8Ky7u3NdgI=
 		</data>
 		<key>Headers/ToastPushMedia.h</key>
 		<data>
-		ottiXOBsG4pAWR0fnR+VJkvYFXk=
+		z2/ZoQRaE5ptBfPi92bH7Vim83Q=
 		</data>
 		<key>Headers/ToastPushMessage.h</key>
 		<data>
-		h8yKqhKMakRfgaxV/6vMDvcnjZg=
+		X6nKphsMQRmnXp9LPgt38I+chPU=
 		</data>
 		<key>Headers/ToastPushNotificationAction.h</key>
 		<data>
-		g+hNd92zIfJ8ksA55E/XWTkgRR4=
+		M9CaTLgyRctbUOMBsk9Hd41CQ18=
 		</data>
 		<key>Headers/ToastPushRichMessage.h</key>
 		<data>
-		GHN5/UHZb9dRjsWIURLw8IB9XQo=
+		KKcNRY0NkmCGrfWu5PO2VcMTDFw=
 		</data>
 		<key>Headers/ToastPushServiceExtension.h</key>
 		<data>
-		E8UNfAFhUj7hYnenYGVLqxhI/pM=
+		A3+3uia/XUD0+kKRybAaQ3ZwVaM=
 		</data>
 		<key>Headers/ToastPushStyle.h</key>
 		<data>
-		WLEDcCxXnnqZ83qT6YmQLx0oE/o=
+		AyMAXTcpAhIfqLsPwIycS6dVQsk=
 		</data>
 		<key>Headers/ToastPushTenant.h</key>
 		<data>
-		iPznI2F1lQKpXh/3gWjL20iw9FE=
+		SjEv1hQfMFNX8L3tYpmmyxcvOHU=
 		</data>
 		<key>Headers/ToastPushTokenInfo.h</key>
 		<data>
-		JwuAD2rQ4C5RmU3W2V5UOp2Al1k=
+		OdHwOexIuurF0rDgejZhzI7Ngtc=
 		</data>
 		<key>Headers/ToastVoIP.h</key>
 		<data>
-		eLhILqjRHeEUWVUWt3DVeHpQFzc=
+		pRp9A0Kw/c5pdM9M3wtoYV+Vo2A=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QJsicuEnrON0B2/Ub4jYCCF0tyc=
+		mqYTBXrkiXma1Dq2w5mo6iKmSfg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -87,187 +87,187 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DBElwRZQIhJkBis+6NqyXeZ3cgY=
+			T6OO+UGRaBEYVIMf/f3bz299Ywk=
 			</data>
 			<key>hash2</key>
 			<data>
-			MnvH71RhCtIgOCsrWpAYyrSFiklwMrbMeUpf6olYDu8=
+			ItFu4znkwyapp8wDHt4SC8X9Lvk7PeA2rNqAaGqXZtc=
 			</data>
 		</dict>
 		<key>Headers/ToastPush+SDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SyuQ4E+u+hMr95cCbwDd38mFtek=
+			wtwA26N77ZgJLIXykFpMj9l0Wj8=
 			</data>
 			<key>hash2</key>
 			<data>
-			+cUA4RrRMaOFdGSd4nyw8bkaDnrs5/uUi5mCtm7zSt4=
+			C0NZTT0z3v+C2+3CsTq7ijc46Z7NW3FY+x2VmLM6W2U=
 			</data>
 		</dict>
 		<key>Headers/ToastPush.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GbqkSMlIJE6/nBZ7AlvVuOqHzIA=
+			TAXB/DYfMhFExWA55vxn2yPFORM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Nw6fiDVIwnrlvF9HpgT0PcPY1na1Em2DAga2ANxLu/M=
+			UuYFfMVFn3oq13/sj1oBIoaMXGmFrxYuQFSHfZp3+DY=
 			</data>
 		</dict>
 		<key>Headers/ToastPushAgreement.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4EsTsYUlm85FdCkpbJ19xjGz2wc=
+			+UqFILDHjXzNmC1hAmRazAFGhjs=
 			</data>
 			<key>hash2</key>
 			<data>
-			8ou2QesB2zMntMprStMvkLqvuwSlzsSAQHQzD+JXp6Q=
+			lcDRNMB19unVo4wda+7csia2sKuPV86+tShpWPEdNLM=
 			</data>
 		</dict>
 		<key>Headers/ToastPushButton.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kOg1CFtLOZKDGZ9lPh87DoDQauo=
+			sn7bR/tImV8pAC0q4ivjzbQ4A4U=
 			</data>
 			<key>hash2</key>
 			<data>
-			162zIXuaBKnuGLAq0aGa5AnwHB+9WIFL/hHrySGenuU=
+			bL4NJwK89OTEEad+9E0zcDBlL9JMsgWrnMzVVSLqf2A=
 			</data>
 		</dict>
 		<key>Headers/ToastPushConfiguration.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9DccX9mmblXVXX5pOWviqAHAARU=
+			bC1HBHAvU8JfwzvvqCimveJHr+0=
 			</data>
 			<key>hash2</key>
 			<data>
-			pQ3hJ2F7KHd+GTyVmrKktumviEQPlCRgtfGRjmlz1z0=
+			rgHPKZKggaKljuSeNg5jnhHY99hIZhVYTAqIz24XU3s=
 			</data>
 		</dict>
 		<key>Headers/ToastPushError.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dk4BKN+lnTjvHGYHSstMfEaq0Mc=
+			Q6vffkox7rmThGTDuRTg2fw/VYE=
 			</data>
 			<key>hash2</key>
 			<data>
-			oZSBwBuv7D637W5p10Msjfdb58XSFcXDqurCe+wQMcE=
+			5oSxci8894paRXnNOQdW2nkHJSa6Xox2tISScMVvH40=
 			</data>
 		</dict>
 		<key>Headers/ToastPushInstance.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nlcY65tsKnGB51pFWdIEgo1iCN4=
+			6jAUTXDxil/ULplHa8Ky7u3NdgI=
 			</data>
 			<key>hash2</key>
 			<data>
-			YO9CxlnifYZ5++KPNuhBhLJtBPsNPbsjkQG0seAy898=
+			sMcrlgxrolKV0aC2QbwiNSaAmGM+HtekbreRmEyZFe0=
 			</data>
 		</dict>
 		<key>Headers/ToastPushMedia.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ottiXOBsG4pAWR0fnR+VJkvYFXk=
+			z2/ZoQRaE5ptBfPi92bH7Vim83Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			zYflkAJ+LRnSSXs1RUmg5I5XClKPy8D2zQrsWR4t2Kc=
+			Q56GPqkgG4WlerTmnJgsHglBOCUFhdCfm0JXAGO0mqk=
 			</data>
 		</dict>
 		<key>Headers/ToastPushMessage.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			h8yKqhKMakRfgaxV/6vMDvcnjZg=
+			X6nKphsMQRmnXp9LPgt38I+chPU=
 			</data>
 			<key>hash2</key>
 			<data>
-			rAAyg5H9VJWhsmaPj8KT8m17bnY2DoczUrPX9VfHy40=
+			OtLrFxuxijda1fumdeM/K8Fqr8G6hz6RfN178y5y8ZA=
 			</data>
 		</dict>
 		<key>Headers/ToastPushNotificationAction.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			g+hNd92zIfJ8ksA55E/XWTkgRR4=
+			M9CaTLgyRctbUOMBsk9Hd41CQ18=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZmpfhnBomMKWHajdsQ/eaAfiEwBFLM3D0lO8z1BFKH8=
+			Czj7NDpJIRjHn0Y7sB89cvX+DvW6jApnPbt/1QqHEeM=
 			</data>
 		</dict>
 		<key>Headers/ToastPushRichMessage.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GHN5/UHZb9dRjsWIURLw8IB9XQo=
+			KKcNRY0NkmCGrfWu5PO2VcMTDFw=
 			</data>
 			<key>hash2</key>
 			<data>
-			cQeD22OKRwc52CNpwjDW1K+BdbUCfMtCYdWdQRtSFeY=
+			vZ5GuBJb+p1CLJw5IbItW66P61FyOVtnZgcyL07Uydc=
 			</data>
 		</dict>
 		<key>Headers/ToastPushServiceExtension.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			E8UNfAFhUj7hYnenYGVLqxhI/pM=
+			A3+3uia/XUD0+kKRybAaQ3ZwVaM=
 			</data>
 			<key>hash2</key>
 			<data>
-			sivZv++Amr5TXDBM9tv+KGGtS5ZPvE9Zd3dNehuOk1s=
+			Qrd63J50XanHmDQk/xKo2c4LyIpuQjNfuxjS/x+3f1w=
 			</data>
 		</dict>
 		<key>Headers/ToastPushStyle.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WLEDcCxXnnqZ83qT6YmQLx0oE/o=
+			AyMAXTcpAhIfqLsPwIycS6dVQsk=
 			</data>
 			<key>hash2</key>
 			<data>
-			VjcpH4+jFLbTB4Yilphq56O0pX3fbCpD5KzJ/1W70y8=
+			d8amUm9CshAkzGJuwAZRDyBv5bEkXvduQc0tzj0ltl4=
 			</data>
 		</dict>
 		<key>Headers/ToastPushTenant.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iPznI2F1lQKpXh/3gWjL20iw9FE=
+			SjEv1hQfMFNX8L3tYpmmyxcvOHU=
 			</data>
 			<key>hash2</key>
 			<data>
-			/eWKjCwPMpUCefnh3wzvRW7MG83l98a36hXzdx38iCA=
+			FmP+zHKUak1xftZkPnPQFolQbv6CtFv3tmqIAy6/PTE=
 			</data>
 		</dict>
 		<key>Headers/ToastPushTokenInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JwuAD2rQ4C5RmU3W2V5UOp2Al1k=
+			OdHwOexIuurF0rDgejZhzI7Ngtc=
 			</data>
 			<key>hash2</key>
 			<data>
-			BZVfsm+ZccEIblMxWhIhwNO47t+Z2w17v74b442RfJI=
+			2OjCVueexHgHKcwpfwTs2+J+4FrtENp95Oj0F3RYFdA=
 			</data>
 		</dict>
 		<key>Headers/ToastVoIP.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eLhILqjRHeEUWVUWt3DVeHpQFzc=
+			pRp9A0Kw/c5pdM9M3wtoYV+Vo2A=
 			</data>
 			<key>hash2</key>
 			<data>
-			hqtgJ26jNVq3CGyh4hzfLQGZmYyHfjjagGwcYBZXztw=
+			9oZ6xnI0mzoxafa3Qg+Hi/jsc5GB3sPx5yuMfLChq+Y=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

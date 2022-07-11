@@ -10,11 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+__attribute__((deprecated("use NHNCloudIAPErrorDomain instead.")))
 extern NSErrorDomain const ToastIAPErrorDomain;
 
 /**
 The error used in ToastIAP.
 */
+__attribute__((deprecated("use NHNCloudIAPErrorDomain instead.")))
 typedef NS_ERROR_ENUM(ToastIAPErrorDomain, ToastIAPError) {
     ToastIAPErrorUnknown = 0,                       // 알수 없음
     ToastIAPErrorNotInitialized = 1,                // 초기화 하지 않음

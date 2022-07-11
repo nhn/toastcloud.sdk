@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  The response you receive as a result of the product listing inquiry([ToastIAP requestProductsWithCompletionHandler:]).
  
  */
+__attribute__((deprecated("use NHNCloudProductsResponse instead.")))
 @interface ToastProductsResponse : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------

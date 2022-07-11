@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ToastCore/ToastCore.h>
+#import <NHNCloudCore/NHNCloudCore.h>
 #import "ToastLoggerConfigurationSetting.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  The configuration used to initialize the ToastLogger SDK.
  */
+__attribute__((deprecated("use NHNCloudLoggerConfiguration instead.")))
 @interface ToastLoggerConfiguration : NSObject
 
 /// ---------------------------------

@@ -16,9 +16,11 @@
 #import "ToastLoggerConfiguration+Deprecated.h"
 
 //! Project version number for ToastLogger.
+__attribute__((deprecated("use NHNCloudLoggerVersionNumber instead.")))
 FOUNDATION_EXPORT double ToastLoggerVersionNumber;
 
 //! Project version string for ToastLogger.
+__attribute__((deprecated("use NHNCloudLoggerVersionString[] instead.")))
 FOUNDATION_EXPORT const unsigned char ToastLoggerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ToastLogger/PublicHeader.h>

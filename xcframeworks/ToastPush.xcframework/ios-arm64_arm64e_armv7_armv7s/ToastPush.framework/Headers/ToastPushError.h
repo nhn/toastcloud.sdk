@@ -10,11 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+__attribute__((deprecated("use NHNCloudPushErrorDomain instead.")))
 extern NSErrorDomain const ToastPushErrorDomain;
 
 /**
  The error used in ToastPush. 
  */
+__attribute__((deprecated("use NHNCloudPushErrorDomain instead.")))
 typedef NS_ERROR_ENUM(ToastPushErrorDomain, ToastPushError) {
     ToastPushErrorUnknown = 0,              // 알수 없음
     ToastPushErrorNotInitialized = 1,       // 초기화하지 않음

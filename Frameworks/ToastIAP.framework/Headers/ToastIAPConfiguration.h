@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ToastCore/ToastCore.h>
+#import <NHNcloudCore/NHNCloudCore.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  Configuration for ToastIAP SDK initialization.
  
  */
+__attribute__((deprecated("use NHNCloudIAPConfiguration instead.")))
 @interface ToastIAPConfiguration : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------

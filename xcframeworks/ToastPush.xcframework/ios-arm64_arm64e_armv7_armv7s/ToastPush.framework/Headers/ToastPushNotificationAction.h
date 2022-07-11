@@ -12,6 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+__attribute__((deprecated("use NHNCloudPushNotificationActionType instead.")))
 typedef NS_ENUM(NSInteger, ToastPushNotificationActionType) {
     ToastPushNotificationActionDismiss  NS_SWIFT_NAME(dismiss) = 0,
     ToastPushNotificationActionOpenApp  NS_SWIFT_NAME(openApp) = 1,
@@ -24,6 +25,7 @@ typedef NS_ENUM(NSInteger, ToastPushNotificationActionType) {
 
 A class that has information about received message.
 */
+__attribute__((deprecated("use NHNCloudPushNotificationAction instead.")))
 @interface ToastPushNotificationAction : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------

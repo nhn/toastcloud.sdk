@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+__attribute__((deprecated("use NHNCloudPushMediaType instead.")))
 typedef NS_ENUM(NSUInteger, ToastPushMediaType) {
     ToastPushMediaTypeImage NS_SWIFT_NAME(image) = 0,
     ToastPushMediaTypeVideo NS_SWIFT_NAME(video) = 1,
@@ -21,6 +22,7 @@ typedef NS_ENUM(NSUInteger, ToastPushMediaType) {
 
 A class that has information about media.
 */
+__attribute__((deprecated("use NHNCloudPushMedia instead.")))
 @interface ToastPushMedia : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------

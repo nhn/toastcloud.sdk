@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ToastCore/ToastCore.h>
+#import <NHNCloudCore/NHNCloudCore.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 A class that has configuration about push service required for initialization.
 */
+__attribute__((deprecated("use NHNCloudPushConfiguration instead.")))
 @interface ToastPushConfiguration : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------

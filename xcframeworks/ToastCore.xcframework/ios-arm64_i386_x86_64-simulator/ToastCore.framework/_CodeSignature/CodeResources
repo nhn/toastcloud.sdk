@@ -6,19 +6,15 @@
 	<dict>
 		<key>Headers/ToastCore.h</key>
 		<data>
-		aFdnHkCci5vnFTFxYo2avjNHQo0=
-		</data>
-		<key>Headers/ToastHttpError.h</key>
-		<data>
-		sOC5LLH9Tv9S6M42hosgPLG1Pt0=
+		KwcLnPhA+LxxCcWHoggACY9jDC8=
 		</data>
 		<key>Headers/ToastSDK.h</key>
 		<data>
-		RzS0nk6aosV4ayHgYGIFok+xWDI=
+		6ylzSDJ5tqrn+yR7NRnuSn0rd+o=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Fa35kmzGTFHlVwSwrK2XwJrFLuw=
+		xbdfJFw6B7tP0MPpfT1p/Yj/J9A=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -31,33 +27,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aFdnHkCci5vnFTFxYo2avjNHQo0=
+			KwcLnPhA+LxxCcWHoggACY9jDC8=
 			</data>
 			<key>hash2</key>
 			<data>
-			mjDJ73J8W8IuCgrSQy42hHu+7kulBim3j4i1T4dTNsw=
-			</data>
-		</dict>
-		<key>Headers/ToastHttpError.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			sOC5LLH9Tv9S6M42hosgPLG1Pt0=
-			</data>
-			<key>hash2</key>
-			<data>
-			msDakDh2HfYEOmdi14GMr681WTUnW/UsBJ63xm55HSU=
+			UdfyixSm445f6p4EAHTYYpG7KhW7z8Dh6cGwlBj9a7g=
 			</data>
 		</dict>
 		<key>Headers/ToastSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RzS0nk6aosV4ayHgYGIFok+xWDI=
+			6ylzSDJ5tqrn+yR7NRnuSn0rd+o=
 			</data>
 			<key>hash2</key>
 			<data>
-			Co4OSbE9Vz9Mg9EQKU3tpQaswZLLp00LPMZBdinq6co=
+			QmJievpksHQmVtlfI9iIMFVNinfW/H45cervWiJY4jk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

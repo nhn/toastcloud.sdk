@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+__attribute__((deprecated("use NHNCloudNotificationOptions instead.")))
 @interface ToastNotificationOptions : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic) BOOL badgeEnabled;

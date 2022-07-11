@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  * [ToastInAppPurchaseDelegate didReceivePurchaseResult:]
  
  */
+__attribute__((deprecated("use NHNCloudPurchaseResult instead.")))
 @interface ToastPurchaseResult : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------

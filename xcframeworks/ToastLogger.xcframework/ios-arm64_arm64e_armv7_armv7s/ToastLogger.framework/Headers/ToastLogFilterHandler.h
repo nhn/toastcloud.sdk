@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
  
  A class that manages to add ToastLogFilter according to ToastLoggerConfiguration.
  */
+//! Project version number for ToastUnityCommon.
+__attribute__((deprecated("use NHNCloudLogFilterHandler instead.")))
 @interface ToastLogFilterHandler : NSObject
 
 /// ---------------------------------
@@ -29,7 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param logFilter The filter to add
  @param configuration The configuration about Toast Logger
  */
-+ (void)addLogFilter:(nullable ToastLogFilter *)logFilter withLoggerConfiguration:(nullable ToastLoggerConfiguration *)configuration;
++ (void)addLogFilter:(nullable ToastLogFilter *)logFilter withLoggerConfiguration:(nullable ToastLoggerConfiguration *)configuration
+__attribute__((deprecated("use NHNCloudLogFilterHandler instead. ToastLogFilterHandler addLogFilter:withLoggerConfiguration: is not working.")));
 
 @end
 

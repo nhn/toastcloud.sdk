@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  A class that has the user's agreement as to whether or not to receive message.
  */
+__attribute__((deprecated("use NHNCloudPushAgreement instead.")))
 @interface ToastPushAgreement : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------

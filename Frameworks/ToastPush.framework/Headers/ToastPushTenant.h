@@ -10,8 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+__attribute__((deprecated("use NHNCloudPushTenantSeparator instead.")))
 extern NSString *const ToastPushTenantSeparator;
 
+__attribute__((deprecated("use NHNCloudPushTenant instead.")))
 @interface ToastPushTenant : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, readonly) NSString *tenantIdentifier;

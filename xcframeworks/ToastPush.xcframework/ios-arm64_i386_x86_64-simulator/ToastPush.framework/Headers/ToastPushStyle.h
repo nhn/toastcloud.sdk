@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 A class that has information about notification's style.
 */
+__attribute__((deprecated("use NHNCloudPushStyle instead.")))
 @interface ToastPushStyle : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------

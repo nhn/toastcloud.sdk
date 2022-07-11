@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  Delegate to receive notifications.
  */
+__attribute__((deprecated("use NHNCloudPushDelegate instead.")))
 @protocol ToastPushDelegate <NSObject>
 
 @optional
@@ -63,6 +64,7 @@ NS_SWIFT_NAME(didReceiveNotificationAction(action:));
  
  SDK to manage remote notifications. (APNS)
  */
+__attribute__((deprecated("use NHNCloudPush instead.")))
 @interface ToastPush : NSObject
 
 /// ---------------------------------

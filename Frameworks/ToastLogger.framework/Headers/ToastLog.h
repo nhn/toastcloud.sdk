@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ToastCore/ToastCore.h>
+#import <NHNCloudCore/NHNCloudCore.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  There are methods to create a log.
  */
+__attribute__((deprecated("use NHNCloudLog instead.")))
 @interface ToastLog : NSObject <NSCoding, NSCopying>
 
 

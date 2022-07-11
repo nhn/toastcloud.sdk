@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 Delegate to receive push messages.
 */
 API_AVAILABLE(ios(10.0))
+__attribute__((deprecated("use NHNCloudVoIPDelegate instead.")))
 @protocol ToastVoIPDelegate <NSObject>
 
 // 메시지 수신
@@ -37,6 +38,7 @@ SDK to manage push message for voip.
 */
 
 API_AVAILABLE(ios(10.0))
+__attribute__((deprecated("use NHNCloudVoIP instead.")))
 @interface ToastVoIP : NSObject
 
 /**

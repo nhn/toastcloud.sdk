@@ -6,27 +6,27 @@
 	<dict>
 		<key>Headers/ToastInstanceLogger.h</key>
 		<data>
-		ZcAAEc7QK/bhX00t6SFqPBhGfXw=
+		dr698pdqPAQfwL4S9om/NKsUkLU=
 		</data>
 		<key>Headers/ToastLog.h</key>
 		<data>
-		Y6Ly8Ytl4J6teqTtZGkA7tC222M=
+		XtPNw3z+Vd7eK8s3HThW/KvV0lI=
 		</data>
 		<key>Headers/ToastLogFilter.h</key>
 		<data>
-		Ol0AzTnTHBkKH31qjl88zbplHd0=
+		QNcTV27lvAsRzGtr92L0ooMV1qk=
 		</data>
 		<key>Headers/ToastLogFilterHandler.h</key>
 		<data>
-		1+sN3vHU2E0ODK9ERC5JZUpVOPg=
+		Zq7YAytfK65SRME1v58ZNe5oxd8=
 		</data>
 		<key>Headers/ToastLogger+SDK.h</key>
 		<data>
-		QqubwjIqpI1EMqM+H2J/0ehAF9Y=
+		y+goQWMGlbeMDYwUBZ5KmaMpqpY=
 		</data>
 		<key>Headers/ToastLogger.h</key>
 		<data>
-		3PjRlg6zN/IzDUGkNk2ShNveA4o=
+		PAi5PnF4hjZlFDZko70RU8l063c=
 		</data>
 		<key>Headers/ToastLoggerConfiguration+Deprecated.h</key>
 		<data>
@@ -34,19 +34,19 @@
 		</data>
 		<key>Headers/ToastLoggerConfiguration.h</key>
 		<data>
-		RxT+JC368UminZpjPF2py170JhA=
+		1WoMYNjPHwE2zCtdfLMRberYJOM=
 		</data>
 		<key>Headers/ToastLoggerConfigurationSetting.h</key>
 		<data>
-		n8OCZZMh7DMRHkAh1JICF/2KucU=
+		7kWvx+GZESh/vMKq4d3W/mgKilA=
 		</data>
 		<key>Headers/ToastLoggerDelegate.h</key>
 		<data>
-		Dplq+Ef8mohrjZ2V4cJi084cESw=
+		8CX0LuKX73H5elo3wq3ZUsriVhw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		30C9976vygFirzgPvVT4SeBVacI=
+		BvZo27JLobr5Ld1TUYZzLCEj+4Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -59,66 +59,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZcAAEc7QK/bhX00t6SFqPBhGfXw=
+			dr698pdqPAQfwL4S9om/NKsUkLU=
 			</data>
 			<key>hash2</key>
 			<data>
-			SgUX3nMLnPFU1X8xWZl51aKjpIMi70/r4tO3sOA67Qo=
+			PUbqxJfvJ6qi0ocxfy+8Ch+9WnFLxJQ5I/A6JLNJ9fI=
 			</data>
 		</dict>
 		<key>Headers/ToastLog.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Y6Ly8Ytl4J6teqTtZGkA7tC222M=
+			XtPNw3z+Vd7eK8s3HThW/KvV0lI=
 			</data>
 			<key>hash2</key>
 			<data>
-			XBbBnKCvNrXpjGeChyyI/TccssjwJtUF60vxa5jvLtQ=
+			nrFL3l131tTgkfjQSdEJHcAltohE+cXV84JiuD43Qkc=
 			</data>
 		</dict>
 		<key>Headers/ToastLogFilter.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ol0AzTnTHBkKH31qjl88zbplHd0=
+			QNcTV27lvAsRzGtr92L0ooMV1qk=
 			</data>
 			<key>hash2</key>
 			<data>
-			ydSWwuJ759yujo+Q3dHnIc5z/5gkD7ujYgzglRX2zTs=
+			rnZpAAZgcDK6bZhWHKY3yC0MRQ7QHoI45MmAOg+UKh8=
 			</data>
 		</dict>
 		<key>Headers/ToastLogFilterHandler.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1+sN3vHU2E0ODK9ERC5JZUpVOPg=
+			Zq7YAytfK65SRME1v58ZNe5oxd8=
 			</data>
 			<key>hash2</key>
 			<data>
-			BTPhm/J+YeE/dfrHYTU+0n/E7R+isAON3hECUXlWmBk=
+			tl7gZyrrgS0RiiI28B24A+y04nQpUzbZEA9fLyB37jE=
 			</data>
 		</dict>
 		<key>Headers/ToastLogger+SDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QqubwjIqpI1EMqM+H2J/0ehAF9Y=
+			y+goQWMGlbeMDYwUBZ5KmaMpqpY=
 			</data>
 			<key>hash2</key>
 			<data>
-			Jqt6ZmsueDTaKGHbpOgFNmtg3R7Wmsgz85epz6sbHoo=
+			vwN/SEZ70lVZvyodUnBCfQg+WeCk+xWNC2nh3GN8fyk=
 			</data>
 		</dict>
 		<key>Headers/ToastLogger.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3PjRlg6zN/IzDUGkNk2ShNveA4o=
+			PAi5PnF4hjZlFDZko70RU8l063c=
 			</data>
 			<key>hash2</key>
 			<data>
-			3TRyKefc+JLTA9fL9l5oZDEtgb1BUhcqBGPUYtpUFCs=
+			QI2LzMCkN+yU7a90X18IJVLgFPvvveZa7vYwskrND9I=
 			</data>
 		</dict>
 		<key>Headers/ToastLoggerConfiguration+Deprecated.h</key>
@@ -136,33 +136,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RxT+JC368UminZpjPF2py170JhA=
+			1WoMYNjPHwE2zCtdfLMRberYJOM=
 			</data>
 			<key>hash2</key>
 			<data>
-			JKiKwNnePDmb+sqk2z0NMnkQALgmEzkVwGwQEyw7WW4=
+			cJbEQp3xQpXfsA0EyETqr3P7M0I+c19aU/GzCN7kD6g=
 			</data>
 		</dict>
 		<key>Headers/ToastLoggerConfigurationSetting.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			n8OCZZMh7DMRHkAh1JICF/2KucU=
+			7kWvx+GZESh/vMKq4d3W/mgKilA=
 			</data>
 			<key>hash2</key>
 			<data>
-			Bkb6f5RKpyJZJuT2yFMJ6EMfdpVPuvVObGiwAZAiCLc=
+			+1eZWGDKPxgt2SMIB6lKFzezfgYk2tDSuVAHcFhsbQc=
 			</data>
 		</dict>
 		<key>Headers/ToastLoggerDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Dplq+Ef8mohrjZ2V4cJi084cESw=
+			8CX0LuKX73H5elo3wq3ZUsriVhw=
 			</data>
 			<key>hash2</key>
 			<data>
-			6pe7BEwkJA/XhS4fkuZcsZ8AIB/vrg+zLfL3EzoUZMY=
+			zM/pihcq3CEyFNHNIvdq2J+FFwsf8XIOeneRfPRkkp0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

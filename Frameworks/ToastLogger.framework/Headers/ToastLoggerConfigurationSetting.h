@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ToastCore/ToastCore.h>
-#import <ToastCommon/ToastCommon.h>
+#import <NHNCloudCore/NHNCloudCore.h>
+#import <NHNCloudCommon/NHNCloudCommon.h>
 #import "ToastLog.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+__attribute__((deprecated("use NHNCloudLoggerConfigurationType instead.")))
 typedef NS_ENUM(NSInteger, ToastLoggerConfigurationType) {
     ToastLoggerConfigurationTypeDefault = 0,
     ToastLoggerConfigurationTypeConsole = 1,
@@ -31,6 +32,7 @@ typedef NS_ENUM(NSInteger, ToastLoggerConfigurationType) {
  * user setting (Set it as you want.)
  
  */
+__attribute__((deprecated("use NHNCloudLoggerConfigurationSetting instead.")))
 @interface ToastLoggerConfigurationSetting : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, readonly) ToastLoggerConfigurationType configurationType;

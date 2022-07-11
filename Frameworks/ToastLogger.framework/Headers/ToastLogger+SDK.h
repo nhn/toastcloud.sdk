@@ -38,6 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
     [ToastLogger info:@"TOAST Log & Crash Search!"];
 
  */
+__attribute__((deprecated("use NHNCloudLogger instead.")))
 @interface ToastLogger : NSObject
 
 /// ---------------------------------

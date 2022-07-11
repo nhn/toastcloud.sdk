@@ -10,24 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, ToastServiceZone) {
-    ToastServiceZoneReal = 0,
-    ToastServiceZoneAlpha = 1,
-    ToastServiceZoneBeta = 2,
-};
-
-typedef NS_ENUM(NSInteger, ToastLogLevel) {
-    ToastLogLevel_DEBUG = 0,
-    ToastLogLevel_INFO = 1,
-    ToastLogLevel_WARN = 2,
-    ToastLogLevel_ERROR = 3,
-    ToastLogLevel_FATAL = 4,
-};
-
 /**
  # ToastSDK
  
  */
+__attribute__((deprecated("use NHNCloudSDK instead.")))
 @interface ToastSDK : NSObject
 
 #pragma mark - init

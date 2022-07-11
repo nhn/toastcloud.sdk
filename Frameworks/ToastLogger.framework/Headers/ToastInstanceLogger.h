@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  The class responsible for sending log.
  */
+__attribute__((deprecated("use NHNCloudLogger instead.")))
 @interface ToastInstanceLogger : NSObject
 
 /// ---------------------------------

@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ToastCore/ToastCore.h>
+#import <NHNCloudCore/NHNCloudCore.h>
 #import "ToastIAPConfiguration.h"
 #import "ToastProduct.h"
 #import "ToastProductsResponse.h"
 #import "ToastPurchaseResult.h"
 #import "ToastInAppPurchaseDelegate.h"
 
+__attribute__((deprecated("use NHNCloudInAppPurchaseDelegate instead.")))
 @protocol ToastInAppPurchaseDelegate;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -30,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
  * After initialization, reprocessing for uncompleted payments and automatic renewal of Auto-Renewal Subscription occur.
  
  */
+__attribute__((deprecated("use NHNCloudIAP instead.")))
 @interface ToastIAP : NSObject
 
 /// ---------------------------------

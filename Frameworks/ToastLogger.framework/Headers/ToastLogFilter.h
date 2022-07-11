@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
  * normal log filter
  
  */
+__attribute__((deprecated("use NHNCloudLogFilter instead.")))
 @interface ToastLogFilter : NSObject
 
 /// ---------------------------------

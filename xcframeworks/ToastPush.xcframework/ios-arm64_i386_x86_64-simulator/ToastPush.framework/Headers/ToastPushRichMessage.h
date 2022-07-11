@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 A class that has information about rich message.
 */
+__attribute__((deprecated("use NHNCloudPushRichMessage instead.")))
 @interface ToastPushRichMessage : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------

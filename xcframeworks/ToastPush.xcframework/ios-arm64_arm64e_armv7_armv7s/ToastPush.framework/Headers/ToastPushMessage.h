@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 A class that has information about received message.
 */
+__attribute__((deprecated("use NHNCloudPushMessage instead.")))
 @interface ToastPushMessage : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------

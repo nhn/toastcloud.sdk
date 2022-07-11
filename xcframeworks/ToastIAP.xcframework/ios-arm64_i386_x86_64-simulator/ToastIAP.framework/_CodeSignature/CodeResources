@@ -6,23 +6,23 @@
 	<dict>
 		<key>Headers/ToastIAP+Additional.h</key>
 		<data>
-		sFLEv1N/jBAgM56zeWGjS5NTrcg=
+		qxhS6SMuNsw9XWOHS8rVSW7KnEk=
 		</data>
 		<key>Headers/ToastIAP+SDK.h</key>
 		<data>
-		9jtPfnnZxZbGBzAfmvH51t9Nsls=
+		aWzgiboTC96bFTSKYtfirrXO5iw=
 		</data>
 		<key>Headers/ToastIAP.h</key>
 		<data>
-		aG0AObuwcKf77McaFu6VcdbR+j4=
+		hB7xP32y5GiGHt7pReg4a/xVbl8=
 		</data>
 		<key>Headers/ToastIAPConfiguration.h</key>
 		<data>
-		qCqZXa3Xt8oMZaK02usK3ppYTV4=
+		mzC8Vy+RfQBuZaYNyOtQvHHyIcE=
 		</data>
 		<key>Headers/ToastIAPError.h</key>
 		<data>
-		tT6nInOzxYrTb35J6Dcl2NlK9bo=
+		g2W/vXASBWJTweHJIjUPxKHgy6U=
 		</data>
 		<key>Headers/ToastInAppPurchaseDelegate.h</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Headers/ToastProduct.h</key>
 		<data>
-		tQcNmT4HRXpwDguGpnb87hhLb28=
+		hLvDOJIMh7hyeN4lM76AJXEw5iY=
 		</data>
 		<key>Headers/ToastProductsResponse.h</key>
 		<data>
-		EqKF4QBekRTZyRCrlmNex2+OXJ8=
+		kTIKmbxHvtUAL75axgyfSA0NcVg=
 		</data>
 		<key>Headers/ToastPurchaseResult.h</key>
 		<data>
-		YKG/LX4kSmaOoFjRxecr8rGd4qM=
+		10mcEP2mbSpJ5Be3X56z/SZz/Tw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Qp7mdD30LmhswLKxwATFKsiAonQ=
+		dhvmiCnXqxg+DQWVF9Qo44KSXxw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -55,55 +55,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sFLEv1N/jBAgM56zeWGjS5NTrcg=
+			qxhS6SMuNsw9XWOHS8rVSW7KnEk=
 			</data>
 			<key>hash2</key>
 			<data>
-			f+sMjuSWgcZcp+9UlrsV3kDaTQeR5Ay9rWYyvZlfIc0=
+			Or9zMC+MFKFpsRx8MrLQm8t6xU7nsJeUUjftIeB7jO4=
 			</data>
 		</dict>
 		<key>Headers/ToastIAP+SDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9jtPfnnZxZbGBzAfmvH51t9Nsls=
+			aWzgiboTC96bFTSKYtfirrXO5iw=
 			</data>
 			<key>hash2</key>
 			<data>
-			1rxY45DEoWw8id6ccv7qJnuwL8eGS7A1vxkjNs7sqDU=
+			1evdOFimnkdFH6zFwx0oR1+IXpSj09Kx2KlYI2TQU6Y=
 			</data>
 		</dict>
 		<key>Headers/ToastIAP.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aG0AObuwcKf77McaFu6VcdbR+j4=
+			hB7xP32y5GiGHt7pReg4a/xVbl8=
 			</data>
 			<key>hash2</key>
 			<data>
-			C6WkLKNjwGKKBF7+rejb8mDJh8kQ5Vz82SBuFAV0VGE=
+			8xyVyOMNKFfXtVt91BfYHbYISzS/+RPS4rgnLwMS0GM=
 			</data>
 		</dict>
 		<key>Headers/ToastIAPConfiguration.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qCqZXa3Xt8oMZaK02usK3ppYTV4=
+			mzC8Vy+RfQBuZaYNyOtQvHHyIcE=
 			</data>
 			<key>hash2</key>
 			<data>
-			KcisSnjyxIUoEIQJVLi1YafQzjj/5QOQd/SZNzFd7I8=
+			55eNUMJOJXKCBrWMtT/g5tVUjDVQPfR7gbu8f+Z2jNQ=
 			</data>
 		</dict>
 		<key>Headers/ToastIAPError.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tT6nInOzxYrTb35J6Dcl2NlK9bo=
+			g2W/vXASBWJTweHJIjUPxKHgy6U=
 			</data>
 			<key>hash2</key>
 			<data>
-			BcBQcKJdEjJrNyC6CwUFgeIjwaSXJu4p/LjIiBeKBn0=
+			ER2A91Bc059I3EA833euGd6seG+0pqE0xOZaQdMH6xk=
 			</data>
 		</dict>
 		<key>Headers/ToastInAppPurchaseDelegate.h</key>
@@ -121,33 +121,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tQcNmT4HRXpwDguGpnb87hhLb28=
+			hLvDOJIMh7hyeN4lM76AJXEw5iY=
 			</data>
 			<key>hash2</key>
 			<data>
-			U5LTJ8lpGnCN5yXKusTkUg4MRhlj+Pjw8dZ4A5La0qs=
+			+M6AnTEywBMx/xev1LT+8O3JE+b/bXkiQHnCofuLiQA=
 			</data>
 		</dict>
 		<key>Headers/ToastProductsResponse.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EqKF4QBekRTZyRCrlmNex2+OXJ8=
+			kTIKmbxHvtUAL75axgyfSA0NcVg=
 			</data>
 			<key>hash2</key>
 			<data>
-			S9NCkUz9cLfbHbkPCkmK4TIXaXwvOF7sXcY5lZZdEu8=
+			sG6thGXYrJyk8NG58cVGSBDrhmyhKrImEsD7UU9WD9Q=
 			</data>
 		</dict>
 		<key>Headers/ToastPurchaseResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YKG/LX4kSmaOoFjRxecr8rGd4qM=
+			10mcEP2mbSpJ5Be3X56z/SZz/Tw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Si8Wo6BYVzKmEDw+MU56fZpLMjUxVsUNNdDDkeafOqI=
+			8nNfdt5Iaq2865R16F5+WkSJodaRLmNCDy4glAZlltw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

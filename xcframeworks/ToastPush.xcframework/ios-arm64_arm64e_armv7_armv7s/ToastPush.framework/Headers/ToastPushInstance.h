@@ -15,6 +15,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+__attribute__((deprecated("use NHNCloudPushInstance instead.")))
 @interface ToastPushInstance : NSObject
 
 @property (nonatomic, readonly) BOOL isDefaultInstance;

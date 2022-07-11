@@ -23,9 +23,11 @@
 #import "ToastPushInstance.h"
 
 //! Project version number for ToastPush.
+__attribute__((deprecated("use NHNCloudPushVersionNumber instead.")))
 FOUNDATION_EXPORT double ToastPushVersionNumber;
 
 //! Project version string for ToastPush.
+__attribute__((deprecated("use NHNCloudPushVersionString instead.")))
 FOUNDATION_EXPORT const unsigned char ToastPushVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ToastPush/PublicHeader.h>

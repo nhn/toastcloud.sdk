@@ -6,10 +6,13 @@
 //  Copyright © 2018년 NHN. All rights reserved.
 //
 
+#import "ToastLogFilter.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class ToastInstanceLogger;
 
+__attribute__((deprecated("use NHNCloudLoggerDelegate instead.")))
 @protocol ToastLoggerDelegate <NSObject>
 
 @optional

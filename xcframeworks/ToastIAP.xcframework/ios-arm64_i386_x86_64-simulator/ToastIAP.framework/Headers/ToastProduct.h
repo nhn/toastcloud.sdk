@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  - ToastProductTypeAutoRenewableSubscription: Auto renewable subscription type
  - ToastProductTypeConsumableSubscription : Consumable subscription type
  */
+__attribute__((deprecated("use NHNCloudProductType instead.")))
 typedef NS_ENUM(NSInteger, ToastProductType) {
     ToastProductTypeUnknown                     NS_SWIFT_NAME(unknown) = 0,
     ToastProductTypeConsumable                  NS_SWIFT_NAME(consumable) = 1,
@@ -30,6 +31,7 @@ typedef NS_ENUM(NSInteger, ToastProductType) {
  
  The information of product.
  */
+__attribute__((deprecated("use NHNCloudProduct instead.")))
 @interface ToastProduct : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------

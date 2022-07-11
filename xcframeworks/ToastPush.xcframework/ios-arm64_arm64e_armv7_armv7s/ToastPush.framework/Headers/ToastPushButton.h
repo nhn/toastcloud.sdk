@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+__attribute__((deprecated("use NHNCloudPushButtonType instead.")))
 typedef NS_ENUM(NSUInteger, ToastPushButtonType) {
     ToastPushButtonTypeDismiss  NS_SWIFT_NAME(dismiss) = 0,
     ToastPushButtonTypeOpenApp  NS_SWIFT_NAME(openApp) = 1,
@@ -23,6 +24,7 @@ typedef NS_ENUM(NSUInteger, ToastPushButtonType) {
 
 A class that has information about notification button.
 */
+__attribute__((deprecated("use NHNCloudPushButton instead.")))
 @interface ToastPushButton : NSObject <NSCoding, NSCopying>
 
 /// ---------------------------------

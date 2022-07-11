@@ -17,9 +17,11 @@
 #import "ToastIAPError.h"
 
 //! Project version number for ToastIAP.
+__attribute__((deprecated("use NHNCloudIAPVersionNumber instead.")))
 FOUNDATION_EXPORT double ToastIAPVersionNumber;
 
 //! Project version string for ToastIAP.
+__attribute__((deprecated("use NHNCloudIAPVersionString[] instead.")))
 FOUNDATION_EXPORT const unsigned char ToastIAPVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ToastIAP/PublicHeader.h>
