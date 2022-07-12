@@ -1,3 +1,6 @@
+# ⚠️ ToastSDK Deprecated ⚠️
+### ToastSDK는 Deprecated 되었습니다. [nhn/toastcloud.sdk](https://github.com/nhn/nhncloud.ios.sdk) 에서 NHNCloudSDK를 사용해주세요.
+
 ## TOAST > TOAST SDK 사용 가이드 > 시작하기 > iOS
 
 ## 지원 환경
